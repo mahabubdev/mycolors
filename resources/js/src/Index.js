@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-function Index() {
+import Routes from './routes/index';
+
+function Index( props ) {
     return (
-       <div>
-           <h2>React SPA wrapper</h2>
-       </div>
+       <React.Fragment>
+           <Routes />
+       </React.Fragment>
     );
 }
 
