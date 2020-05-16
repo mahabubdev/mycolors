@@ -15,8 +15,11 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    protected $table = "users";
+
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'username'
     ];
 
     /**
@@ -36,4 +39,27 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    // Eloquent Relationships
+
+    // current user's profile
+    public function profile()
+    {
+        return $this->hasOne(\App\Model\Profile::class);
+    }
+
+    // get current user's photo
+    public function photo()
+    {
+        return $this->hasOne(\App\Model\Profile::class)
+            ->first()->photo;
+    }
+
+    // get current user's all palettes
+    public function pals()
+    {
+        return $this->hasMany(\App\Model\Palette::class);
+    }
+
 }
