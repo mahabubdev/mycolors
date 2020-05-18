@@ -1,14 +1,25 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { 
+    authRoutes,
     defaultRoutes,
-    dashboardRoutes
+    dashboardRoutes,
 } from "./register";
 
-// pages
+// layouts
 import DefaultLayout from './../components/layouts/DefaultLayout';
+import CredentLayout from './../components/layouts/CredentLayout';
+import DashboardLayout from './../components/layouts/DashboardLayout';
+
+// pages
 import HomePage from './../components/pages/HomePage';
+import AboutPage from './../components/pages/AboutPage';
+import ContactPage from './../components/pages/ContactPage';
+import IndexPage from './../components/pages/dashboard/IndexPage';
+import LoginPage from './../components/pages/auth/LoginPage';
+import RegisterPage from './../components/pages/auth/RegisterPage';
 import NotFound from './../components/pages/NotFound';
+
 
 function Routes( props )  {
 
@@ -25,29 +36,59 @@ function Routes( props )  {
     return (
         <Router>
             <Switch>
-                {/* Default Layouts */}
+
+                <Route exact path={authRoutes}>
+                    <AppRoute
+                    exact path="/login"
+                    layout={CredentLayout}
+                    component={LoginPage}
+                    />
+
+                    <AppRoute
+                    exact path="/register"
+                    layout={CredentLayout}
+                    component={RegisterPage}
+                    />
+                </Route>
+                
                 <Route exact path={defaultRoutes}>
                     <AppRoute
-                    exact
-                    path="/"
+                    exact path="/"
                     layout={DefaultLayout}
                     component={HomePage}
                     />
-                    
+
                     <AppRoute
                     exact path="/home"
                     layout={DefaultLayout}
                     component={HomePage}
                     />
+                    
+                    <AppRoute
+                    exact path="/about"
+                    layout={DefaultLayout}
+                    component={AboutPage}
+                    />
+
+                    <AppRoute
+                    exact path="/contact"
+                    layout={DefaultLayout}
+                    component={ContactPage}
+                    />
                 </Route>
 
-                
+                <Route exact path={dashboardRoutes}>
+                    <AppRoute
+                    exact path="/dashboard"
+                    layout={DashboardLayout}
+                    component={IndexPage}
+                    />
+                </Route>
 
-                {/* Not Found */}
+
                 <Route exact path="*">
                     <AppRoute
-                    exact
-                    path="*"
+                    exact path="*"
                     layout={DefaultLayout}
                     component={NotFound}
                     />

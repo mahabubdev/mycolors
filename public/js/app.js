@@ -69861,6 +69861,62 @@ var Header = function Header(props) {
 
 /***/ }),
 
+/***/ "./resources/js/src/components/layouts/CredentLayout.js":
+/*!**************************************************************!*\
+  !*** ./resources/js/src/components/layouts/CredentLayout.js ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var DefaultLayout = function DefaultLayout(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "default-page"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "cred-header"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Auth pages")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "page-area"
+  }, props.children));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DefaultLayout);
+
+/***/ }),
+
+/***/ "./resources/js/src/components/layouts/DashboardLayout.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/src/components/layouts/DashboardLayout.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Header */ "./resources/js/src/components/Header.js");
+
+
+
+var DefaultLayout = function DefaultLayout(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "default-page"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dashboard-header"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Dashboard Header")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "page-area"
+  }, props.children));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DefaultLayout);
+
+/***/ }),
+
 /***/ "./resources/js/src/components/layouts/DefaultLayout.js":
 /*!**************************************************************!*\
   !*** ./resources/js/src/components/layouts/DefaultLayout.js ***!
@@ -69885,6 +69941,54 @@ var DefaultLayout = function DefaultLayout(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (DefaultLayout);
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/AboutPage.js":
+/*!********************************************************!*\
+  !*** ./resources/js/src/components/pages/AboutPage.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function AboutPage(props) {
+  // 
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "page_area"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "AboutPage"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (AboutPage);
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/ContactPage.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/src/components/pages/ContactPage.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function ContactPage(props) {
+  // 
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "page_area"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "ContactPage"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ContactPage);
 
 /***/ }),
 
@@ -69930,6 +70034,78 @@ var NotFound = function NotFound(props) {
 
 /***/ }),
 
+/***/ "./resources/js/src/components/pages/auth/LoginPage.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/src/components/pages/auth/LoginPage.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function LoginPage(props) {
+  // 
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "page_area"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "LoginPage"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (LoginPage);
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/auth/RegisterPage.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/src/components/pages/auth/RegisterPage.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function RegisterPage(props) {
+  // 
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "page_area"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "RegisterPage"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (RegisterPage);
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/dashboard/IndexPage.js":
+/*!******************************************************************!*\
+  !*** ./resources/js/src/components/pages/dashboard/IndexPage.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function IndexPage(props) {
+  // 
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "page_area"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Dashboard - Indexpage"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (IndexPage);
+
+/***/ }),
+
 /***/ "./resources/js/src/routes/index.js":
 /*!******************************************!*\
   !*** ./resources/js/src/routes/index.js ***!
@@ -69944,8 +70120,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _register__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./register */ "./resources/js/src/routes/register.js");
 /* harmony import */ var _components_layouts_DefaultLayout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../components/layouts/DefaultLayout */ "./resources/js/src/components/layouts/DefaultLayout.js");
-/* harmony import */ var _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../components/pages/HomePage */ "./resources/js/src/components/pages/HomePage.js");
-/* harmony import */ var _components_pages_NotFound__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../components/pages/NotFound */ "./resources/js/src/components/pages/NotFound.js");
+/* harmony import */ var _components_layouts_CredentLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../components/layouts/CredentLayout */ "./resources/js/src/components/layouts/CredentLayout.js");
+/* harmony import */ var _components_layouts_DashboardLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../components/layouts/DashboardLayout */ "./resources/js/src/components/layouts/DashboardLayout.js");
+/* harmony import */ var _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../components/pages/HomePage */ "./resources/js/src/components/pages/HomePage.js");
+/* harmony import */ var _components_pages_AboutPage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../components/pages/AboutPage */ "./resources/js/src/components/pages/AboutPage.js");
+/* harmony import */ var _components_pages_ContactPage__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../components/pages/ContactPage */ "./resources/js/src/components/pages/ContactPage.js");
+/* harmony import */ var _components_pages_dashboard_IndexPage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../components/pages/dashboard/IndexPage */ "./resources/js/src/components/pages/dashboard/IndexPage.js");
+/* harmony import */ var _components_pages_auth_LoginPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../components/pages/auth/LoginPage */ "./resources/js/src/components/pages/auth/LoginPage.js");
+/* harmony import */ var _components_pages_auth_RegisterPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./../components/pages/auth/RegisterPage */ "./resources/js/src/components/pages/auth/RegisterPage.js");
+/* harmony import */ var _components_pages_NotFound__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./../components/pages/NotFound */ "./resources/js/src/components/pages/NotFound.js");
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -69954,7 +70137,15 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
+ // layouts
+
+
+
  // pages
+
+
+
+
 
 
 
@@ -69977,17 +70168,48 @@ function Routes(props) {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
+    path: _register__WEBPACK_IMPORTED_MODULE_2__["authRoutes"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppRoute, {
+    exact: true,
+    path: "/login",
+    layout: _components_layouts_CredentLayout__WEBPACK_IMPORTED_MODULE_4__["default"],
+    component: _components_pages_auth_LoginPage__WEBPACK_IMPORTED_MODULE_10__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppRoute, {
+    exact: true,
+    path: "/register",
+    layout: _components_layouts_CredentLayout__WEBPACK_IMPORTED_MODULE_4__["default"],
+    component: _components_pages_auth_RegisterPage__WEBPACK_IMPORTED_MODULE_11__["default"]
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
     path: _register__WEBPACK_IMPORTED_MODULE_2__["defaultRoutes"]
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppRoute, {
     exact: true,
     path: "/",
     layout: _components_layouts_DefaultLayout__WEBPACK_IMPORTED_MODULE_3__["default"],
-    component: _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppRoute, {
     exact: true,
     path: "/home",
     layout: _components_layouts_DefaultLayout__WEBPACK_IMPORTED_MODULE_3__["default"],
-    component: _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppRoute, {
+    exact: true,
+    path: "/about",
+    layout: _components_layouts_DefaultLayout__WEBPACK_IMPORTED_MODULE_3__["default"],
+    component: _components_pages_AboutPage__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppRoute, {
+    exact: true,
+    path: "/contact",
+    layout: _components_layouts_DefaultLayout__WEBPACK_IMPORTED_MODULE_3__["default"],
+    component: _components_pages_ContactPage__WEBPACK_IMPORTED_MODULE_8__["default"]
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: _register__WEBPACK_IMPORTED_MODULE_2__["dashboardRoutes"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppRoute, {
+    exact: true,
+    path: "/dashboard",
+    layout: _components_layouts_DashboardLayout__WEBPACK_IMPORTED_MODULE_5__["default"],
+    component: _components_pages_dashboard_IndexPage__WEBPACK_IMPORTED_MODULE_9__["default"]
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "*"
@@ -69995,7 +70217,7 @@ function Routes(props) {
     exact: true,
     path: "*",
     layout: _components_layouts_DefaultLayout__WEBPACK_IMPORTED_MODULE_3__["default"],
-    component: _components_pages_NotFound__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _components_pages_NotFound__WEBPACK_IMPORTED_MODULE_12__["default"]
   }))));
 }
 
@@ -70007,15 +70229,17 @@ function Routes(props) {
 /*!*********************************************!*\
   !*** ./resources/js/src/routes/register.js ***!
   \*********************************************/
-/*! exports provided: dashboardRoutes, defaultRoutes */
+/*! exports provided: defaultRoutes, authRoutes, dashboardRoutes */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dashboardRoutes", function() { return dashboardRoutes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defaultRoutes", function() { return defaultRoutes; });
-var dashboardRoutes = ["/dashboard", "/dashboard/demo"];
-var defaultRoutes = ["/", "/home", "/login", "/register"];
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "authRoutes", function() { return authRoutes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dashboardRoutes", function() { return dashboardRoutes; });
+var defaultRoutes = ["/", "/home", "/about", "/contact"];
+var authRoutes = ["/login", "/register"];
+var dashboardRoutes = ["/dashboard"];
 
 /***/ }),
 
