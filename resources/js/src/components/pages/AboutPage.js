@@ -1,12 +1,12 @@
 import React from 'react';
 
-const HomePage = (props) =>  {
-
+function AboutPage (props) {
+    //
     return (
         <React.Fragment>
-            <h1>HomePage</h1>
+            <h1>About Page</h1>
         </React.Fragment>
     );
 }
 
-export default HomePage;
+export default AboutPage;

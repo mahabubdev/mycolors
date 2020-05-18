@@ -161,6 +161,18 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/regenerator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ "./node_modules/regenerator-runtime/runtime.js");
+
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -6400,6 +6412,131 @@ module.exports = {
 
 })));
 //# sourceMappingURL=bootstrap.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/src/components/css/auth.css":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/src/components/css/auth.css ***!
+  \**********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".auth-page {\r\n    max-width: 400px;\r\n    margin: 50px auto;\r\n    background: #fff5fc;\r\n    color: #3a3a3a;\r\n    padding: 50px 10px;\r\n    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);\r\n    border-radius: 10px;\r\n    -webkit-border-radius: 10px;\r\n    -moz-border-radius: 10px;\r\n    -ms-border-radius: 10px;\r\n    -o-border-radius: 10px;\r\n}\r\n.auth-page hr {\r\n    border-top: 2px solid rgba(38, 194, 17, 0.2) !important;\r\n}\r\n.auth-page h2 {\r\n    text-align: center;\r\n    text-transform: capitalize;\r\n    color: #4b4b4b;\r\n    margin-bottom: 0;\r\n}\r\n.auth-page .form {\r\n    width: 80%;\r\n    margin: 0 auto;\r\n    padding: 10px 0;\r\n}\r\n.auth-page .form input {\r\n    display: block;\r\n    width: 100%;\r\n    padding: 8px;\r\n    border: 1px solid rgba(38, 194, 17, 0.75);\r\n    background-color: rgba(33, 255, 4, 0.1);\r\n    border-radius: 5px;\r\n    -webkit-border-radius: 5px;\r\n    -moz-border-radius: 5px;\r\n    -ms-border-radius: 5px;\r\n    -o-border-radius: 5px;\r\n}\r\n.auth-page .form button[type=\"submit\"] {\r\n    background: linear-gradient(35deg, #10bb44, #089925);\r\n    color: #FFFFFF;\r\n    padding: 10px 20px;\r\n    box-shadow: 0 3px 20px 0 rgba(14, 179, 47, 0.5);\r\n    text-transform: capitalize;\r\n    transition: all 0.3s ease-in-out;\r\n    -webkit-transition: all 0.3s ease-in-out;\r\n    -moz-transition: all 0.3s ease-in-out;\r\n    -ms-transition: all 0.3s ease-in-out;\r\n    -o-transition: all 0.3s ease-in-out;\r\n}\r\n.auth-page .form button[type=\"submit\"]:hover {\r\n    background: linear-gradient(35deg, #089925, #10bb44);\r\n    transform: translateY(-2px);\r\n    -webkit-transform: translateY(-2px);\r\n    -moz-transform: translateY(-2px);\r\n    -ms-transform: translateY(-2px);\r\n    -o-transform: translateY(-2px);\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/src/components/css/header.css":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./resources/js/src/components/css/header.css ***!
+  \************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/css-base.js":
+/*!*************************************************!*\
+  !*** ./node_modules/css-loader/lib/css-base.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
 
 
 /***/ }),
@@ -64632,6 +64769,1656 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-redux/es/components/Context.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/components/Context.js ***!
+  \***********************************************************/
+/*! exports provided: ReactReduxContext, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReactReduxContext", function() { return ReactReduxContext; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var ReactReduxContext =
+/*#__PURE__*/
+react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(null);
+
+if (true) {
+  ReactReduxContext.displayName = 'ReactRedux';
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (ReactReduxContext);
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/components/Provider.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-redux/es/components/Provider.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/es/components/Context.js");
+/* harmony import */ var _utils_Subscription__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
+
+
+
+
+
+function Provider(_ref) {
+  var store = _ref.store,
+      context = _ref.context,
+      children = _ref.children;
+  var contextValue = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
+    var subscription = new _utils_Subscription__WEBPACK_IMPORTED_MODULE_3__["default"](store);
+    subscription.onStateChange = subscription.notifyNestedSubs;
+    return {
+      store: store,
+      subscription: subscription
+    };
+  }, [store]);
+  var previousState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
+    return store.getState();
+  }, [store]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    var subscription = contextValue.subscription;
+    subscription.trySubscribe();
+
+    if (previousState !== store.getState()) {
+      subscription.notifyNestedSubs();
+    }
+
+    return function () {
+      subscription.tryUnsubscribe();
+      subscription.onStateChange = null;
+    };
+  }, [contextValue, previousState]);
+  var Context = context || _Context__WEBPACK_IMPORTED_MODULE_2__["ReactReduxContext"];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Context.Provider, {
+    value: contextValue
+  }, children);
+}
+
+if (true) {
+  Provider.propTypes = {
+    store: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+      subscribe: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
+      dispatch: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired,
+      getState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func.isRequired
+    }),
+    context: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+    children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.any
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Provider);
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/components/connectAdvanced.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/es/components/connectAdvanced.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return connectAdvanced; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_is__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _utils_Subscription__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
+/* harmony import */ var _utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/useIsomorphicLayoutEffect */ "./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js");
+/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/es/components/Context.js");
+
+
+
+
+
+
+
+ // Define some constant arrays just to avoid re-creating these
+
+var EMPTY_ARRAY = [];
+var NO_SUBSCRIPTION_ARRAY = [null, null];
+
+var stringifyComponent = function stringifyComponent(Comp) {
+  try {
+    return JSON.stringify(Comp);
+  } catch (err) {
+    return String(Comp);
+  }
+};
+
+function storeStateUpdatesReducer(state, action) {
+  var updateCount = state[1];
+  return [action.payload, updateCount + 1];
+}
+
+function useIsomorphicLayoutEffectWithArgs(effectFunc, effectArgs, dependencies) {
+  Object(_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_6__["useIsomorphicLayoutEffect"])(function () {
+    return effectFunc.apply(void 0, effectArgs);
+  }, dependencies);
+}
+
+function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs) {
+  // We want to capture the wrapper props and child props we used for later comparisons
+  lastWrapperProps.current = wrapperProps;
+  lastChildProps.current = actualChildProps;
+  renderIsScheduled.current = false; // If the render was from a store update, clear out that reference and cascade the subscriber update
+
+  if (childPropsFromStoreUpdate.current) {
+    childPropsFromStoreUpdate.current = null;
+    notifyNestedSubs();
+  }
+}
+
+function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch) {
+  // If we're not subscribed to the store, nothing to do here
+  if (!shouldHandleStateChanges) return; // Capture values for checking if and when this component unmounts
+
+  var didUnsubscribe = false;
+  var lastThrownError = null; // We'll run this callback every time a store subscription update propagates to this component
+
+  var checkForUpdates = function checkForUpdates() {
+    if (didUnsubscribe) {
+      // Don't run stale listeners.
+      // Redux doesn't guarantee unsubscriptions happen until next dispatch.
+      return;
+    }
+
+    var latestStoreState = store.getState();
+    var newChildProps, error;
+
+    try {
+      // Actually run the selector with the most recent store state and wrapper props
+      // to determine what the child props should be
+      newChildProps = childPropsSelector(latestStoreState, lastWrapperProps.current);
+    } catch (e) {
+      error = e;
+      lastThrownError = e;
+    }
+
+    if (!error) {
+      lastThrownError = null;
+    } // If the child props haven't changed, nothing to do here - cascade the subscription update
+
+
+    if (newChildProps === lastChildProps.current) {
+      if (!renderIsScheduled.current) {
+        notifyNestedSubs();
+      }
+    } else {
+      // Save references to the new child props.  Note that we track the "child props from store update"
+      // as a ref instead of a useState/useReducer because we need a way to determine if that value has
+      // been processed.  If this went into useState/useReducer, we couldn't clear out the value without
+      // forcing another re-render, which we don't want.
+      lastChildProps.current = newChildProps;
+      childPropsFromStoreUpdate.current = newChildProps;
+      renderIsScheduled.current = true; // If the child props _did_ change (or we caught an error), this wrapper component needs to re-render
+
+      forceComponentUpdateDispatch({
+        type: 'STORE_UPDATED',
+        payload: {
+          error: error
+        }
+      });
+    }
+  }; // Actually subscribe to the nearest connected ancestor (or store)
+
+
+  subscription.onStateChange = checkForUpdates;
+  subscription.trySubscribe(); // Pull data from the store after first render in case the store has
+  // changed since we began.
+
+  checkForUpdates();
+
+  var unsubscribeWrapper = function unsubscribeWrapper() {
+    didUnsubscribe = true;
+    subscription.tryUnsubscribe();
+    subscription.onStateChange = null;
+
+    if (lastThrownError) {
+      // It's possible that we caught an error due to a bad mapState function, but the
+      // parent re-rendered without this component and we're about to unmount.
+      // This shouldn't happen as long as we do top-down subscriptions correctly, but
+      // if we ever do those wrong, this throw will surface the error in our tests.
+      // In that case, throw the error from here so it doesn't get lost.
+      throw lastThrownError;
+    }
+  };
+
+  return unsubscribeWrapper;
+}
+
+var initStateUpdates = function initStateUpdates() {
+  return [null, 0];
+};
+
+function connectAdvanced(
+/*
+  selectorFactory is a func that is responsible for returning the selector function used to
+  compute new props from state, props, and dispatch. For example:
+      export default connectAdvanced((dispatch, options) => (state, props) => ({
+      thing: state.things[props.thingId],
+      saveThing: fields => dispatch(actionCreators.saveThing(props.thingId, fields)),
+    }))(YourComponent)
+    Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
+  outside of their selector as an optimization. Options passed to connectAdvanced are passed to
+  the selectorFactory, along with displayName and WrappedComponent, as the second argument.
+    Note that selectorFactory is responsible for all caching/memoization of inbound and outbound
+  props. Do not use connectAdvanced directly without memoizing results between calls to your
+  selector, otherwise the Connect component will re-render on every state or props change.
+*/
+selectorFactory, // options object:
+_ref) {
+  if (_ref === void 0) {
+    _ref = {};
+  }
+
+  var _ref2 = _ref,
+      _ref2$getDisplayName = _ref2.getDisplayName,
+      getDisplayName = _ref2$getDisplayName === void 0 ? function (name) {
+    return "ConnectAdvanced(" + name + ")";
+  } : _ref2$getDisplayName,
+      _ref2$methodName = _ref2.methodName,
+      methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName,
+      _ref2$renderCountProp = _ref2.renderCountProp,
+      renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp,
+      _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges,
+      shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta,
+      _ref2$storeKey = _ref2.storeKey,
+      storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey,
+      _ref2$withRef = _ref2.withRef,
+      withRef = _ref2$withRef === void 0 ? false : _ref2$withRef,
+      _ref2$forwardRef = _ref2.forwardRef,
+      forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef,
+      _ref2$context = _ref2.context,
+      context = _ref2$context === void 0 ? _Context__WEBPACK_IMPORTED_MODULE_7__["ReactReduxContext"] : _ref2$context,
+      connectOptions = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref2, ["getDisplayName", "methodName", "renderCountProp", "shouldHandleStateChanges", "storeKey", "withRef", "forwardRef", "context"]);
+
+  if (true) {
+    if (renderCountProp !== undefined) {
+      throw new Error("renderCountProp is removed. render counting is built into the latest React Dev Tools profiling extension");
+    }
+
+    if (withRef) {
+      throw new Error('withRef is removed. To access the wrapped instance, use a ref on the connected component');
+    }
+
+    var customStoreWarningMessage = 'To use a custom Redux store for specific components, create a custom React context with ' + "React.createContext(), and pass the context object to React Redux's Provider and specific components" + ' like: <Provider context={MyContext}><ConnectedComponent context={MyContext} /></Provider>. ' + 'You may also pass a {context : MyContext} option to connect';
+
+    if (storeKey !== 'store') {
+      throw new Error('storeKey has been removed and does not do anything. ' + customStoreWarningMessage);
+    }
+  }
+
+  var Context = context;
+  return function wrapWithConnect(WrappedComponent) {
+    if ( true && !Object(react_is__WEBPACK_IMPORTED_MODULE_4__["isValidElementType"])(WrappedComponent)) {
+      throw new Error("You must pass a component to the function returned by " + (methodName + ". Instead received " + stringifyComponent(WrappedComponent)));
+    }
+
+    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
+    var displayName = getDisplayName(wrappedComponentName);
+
+    var selectorFactoryOptions = Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, connectOptions, {
+      getDisplayName: getDisplayName,
+      methodName: methodName,
+      renderCountProp: renderCountProp,
+      shouldHandleStateChanges: shouldHandleStateChanges,
+      storeKey: storeKey,
+      displayName: displayName,
+      wrappedComponentName: wrappedComponentName,
+      WrappedComponent: WrappedComponent
+    });
+
+    var pure = connectOptions.pure;
+
+    function createChildSelector(store) {
+      return selectorFactory(store.dispatch, selectorFactoryOptions);
+    } // If we aren't running in "pure" mode, we don't want to memoize values.
+    // To avoid conditionally calling hooks, we fall back to a tiny wrapper
+    // that just executes the given callback immediately.
+
+
+    var usePureOnlyMemo = pure ? react__WEBPACK_IMPORTED_MODULE_3__["useMemo"] : function (callback) {
+      return callback();
+    };
+
+    function ConnectFunction(props) {
+      var _useMemo = Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
+        // Distinguish between actual "data" props that were passed to the wrapper component,
+        // and values needed to control behavior (forwarded refs, alternate context instances).
+        // To maintain the wrapperProps object reference, memoize this destructuring.
+        var forwardedRef = props.forwardedRef,
+            wrapperProps = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, ["forwardedRef"]);
+
+        return [props.context, forwardedRef, wrapperProps];
+      }, [props]),
+          propsContext = _useMemo[0],
+          forwardedRef = _useMemo[1],
+          wrapperProps = _useMemo[2];
+
+      var ContextToUse = Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
+        // Users may optionally pass in a custom context instance to use instead of our ReactReduxContext.
+        // Memoize the check that determines which context instance we should use.
+        return propsContext && propsContext.Consumer && Object(react_is__WEBPACK_IMPORTED_MODULE_4__["isContextConsumer"])(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(propsContext.Consumer, null)) ? propsContext : Context;
+      }, [propsContext, Context]); // Retrieve the store and ancestor subscription via context, if available
+
+      var contextValue = Object(react__WEBPACK_IMPORTED_MODULE_3__["useContext"])(ContextToUse); // The store _must_ exist as either a prop or in context.
+      // We'll check to see if it _looks_ like a Redux store first.
+      // This allows us to pass through a `store` prop that is just a plain value.
+
+      var didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
+      var didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
+
+      if ( true && !didStoreComeFromProps && !didStoreComeFromContext) {
+        throw new Error("Could not find \"store\" in the context of " + ("\"" + displayName + "\". Either wrap the root component in a <Provider>, ") + "or pass a custom React context provider to <Provider> and the corresponding " + ("React context consumer to " + displayName + " in connect options."));
+      } // Based on the previous check, one of these must be true
+
+
+      var store = didStoreComeFromProps ? props.store : contextValue.store;
+      var childPropsSelector = Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
+        // The child props selector needs the store reference as an input.
+        // Re-create this selector whenever the store changes.
+        return createChildSelector(store);
+      }, [store]);
+
+      var _useMemo2 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
+        if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY; // This Subscription's source should match where store came from: props vs. context. A component
+        // connected to the store via props shouldn't use subscription from context, or vice versa.
+
+        var subscription = new _utils_Subscription__WEBPACK_IMPORTED_MODULE_5__["default"](store, didStoreComeFromProps ? null : contextValue.subscription); // `notifyNestedSubs` is duplicated to handle the case where the component is unmounted in
+        // the middle of the notification loop, where `subscription` will then be null. This can
+        // probably be avoided if Subscription's listeners logic is changed to not call listeners
+        // that have been unsubscribed in the  middle of the notification loop.
+
+        var notifyNestedSubs = subscription.notifyNestedSubs.bind(subscription);
+        return [subscription, notifyNestedSubs];
+      }, [store, didStoreComeFromProps, contextValue]),
+          subscription = _useMemo2[0],
+          notifyNestedSubs = _useMemo2[1]; // Determine what {store, subscription} value should be put into nested context, if necessary,
+      // and memoize that value to avoid unnecessary context updates.
+
+
+      var overriddenContextValue = Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
+        if (didStoreComeFromProps) {
+          // This component is directly subscribed to a store from props.
+          // We don't want descendants reading from this store - pass down whatever
+          // the existing context value is from the nearest connected ancestor.
+          return contextValue;
+        } // Otherwise, put this component's subscription instance into context, so that
+        // connected descendants won't update until after this component is done
+
+
+        return Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, contextValue, {
+          subscription: subscription
+        });
+      }, [didStoreComeFromProps, contextValue, subscription]); // We need to force this wrapper component to re-render whenever a Redux store update
+      // causes a change to the calculated child component props (or we caught an error in mapState)
+
+      var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_3__["useReducer"])(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates),
+          _useReducer$ = _useReducer[0],
+          previousStateUpdateResult = _useReducer$[0],
+          forceComponentUpdateDispatch = _useReducer[1]; // Propagate any mapState/mapDispatch errors upwards
+
+
+      if (previousStateUpdateResult && previousStateUpdateResult.error) {
+        throw previousStateUpdateResult.error;
+      } // Set up refs to coordinate values between the subscription effect and the render logic
+
+
+      var lastChildProps = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])();
+      var lastWrapperProps = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(wrapperProps);
+      var childPropsFromStoreUpdate = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])();
+      var renderIsScheduled = Object(react__WEBPACK_IMPORTED_MODULE_3__["useRef"])(false);
+      var actualChildProps = usePureOnlyMemo(function () {
+        // Tricky logic here:
+        // - This render may have been triggered by a Redux store update that produced new child props
+        // - However, we may have gotten new wrapper props after that
+        // If we have new child props, and the same wrapper props, we know we should use the new child props as-is.
+        // But, if we have new wrapper props, those might change the child props, so we have to recalculate things.
+        // So, we'll use the child props from store update only if the wrapper props are the same as last time.
+        if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) {
+          return childPropsFromStoreUpdate.current;
+        } // TODO We're reading the store directly in render() here. Bad idea?
+        // This will likely cause Bad Things (TM) to happen in Concurrent Mode.
+        // Note that we do this because on renders _not_ caused by store updates, we need the latest store state
+        // to determine what the child props should be.
+
+
+        return childPropsSelector(store.getState(), wrapperProps);
+      }, [store, previousStateUpdateResult, wrapperProps]); // We need this to execute synchronously every time we re-render. However, React warns
+      // about useLayoutEffect in SSR, so we try to detect environment and fall back to
+      // just useEffect instead to avoid the warning, since neither will run anyway.
+
+      useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, actualChildProps, childPropsFromStoreUpdate, notifyNestedSubs]); // Our re-subscribe logic only runs when the store/subscription setup changes
+
+      useIsomorphicLayoutEffectWithArgs(subscribeUpdates, [shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, childPropsFromStoreUpdate, notifyNestedSubs, forceComponentUpdateDispatch], [store, subscription, childPropsSelector]); // Now that all that's done, we can finally try to actually render the child component.
+      // We memoize the elements for the rendered child component as an optimization.
+
+      var renderedWrappedComponent = Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
+        return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(WrappedComponent, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, actualChildProps, {
+          ref: forwardedRef
+        }));
+      }, [forwardedRef, WrappedComponent, actualChildProps]); // If React sees the exact same element reference as last time, it bails out of re-rendering
+      // that child, same as if it was wrapped in React.memo() or returned false from shouldComponentUpdate.
+
+      var renderedChild = Object(react__WEBPACK_IMPORTED_MODULE_3__["useMemo"])(function () {
+        if (shouldHandleStateChanges) {
+          // If this component is subscribed to store updates, we need to pass its own
+          // subscription instance down to our descendants. That means rendering the same
+          // Context instance, and putting a different value into the context.
+          return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(ContextToUse.Provider, {
+            value: overriddenContextValue
+          }, renderedWrappedComponent);
+        }
+
+        return renderedWrappedComponent;
+      }, [ContextToUse, renderedWrappedComponent, overriddenContextValue]);
+      return renderedChild;
+    } // If we're in "pure" mode, ensure our wrapper component only re-renders when incoming props have changed.
+
+
+    var Connect = pure ? react__WEBPACK_IMPORTED_MODULE_3___default.a.memo(ConnectFunction) : ConnectFunction;
+    Connect.WrappedComponent = WrappedComponent;
+    Connect.displayName = displayName;
+
+    if (forwardRef) {
+      var forwarded = react__WEBPACK_IMPORTED_MODULE_3___default.a.forwardRef(function forwardConnectRef(props, ref) {
+        return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Connect, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+          forwardedRef: ref
+        }));
+      });
+      forwarded.displayName = displayName;
+      forwarded.WrappedComponent = WrappedComponent;
+      return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2___default()(forwarded, WrappedComponent);
+    }
+
+    return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2___default()(Connect, WrappedComponent);
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/connect.js":
+/*!********************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/connect.js ***!
+  \********************************************************/
+/*! exports provided: createConnect, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createConnect", function() { return createConnect; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/connectAdvanced */ "./node_modules/react-redux/es/components/connectAdvanced.js");
+/* harmony import */ var _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/shallowEqual */ "./node_modules/react-redux/es/utils/shallowEqual.js");
+/* harmony import */ var _mapDispatchToProps__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mapDispatchToProps */ "./node_modules/react-redux/es/connect/mapDispatchToProps.js");
+/* harmony import */ var _mapStateToProps__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mapStateToProps */ "./node_modules/react-redux/es/connect/mapStateToProps.js");
+/* harmony import */ var _mergeProps__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./mergeProps */ "./node_modules/react-redux/es/connect/mergeProps.js");
+/* harmony import */ var _selectorFactory__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./selectorFactory */ "./node_modules/react-redux/es/connect/selectorFactory.js");
+
+
+
+
+
+
+
+
+/*
+  connect is a facade over connectAdvanced. It turns its args into a compatible
+  selectorFactory, which has the signature:
+
+    (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
+  
+  connect passes its args to connectAdvanced as options, which will in turn pass them to
+  selectorFactory each time a Connect component instance is instantiated or hot reloaded.
+
+  selectorFactory returns a final props selector from its mapStateToProps,
+  mapStateToPropsFactories, mapDispatchToProps, mapDispatchToPropsFactories, mergeProps,
+  mergePropsFactories, and pure args.
+
+  The resulting final props selector is called by the Connect component instance whenever
+  it receives new props or store state.
+ */
+
+function match(arg, factories, name) {
+  for (var i = factories.length - 1; i >= 0; i--) {
+    var result = factories[i](arg);
+    if (result) return result;
+  }
+
+  return function (dispatch, options) {
+    throw new Error("Invalid value of type " + typeof arg + " for " + name + " argument when connecting component " + options.wrappedComponentName + ".");
+  };
+}
+
+function strictEqual(a, b) {
+  return a === b;
+} // createConnect with default args builds the 'official' connect behavior. Calling it with
+// different options opens up some testing and extensibility scenarios
+
+
+function createConnect(_temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      _ref$connectHOC = _ref.connectHOC,
+      connectHOC = _ref$connectHOC === void 0 ? _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_2__["default"] : _ref$connectHOC,
+      _ref$mapStateToPropsF = _ref.mapStateToPropsFactories,
+      mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? _mapStateToProps__WEBPACK_IMPORTED_MODULE_5__["default"] : _ref$mapStateToPropsF,
+      _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories,
+      mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? _mapDispatchToProps__WEBPACK_IMPORTED_MODULE_4__["default"] : _ref$mapDispatchToPro,
+      _ref$mergePropsFactor = _ref.mergePropsFactories,
+      mergePropsFactories = _ref$mergePropsFactor === void 0 ? _mergeProps__WEBPACK_IMPORTED_MODULE_6__["default"] : _ref$mergePropsFactor,
+      _ref$selectorFactory = _ref.selectorFactory,
+      selectorFactory = _ref$selectorFactory === void 0 ? _selectorFactory__WEBPACK_IMPORTED_MODULE_7__["default"] : _ref$selectorFactory;
+
+  return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
+    if (_ref2 === void 0) {
+      _ref2 = {};
+    }
+
+    var _ref3 = _ref2,
+        _ref3$pure = _ref3.pure,
+        pure = _ref3$pure === void 0 ? true : _ref3$pure,
+        _ref3$areStatesEqual = _ref3.areStatesEqual,
+        areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual,
+        _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual,
+        areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__["default"] : _ref3$areOwnPropsEqua,
+        _ref3$areStatePropsEq = _ref3.areStatePropsEqual,
+        areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__["default"] : _ref3$areStatePropsEq,
+        _ref3$areMergedPropsE = _ref3.areMergedPropsEqual,
+        areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_3__["default"] : _ref3$areMergedPropsE,
+        extraOptions = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref3, ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"]);
+
+    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
+    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
+    var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
+    return connectHOC(selectorFactory, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      // used in error messages
+      methodName: 'connect',
+      // used to compute Connect's displayName from the wrapped component's displayName.
+      getDisplayName: function getDisplayName(name) {
+        return "Connect(" + name + ")";
+      },
+      // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
+      shouldHandleStateChanges: Boolean(mapStateToProps),
+      // passed through to selectorFactory
+      initMapStateToProps: initMapStateToProps,
+      initMapDispatchToProps: initMapDispatchToProps,
+      initMergeProps: initMergeProps,
+      pure: pure,
+      areStatesEqual: areStatesEqual,
+      areOwnPropsEqual: areOwnPropsEqual,
+      areStatePropsEqual: areStatePropsEqual,
+      areMergedPropsEqual: areMergedPropsEqual
+    }, extraOptions));
+  };
+}
+/* harmony default export */ __webpack_exports__["default"] = (/*#__PURE__*/createConnect());
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/mapDispatchToProps.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/mapDispatchToProps.js ***!
+  \*******************************************************************/
+/*! exports provided: whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenMapDispatchToPropsIsFunction", function() { return whenMapDispatchToPropsIsFunction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenMapDispatchToPropsIsMissing", function() { return whenMapDispatchToPropsIsMissing; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenMapDispatchToPropsIsObject", function() { return whenMapDispatchToPropsIsObject; });
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/es/connect/wrapMapToProps.js");
+
+
+function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
+  return typeof mapDispatchToProps === 'function' ? Object(_wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__["wrapMapToPropsFunc"])(mapDispatchToProps, 'mapDispatchToProps') : undefined;
+}
+function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
+  return !mapDispatchToProps ? Object(_wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__["wrapMapToPropsConstant"])(function (dispatch) {
+    return {
+      dispatch: dispatch
+    };
+  }) : undefined;
+}
+function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
+  return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? Object(_wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__["wrapMapToPropsConstant"])(function (dispatch) {
+    return Object(redux__WEBPACK_IMPORTED_MODULE_0__["bindActionCreators"])(mapDispatchToProps, dispatch);
+  }) : undefined;
+}
+/* harmony default export */ __webpack_exports__["default"] = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/mapStateToProps.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/mapStateToProps.js ***!
+  \****************************************************************/
+/*! exports provided: whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenMapStateToPropsIsFunction", function() { return whenMapStateToPropsIsFunction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenMapStateToPropsIsMissing", function() { return whenMapStateToPropsIsMissing; });
+/* harmony import */ var _wrapMapToProps__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/es/connect/wrapMapToProps.js");
+
+function whenMapStateToPropsIsFunction(mapStateToProps) {
+  return typeof mapStateToProps === 'function' ? Object(_wrapMapToProps__WEBPACK_IMPORTED_MODULE_0__["wrapMapToPropsFunc"])(mapStateToProps, 'mapStateToProps') : undefined;
+}
+function whenMapStateToPropsIsMissing(mapStateToProps) {
+  return !mapStateToProps ? Object(_wrapMapToProps__WEBPACK_IMPORTED_MODULE_0__["wrapMapToPropsConstant"])(function () {
+    return {};
+  }) : undefined;
+}
+/* harmony default export */ __webpack_exports__["default"] = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/mergeProps.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/mergeProps.js ***!
+  \***********************************************************/
+/*! exports provided: defaultMergeProps, wrapMergePropsFunc, whenMergePropsIsFunction, whenMergePropsIsOmitted, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defaultMergeProps", function() { return defaultMergeProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wrapMergePropsFunc", function() { return wrapMergePropsFunc; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenMergePropsIsFunction", function() { return whenMergePropsIsFunction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "whenMergePropsIsOmitted", function() { return whenMergePropsIsOmitted; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/verifyPlainObject */ "./node_modules/react-redux/es/utils/verifyPlainObject.js");
+
+
+function defaultMergeProps(stateProps, dispatchProps, ownProps) {
+  return Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, ownProps, {}, stateProps, {}, dispatchProps);
+}
+function wrapMergePropsFunc(mergeProps) {
+  return function initMergePropsProxy(dispatch, _ref) {
+    var displayName = _ref.displayName,
+        pure = _ref.pure,
+        areMergedPropsEqual = _ref.areMergedPropsEqual;
+    var hasRunOnce = false;
+    var mergedProps;
+    return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
+      var nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+
+      if (hasRunOnce) {
+        if (!pure || !areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
+      } else {
+        hasRunOnce = true;
+        mergedProps = nextMergedProps;
+        if (true) Object(_utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_1__["default"])(mergedProps, displayName, 'mergeProps');
+      }
+
+      return mergedProps;
+    };
+  };
+}
+function whenMergePropsIsFunction(mergeProps) {
+  return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
+}
+function whenMergePropsIsOmitted(mergeProps) {
+  return !mergeProps ? function () {
+    return defaultMergeProps;
+  } : undefined;
+}
+/* harmony default export */ __webpack_exports__["default"] = ([whenMergePropsIsFunction, whenMergePropsIsOmitted]);
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/selectorFactory.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/selectorFactory.js ***!
+  \****************************************************************/
+/*! exports provided: impureFinalPropsSelectorFactory, pureFinalPropsSelectorFactory, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "impureFinalPropsSelectorFactory", function() { return impureFinalPropsSelectorFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pureFinalPropsSelectorFactory", function() { return pureFinalPropsSelectorFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return finalPropsSelectorFactory; });
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _verifySubselectors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./verifySubselectors */ "./node_modules/react-redux/es/connect/verifySubselectors.js");
+
+
+function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
+  return function impureFinalPropsSelector(state, ownProps) {
+    return mergeProps(mapStateToProps(state, ownProps), mapDispatchToProps(dispatch, ownProps), ownProps);
+  };
+}
+function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, _ref) {
+  var areStatesEqual = _ref.areStatesEqual,
+      areOwnPropsEqual = _ref.areOwnPropsEqual,
+      areStatePropsEqual = _ref.areStatePropsEqual;
+  var hasRunAtLeastOnce = false;
+  var state;
+  var ownProps;
+  var stateProps;
+  var dispatchProps;
+  var mergedProps;
+
+  function handleFirstCall(firstState, firstOwnProps) {
+    state = firstState;
+    ownProps = firstOwnProps;
+    stateProps = mapStateToProps(state, ownProps);
+    dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    hasRunAtLeastOnce = true;
+    return mergedProps;
+  }
+
+  function handleNewPropsAndNewState() {
+    stateProps = mapStateToProps(state, ownProps);
+    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleNewProps() {
+    if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
+    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleNewState() {
+    var nextStateProps = mapStateToProps(state, ownProps);
+    var statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
+    stateProps = nextStateProps;
+    if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleSubsequentCalls(nextState, nextOwnProps) {
+    var propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
+    var stateChanged = !areStatesEqual(nextState, state);
+    state = nextState;
+    ownProps = nextOwnProps;
+    if (propsChanged && stateChanged) return handleNewPropsAndNewState();
+    if (propsChanged) return handleNewProps();
+    if (stateChanged) return handleNewState();
+    return mergedProps;
+  }
+
+  return function pureFinalPropsSelector(nextState, nextOwnProps) {
+    return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
+  };
+} // TODO: Add more comments
+// If pure is true, the selector returned by selectorFactory will memoize its results,
+// allowing connectAdvanced's shouldComponentUpdate to return false if final
+// props have not changed. If false, the selector will always return a new
+// object and shouldComponentUpdate will always return true.
+
+function finalPropsSelectorFactory(dispatch, _ref2) {
+  var initMapStateToProps = _ref2.initMapStateToProps,
+      initMapDispatchToProps = _ref2.initMapDispatchToProps,
+      initMergeProps = _ref2.initMergeProps,
+      options = Object(_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref2, ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"]);
+
+  var mapStateToProps = initMapStateToProps(dispatch, options);
+  var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
+  var mergeProps = initMergeProps(dispatch, options);
+
+  if (true) {
+    Object(_verifySubselectors__WEBPACK_IMPORTED_MODULE_1__["default"])(mapStateToProps, mapDispatchToProps, mergeProps, options.displayName);
+  }
+
+  var selectorFactory = options.pure ? pureFinalPropsSelectorFactory : impureFinalPropsSelectorFactory;
+  return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/verifySubselectors.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/verifySubselectors.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return verifySubselectors; });
+/* harmony import */ var _utils_warning__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/warning */ "./node_modules/react-redux/es/utils/warning.js");
+
+
+function verify(selector, methodName, displayName) {
+  if (!selector) {
+    throw new Error("Unexpected value for " + methodName + " in " + displayName + ".");
+  } else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
+    if (!Object.prototype.hasOwnProperty.call(selector, 'dependsOnOwnProps')) {
+      Object(_utils_warning__WEBPACK_IMPORTED_MODULE_0__["default"])("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
+    }
+  }
+}
+
+function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, displayName) {
+  verify(mapStateToProps, 'mapStateToProps', displayName);
+  verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
+  verify(mergeProps, 'mergeProps', displayName);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/connect/wrapMapToProps.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/react-redux/es/connect/wrapMapToProps.js ***!
+  \***************************************************************/
+/*! exports provided: wrapMapToPropsConstant, getDependsOnOwnProps, wrapMapToPropsFunc */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wrapMapToPropsConstant", function() { return wrapMapToPropsConstant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDependsOnOwnProps", function() { return getDependsOnOwnProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "wrapMapToPropsFunc", function() { return wrapMapToPropsFunc; });
+/* harmony import */ var _utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/verifyPlainObject */ "./node_modules/react-redux/es/utils/verifyPlainObject.js");
+
+function wrapMapToPropsConstant(getConstant) {
+  return function initConstantSelector(dispatch, options) {
+    var constant = getConstant(dispatch, options);
+
+    function constantSelector() {
+      return constant;
+    }
+
+    constantSelector.dependsOnOwnProps = false;
+    return constantSelector;
+  };
+} // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
+// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
+// whether mapToProps needs to be invoked when props have changed.
+//
+// A length of one signals that mapToProps does not depend on props from the parent component.
+// A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
+// therefore not reporting its length accurately..
+
+function getDependsOnOwnProps(mapToProps) {
+  return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
+} // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
+// this function wraps mapToProps in a proxy function which does several things:
+//
+//  * Detects whether the mapToProps function being called depends on props, which
+//    is used by selectorFactory to decide if it should reinvoke on props changes.
+//
+//  * On first call, handles mapToProps if returns another function, and treats that
+//    new function as the true mapToProps for subsequent calls.
+//
+//  * On first call, verifies the first result is a plain object, in order to warn
+//    the developer that their mapToProps function is not returning a valid result.
+//
+
+function wrapMapToPropsFunc(mapToProps, methodName) {
+  return function initProxySelector(dispatch, _ref) {
+    var displayName = _ref.displayName;
+
+    var proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+      return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch);
+    }; // allow detectFactoryAndVerify to get ownProps
+
+
+    proxy.dependsOnOwnProps = true;
+
+    proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
+      proxy.mapToProps = mapToProps;
+      proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
+      var props = proxy(stateOrDispatch, ownProps);
+
+      if (typeof props === 'function') {
+        proxy.mapToProps = props;
+        proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
+        props = proxy(stateOrDispatch, ownProps);
+      }
+
+      if (true) Object(_utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_0__["default"])(props, displayName, methodName);
+      return props;
+    };
+
+    return proxy;
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/hooks/useDispatch.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useDispatch.js ***!
+  \**********************************************************/
+/*! exports provided: createDispatchHook, useDispatch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDispatchHook", function() { return createDispatchHook; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useDispatch", function() { return useDispatch; });
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Context */ "./node_modules/react-redux/es/components/Context.js");
+/* harmony import */ var _useStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useStore */ "./node_modules/react-redux/es/hooks/useStore.js");
+
+
+/**
+ * Hook factory, which creates a `useDispatch` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useDispatch` hook bound to the specified context.
+ */
+
+function createDispatchHook(context) {
+  if (context === void 0) {
+    context = _components_Context__WEBPACK_IMPORTED_MODULE_0__["ReactReduxContext"];
+  }
+
+  var useStore = context === _components_Context__WEBPACK_IMPORTED_MODULE_0__["ReactReduxContext"] ? _useStore__WEBPACK_IMPORTED_MODULE_1__["useStore"] : Object(_useStore__WEBPACK_IMPORTED_MODULE_1__["createStoreHook"])(context);
+  return function useDispatch() {
+    var store = useStore();
+    return store.dispatch;
+  };
+}
+/**
+ * A hook to access the redux `dispatch` function.
+ *
+ * @returns {any|function} redux store's `dispatch` function
+ *
+ * @example
+ *
+ * import React, { useCallback } from 'react'
+ * import { useDispatch } from 'react-redux'
+ *
+ * export const CounterComponent = ({ value }) => {
+ *   const dispatch = useDispatch()
+ *   const increaseCounter = useCallback(() => dispatch({ type: 'increase-counter' }), [])
+ *   return (
+ *     <div>
+ *       <span>{value}</span>
+ *       <button onClick={increaseCounter}>Increase counter</button>
+ *     </div>
+ *   )
+ * }
+ */
+
+var useDispatch =
+/*#__PURE__*/
+createDispatchHook();
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/hooks/useReduxContext.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useReduxContext.js ***!
+  \**************************************************************/
+/*! exports provided: useReduxContext */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useReduxContext", function() { return useReduxContext; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Context */ "./node_modules/react-redux/es/components/Context.js");
+
+
+/**
+ * A hook to access the value of the `ReactReduxContext`. This is a low-level
+ * hook that you should usually not need to call directly.
+ *
+ * @returns {any} the value of the `ReactReduxContext`
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useReduxContext } from 'react-redux'
+ *
+ * export const CounterComponent = ({ value }) => {
+ *   const { store } = useReduxContext()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+
+function useReduxContext() {
+  var contextValue = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_components_Context__WEBPACK_IMPORTED_MODULE_1__["ReactReduxContext"]);
+
+  if ( true && !contextValue) {
+    throw new Error('could not find react-redux context value; please ensure the component is wrapped in a <Provider>');
+  }
+
+  return contextValue;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/hooks/useSelector.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useSelector.js ***!
+  \**********************************************************/
+/*! exports provided: createSelectorHook, useSelector */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSelectorHook", function() { return createSelectorHook; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useSelector", function() { return useSelector; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _useReduxContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./useReduxContext */ "./node_modules/react-redux/es/hooks/useReduxContext.js");
+/* harmony import */ var _utils_Subscription__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
+/* harmony import */ var _utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/useIsomorphicLayoutEffect */ "./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js");
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Context */ "./node_modules/react-redux/es/components/Context.js");
+
+
+
+
+
+
+var refEquality = function refEquality(a, b) {
+  return a === b;
+};
+
+function useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub) {
+  var _useReducer = Object(react__WEBPACK_IMPORTED_MODULE_0__["useReducer"])(function (s) {
+    return s + 1;
+  }, 0),
+      forceRender = _useReducer[1];
+
+  var subscription = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(function () {
+    return new _utils_Subscription__WEBPACK_IMPORTED_MODULE_2__["default"](store, contextSub);
+  }, [store, contextSub]);
+  var latestSubscriptionCallbackError = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  var latestSelector = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  var latestSelectedState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])();
+  var selectedState;
+
+  try {
+    if (selector !== latestSelector.current || latestSubscriptionCallbackError.current) {
+      selectedState = selector(store.getState());
+    } else {
+      selectedState = latestSelectedState.current;
+    }
+  } catch (err) {
+    if (latestSubscriptionCallbackError.current) {
+      err.message += "\nThe error may be correlated with this previous error:\n" + latestSubscriptionCallbackError.current.stack + "\n\n";
+    }
+
+    throw err;
+  }
+
+  Object(_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__["useIsomorphicLayoutEffect"])(function () {
+    latestSelector.current = selector;
+    latestSelectedState.current = selectedState;
+    latestSubscriptionCallbackError.current = undefined;
+  });
+  Object(_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__["useIsomorphicLayoutEffect"])(function () {
+    function checkForUpdates() {
+      try {
+        var newSelectedState = latestSelector.current(store.getState());
+
+        if (equalityFn(newSelectedState, latestSelectedState.current)) {
+          return;
+        }
+
+        latestSelectedState.current = newSelectedState;
+      } catch (err) {
+        // we ignore all errors here, since when the component
+        // is re-rendered, the selectors are called again, and
+        // will throw again, if neither props nor store state
+        // changed
+        latestSubscriptionCallbackError.current = err;
+      }
+
+      forceRender({});
+    }
+
+    subscription.onStateChange = checkForUpdates;
+    subscription.trySubscribe();
+    checkForUpdates();
+    return function () {
+      return subscription.tryUnsubscribe();
+    };
+  }, [store, subscription]);
+  return selectedState;
+}
+/**
+ * Hook factory, which creates a `useSelector` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useSelector` hook bound to the specified context.
+ */
+
+
+function createSelectorHook(context) {
+  if (context === void 0) {
+    context = _components_Context__WEBPACK_IMPORTED_MODULE_4__["ReactReduxContext"];
+  }
+
+  var useReduxContext = context === _components_Context__WEBPACK_IMPORTED_MODULE_4__["ReactReduxContext"] ? _useReduxContext__WEBPACK_IMPORTED_MODULE_1__["useReduxContext"] : function () {
+    return Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(context);
+  };
+  return function useSelector(selector, equalityFn) {
+    if (equalityFn === void 0) {
+      equalityFn = refEquality;
+    }
+
+    if ( true && !selector) {
+      throw new Error("You must pass a selector to useSelectors");
+    }
+
+    var _useReduxContext = useReduxContext(),
+        store = _useReduxContext.store,
+        contextSub = _useReduxContext.subscription;
+
+    return useSelectorWithStoreAndSubscription(selector, equalityFn, store, contextSub);
+  };
+}
+/**
+ * A hook to access the redux store's state. This hook takes a selector function
+ * as an argument. The selector is called with the store state.
+ *
+ * This hook takes an optional equality comparison function as the second parameter
+ * that allows you to customize the way the selected state is compared to determine
+ * whether the component needs to be re-rendered.
+ *
+ * @param {Function} selector the selector function
+ * @param {Function=} equalityFn the function that will be used to determine equality
+ *
+ * @returns {any} the selected state
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useSelector } from 'react-redux'
+ *
+ * export const CounterComponent = () => {
+ *   const counter = useSelector(state => state.counter)
+ *   return <div>{counter}</div>
+ * }
+ */
+
+var useSelector =
+/*#__PURE__*/
+createSelectorHook();
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/hooks/useStore.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/react-redux/es/hooks/useStore.js ***!
+  \*******************************************************/
+/*! exports provided: createStoreHook, useStore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStoreHook", function() { return createStoreHook; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useStore", function() { return useStore; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Context */ "./node_modules/react-redux/es/components/Context.js");
+/* harmony import */ var _useReduxContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./useReduxContext */ "./node_modules/react-redux/es/hooks/useReduxContext.js");
+
+
+
+/**
+ * Hook factory, which creates a `useStore` hook bound to a given context.
+ *
+ * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.
+ * @returns {Function} A `useStore` hook bound to the specified context.
+ */
+
+function createStoreHook(context) {
+  if (context === void 0) {
+    context = _components_Context__WEBPACK_IMPORTED_MODULE_1__["ReactReduxContext"];
+  }
+
+  var useReduxContext = context === _components_Context__WEBPACK_IMPORTED_MODULE_1__["ReactReduxContext"] ? _useReduxContext__WEBPACK_IMPORTED_MODULE_2__["useReduxContext"] : function () {
+    return Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(context);
+  };
+  return function useStore() {
+    var _useReduxContext = useReduxContext(),
+        store = _useReduxContext.store;
+
+    return store;
+  };
+}
+/**
+ * A hook to access the redux store.
+ *
+ * @returns {any} the redux store
+ *
+ * @example
+ *
+ * import React from 'react'
+ * import { useStore } from 'react-redux'
+ *
+ * export const ExampleComponent = () => {
+ *   const store = useStore()
+ *   return <div>{store.getState()}</div>
+ * }
+ */
+
+var useStore =
+/*#__PURE__*/
+createStoreHook();
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/react-redux/es/index.js ***!
+  \**********************************************/
+/*! exports provided: Provider, connectAdvanced, ReactReduxContext, connect, batch, useDispatch, createDispatchHook, useSelector, createSelectorHook, useStore, createStoreHook, shallowEqual */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_Provider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Provider */ "./node_modules/react-redux/es/components/Provider.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return _components_Provider__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+/* harmony import */ var _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/connectAdvanced */ "./node_modules/react-redux/es/components/connectAdvanced.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_1__["default"]; });
+
+/* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Context */ "./node_modules/react-redux/es/components/Context.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ReactReduxContext", function() { return _components_Context__WEBPACK_IMPORTED_MODULE_2__["ReactReduxContext"]; });
+
+/* harmony import */ var _connect_connect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./connect/connect */ "./node_modules/react-redux/es/connect/connect.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return _connect_connect__WEBPACK_IMPORTED_MODULE_3__["default"]; });
+
+/* harmony import */ var _hooks_useDispatch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hooks/useDispatch */ "./node_modules/react-redux/es/hooks/useDispatch.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useDispatch", function() { return _hooks_useDispatch__WEBPACK_IMPORTED_MODULE_4__["useDispatch"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createDispatchHook", function() { return _hooks_useDispatch__WEBPACK_IMPORTED_MODULE_4__["createDispatchHook"]; });
+
+/* harmony import */ var _hooks_useSelector__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./hooks/useSelector */ "./node_modules/react-redux/es/hooks/useSelector.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useSelector", function() { return _hooks_useSelector__WEBPACK_IMPORTED_MODULE_5__["useSelector"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createSelectorHook", function() { return _hooks_useSelector__WEBPACK_IMPORTED_MODULE_5__["createSelectorHook"]; });
+
+/* harmony import */ var _hooks_useStore__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./hooks/useStore */ "./node_modules/react-redux/es/hooks/useStore.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "useStore", function() { return _hooks_useStore__WEBPACK_IMPORTED_MODULE_6__["useStore"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "createStoreHook", function() { return _hooks_useStore__WEBPACK_IMPORTED_MODULE_6__["createStoreHook"]; });
+
+/* harmony import */ var _utils_batch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utils/batch */ "./node_modules/react-redux/es/utils/batch.js");
+/* harmony import */ var _utils_reactBatchedUpdates__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./utils/reactBatchedUpdates */ "./node_modules/react-redux/es/utils/reactBatchedUpdates.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "batch", function() { return _utils_reactBatchedUpdates__WEBPACK_IMPORTED_MODULE_8__["unstable_batchedUpdates"]; });
+
+/* harmony import */ var _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./utils/shallowEqual */ "./node_modules/react-redux/es/utils/shallowEqual.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "shallowEqual", function() { return _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_9__["default"]; });
+
+
+
+
+
+
+
+
+
+
+
+Object(_utils_batch__WEBPACK_IMPORTED_MODULE_7__["setBatch"])(_utils_reactBatchedUpdates__WEBPACK_IMPORTED_MODULE_8__["unstable_batchedUpdates"]);
+
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/Subscription.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/Subscription.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Subscription; });
+/* harmony import */ var _batch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./batch */ "./node_modules/react-redux/es/utils/batch.js");
+ // encapsulates the subscription logic for connecting a component to the redux store, as
+// well as nesting subscriptions of descendant components, so that we can ensure the
+// ancestor components re-render before descendants
+
+var nullListeners = {
+  notify: function notify() {}
+};
+
+function createListenerCollection() {
+  var batch = Object(_batch__WEBPACK_IMPORTED_MODULE_0__["getBatch"])();
+  var first = null;
+  var last = null;
+  return {
+    clear: function clear() {
+      first = null;
+      last = null;
+    },
+    notify: function notify() {
+      batch(function () {
+        var listener = first;
+
+        while (listener) {
+          listener.callback();
+          listener = listener.next;
+        }
+      });
+    },
+    get: function get() {
+      var listeners = [];
+      var listener = first;
+
+      while (listener) {
+        listeners.push(listener);
+        listener = listener.next;
+      }
+
+      return listeners;
+    },
+    subscribe: function subscribe(callback) {
+      var isSubscribed = true;
+      var listener = last = {
+        callback: callback,
+        next: null,
+        prev: last
+      };
+
+      if (listener.prev) {
+        listener.prev.next = listener;
+      } else {
+        first = listener;
+      }
+
+      return function unsubscribe() {
+        if (!isSubscribed || first === null) return;
+        isSubscribed = false;
+
+        if (listener.next) {
+          listener.next.prev = listener.prev;
+        } else {
+          last = listener.prev;
+        }
+
+        if (listener.prev) {
+          listener.prev.next = listener.next;
+        } else {
+          first = listener.next;
+        }
+      };
+    }
+  };
+}
+
+var Subscription =
+/*#__PURE__*/
+function () {
+  function Subscription(store, parentSub) {
+    this.store = store;
+    this.parentSub = parentSub;
+    this.unsubscribe = null;
+    this.listeners = nullListeners;
+    this.handleChangeWrapper = this.handleChangeWrapper.bind(this);
+  }
+
+  var _proto = Subscription.prototype;
+
+  _proto.addNestedSub = function addNestedSub(listener) {
+    this.trySubscribe();
+    return this.listeners.subscribe(listener);
+  };
+
+  _proto.notifyNestedSubs = function notifyNestedSubs() {
+    this.listeners.notify();
+  };
+
+  _proto.handleChangeWrapper = function handleChangeWrapper() {
+    if (this.onStateChange) {
+      this.onStateChange();
+    }
+  };
+
+  _proto.isSubscribed = function isSubscribed() {
+    return Boolean(this.unsubscribe);
+  };
+
+  _proto.trySubscribe = function trySubscribe() {
+    if (!this.unsubscribe) {
+      this.unsubscribe = this.parentSub ? this.parentSub.addNestedSub(this.handleChangeWrapper) : this.store.subscribe(this.handleChangeWrapper);
+      this.listeners = createListenerCollection();
+    }
+  };
+
+  _proto.tryUnsubscribe = function tryUnsubscribe() {
+    if (this.unsubscribe) {
+      this.unsubscribe();
+      this.unsubscribe = null;
+      this.listeners.clear();
+      this.listeners = nullListeners;
+    }
+  };
+
+  return Subscription;
+}();
+
+
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/batch.js":
+/*!****************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/batch.js ***!
+  \****************************************************/
+/*! exports provided: setBatch, getBatch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setBatch", function() { return setBatch; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBatch", function() { return getBatch; });
+// Default to a dummy "batch" implementation that just runs the callback
+function defaultNoopBatch(callback) {
+  callback();
+}
+
+var batch = defaultNoopBatch; // Allow injecting another batching function later
+
+var setBatch = function setBatch(newBatch) {
+  return batch = newBatch;
+}; // Supply a getter just to skip dealing with ESM bindings
+
+var getBatch = function getBatch() {
+  return batch;
+};
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/isPlainObject.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/isPlainObject.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return isPlainObject; });
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false;
+  var proto = Object.getPrototypeOf(obj);
+  if (proto === null) return true;
+  var baseProto = proto;
+
+  while (Object.getPrototypeOf(baseProto) !== null) {
+    baseProto = Object.getPrototypeOf(baseProto);
+  }
+
+  return proto === baseProto;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/reactBatchedUpdates.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/reactBatchedUpdates.js ***!
+  \******************************************************************/
+/*! exports provided: unstable_batchedUpdates */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "unstable_batchedUpdates", function() { return react_dom__WEBPACK_IMPORTED_MODULE_0__["unstable_batchedUpdates"]; });
+
+/* eslint-disable import/no-unresolved */
+
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/shallowEqual.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/shallowEqual.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return shallowEqual; });
+function is(x, y) {
+  if (x === y) {
+    return x !== 0 || y !== 0 || 1 / x === 1 / y;
+  } else {
+    return x !== x && y !== y;
+  }
+}
+
+function shallowEqual(objA, objB) {
+  if (is(objA, objB)) return true;
+
+  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+  if (keysA.length !== keysB.length) return false;
+
+  for (var i = 0; i < keysA.length; i++) {
+    if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js ***!
+  \************************************************************************/
+/*! exports provided: useIsomorphicLayoutEffect */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useIsomorphicLayoutEffect", function() { return useIsomorphicLayoutEffect; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+ // React currently throws a warning when using useLayoutEffect on the server.
+// To get around it, we can conditionally useEffect on the server (no-op) and
+// useLayoutEffect in the browser. We need useLayoutEffect to ensure the store
+// subscription callback always has the selector from the latest render commit
+// available, otherwise a store update may happen between render and the effect,
+// which may cause missed updates; we also must ensure the store subscription
+// is created synchronously, otherwise a store update may occur before the
+// subscription is created and an inconsistent state may be observed
+
+var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? react__WEBPACK_IMPORTED_MODULE_0__["useLayoutEffect"] : react__WEBPACK_IMPORTED_MODULE_0__["useEffect"];
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/verifyPlainObject.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/verifyPlainObject.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return verifyPlainObject; });
+/* harmony import */ var _isPlainObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./isPlainObject */ "./node_modules/react-redux/es/utils/isPlainObject.js");
+/* harmony import */ var _warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./warning */ "./node_modules/react-redux/es/utils/warning.js");
+
+
+function verifyPlainObject(value, displayName, methodName) {
+  if (!Object(_isPlainObject__WEBPACK_IMPORTED_MODULE_0__["default"])(value)) {
+    Object(_warning__WEBPACK_IMPORTED_MODULE_1__["default"])(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/es/utils/warning.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-redux/es/utils/warning.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return warning; });
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+
+
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+    /* eslint-disable no-empty */
+  } catch (e) {}
+  /* eslint-enable no-empty */
+
+}
+
+/***/ }),
+
 /***/ "./node_modules/react-router-dom/esm/react-router-dom.js":
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
@@ -68213,6 +70000,1461 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/redux-thunk/es/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/redux-thunk/es/index.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function createThunkMiddleware(extraArgument) {
+  return function (_ref) {
+    var dispatch = _ref.dispatch,
+        getState = _ref.getState;
+    return function (next) {
+      return function (action) {
+        if (typeof action === 'function') {
+          return action(dispatch, getState, extraArgument);
+        }
+
+        return next(action);
+      };
+    };
+  };
+}
+
+var thunk = createThunkMiddleware();
+thunk.withExtraArgument = createThunkMiddleware;
+
+/* harmony default export */ __webpack_exports__["default"] = (thunk);
+
+/***/ }),
+
+/***/ "./node_modules/redux/es/redux.js":
+/*!****************************************!*\
+  !*** ./node_modules/redux/es/redux.js ***!
+  \****************************************/
+/*! exports provided: __DO_NOT_USE__ActionTypes, applyMiddleware, bindActionCreators, combineReducers, compose, createStore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__DO_NOT_USE__ActionTypes", function() { return ActionTypes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return applyMiddleware; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bindActionCreators", function() { return bindActionCreators; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "combineReducers", function() { return combineReducers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return compose; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStore", function() { return createStore; });
+/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! symbol-observable */ "./node_modules/symbol-observable/es/index.js");
+
+
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */
+var randomString = function randomString() {
+  return Math.random().toString(36).substring(7).split('').join('.');
+};
+
+var ActionTypes = {
+  INIT: "@@redux/INIT" + randomString(),
+  REPLACE: "@@redux/REPLACE" + randomString(),
+  PROBE_UNKNOWN_ACTION: function PROBE_UNKNOWN_ACTION() {
+    return "@@redux/PROBE_UNKNOWN_ACTION" + randomString();
+  }
+};
+
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false;
+  var proto = obj;
+
+  while (Object.getPrototypeOf(proto) !== null) {
+    proto = Object.getPrototypeOf(proto);
+  }
+
+  return Object.getPrototypeOf(obj) === proto;
+}
+
+/**
+ * Creates a Redux store that holds the state tree.
+ * The only way to change the data in the store is to call `dispatch()` on it.
+ *
+ * There should only be a single store in your app. To specify how different
+ * parts of the state tree respond to actions, you may combine several reducers
+ * into a single reducer function by using `combineReducers`.
+ *
+ * @param {Function} reducer A function that returns the next state tree, given
+ * the current state tree and the action to handle.
+ *
+ * @param {any} [preloadedState] The initial state. You may optionally specify it
+ * to hydrate the state from the server in universal apps, or to restore a
+ * previously serialized user session.
+ * If you use `combineReducers` to produce the root reducer function, this must be
+ * an object with the same shape as `combineReducers` keys.
+ *
+ * @param {Function} [enhancer] The store enhancer. You may optionally specify it
+ * to enhance the store with third-party capabilities such as middleware,
+ * time travel, persistence, etc. The only store enhancer that ships with Redux
+ * is `applyMiddleware()`.
+ *
+ * @returns {Store} A Redux store that lets you read the state, dispatch actions
+ * and subscribe to changes.
+ */
+
+function createStore(reducer, preloadedState, enhancer) {
+  var _ref2;
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') {
+    throw new Error('It looks like you are passing several store enhancers to ' + 'createStore(). This is not supported. Instead, compose them ' + 'together to a single function.');
+  }
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
+    enhancer = preloadedState;
+    preloadedState = undefined;
+  }
+
+  if (typeof enhancer !== 'undefined') {
+    if (typeof enhancer !== 'function') {
+      throw new Error('Expected the enhancer to be a function.');
+    }
+
+    return enhancer(createStore)(reducer, preloadedState);
+  }
+
+  if (typeof reducer !== 'function') {
+    throw new Error('Expected the reducer to be a function.');
+  }
+
+  var currentReducer = reducer;
+  var currentState = preloadedState;
+  var currentListeners = [];
+  var nextListeners = currentListeners;
+  var isDispatching = false;
+  /**
+   * This makes a shallow copy of currentListeners so we can use
+   * nextListeners as a temporary list while dispatching.
+   *
+   * This prevents any bugs around consumers calling
+   * subscribe/unsubscribe in the middle of a dispatch.
+   */
+
+  function ensureCanMutateNextListeners() {
+    if (nextListeners === currentListeners) {
+      nextListeners = currentListeners.slice();
+    }
+  }
+  /**
+   * Reads the state tree managed by the store.
+   *
+   * @returns {any} The current state tree of your application.
+   */
+
+
+  function getState() {
+    if (isDispatching) {
+      throw new Error('You may not call store.getState() while the reducer is executing. ' + 'The reducer has already received the state as an argument. ' + 'Pass it down from the top reducer instead of reading it from the store.');
+    }
+
+    return currentState;
+  }
+  /**
+   * Adds a change listener. It will be called any time an action is dispatched,
+   * and some part of the state tree may potentially have changed. You may then
+   * call `getState()` to read the current state tree inside the callback.
+   *
+   * You may call `dispatch()` from a change listener, with the following
+   * caveats:
+   *
+   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
+   * If you subscribe or unsubscribe while the listeners are being invoked, this
+   * will not have any effect on the `dispatch()` that is currently in progress.
+   * However, the next `dispatch()` call, whether nested or not, will use a more
+   * recent snapshot of the subscription list.
+   *
+   * 2. The listener should not expect to see all state changes, as the state
+   * might have been updated multiple times during a nested `dispatch()` before
+   * the listener is called. It is, however, guaranteed that all subscribers
+   * registered before the `dispatch()` started will be called with the latest
+   * state by the time it exits.
+   *
+   * @param {Function} listener A callback to be invoked on every dispatch.
+   * @returns {Function} A function to remove this change listener.
+   */
+
+
+  function subscribe(listener) {
+    if (typeof listener !== 'function') {
+      throw new Error('Expected the listener to be a function.');
+    }
+
+    if (isDispatching) {
+      throw new Error('You may not call store.subscribe() while the reducer is executing. ' + 'If you would like to be notified after the store has been updated, subscribe from a ' + 'component and invoke store.getState() in the callback to access the latest state. ' + 'See https://redux.js.org/api-reference/store#subscribelistener for more details.');
+    }
+
+    var isSubscribed = true;
+    ensureCanMutateNextListeners();
+    nextListeners.push(listener);
+    return function unsubscribe() {
+      if (!isSubscribed) {
+        return;
+      }
+
+      if (isDispatching) {
+        throw new Error('You may not unsubscribe from a store listener while the reducer is executing. ' + 'See https://redux.js.org/api-reference/store#subscribelistener for more details.');
+      }
+
+      isSubscribed = false;
+      ensureCanMutateNextListeners();
+      var index = nextListeners.indexOf(listener);
+      nextListeners.splice(index, 1);
+      currentListeners = null;
+    };
+  }
+  /**
+   * Dispatches an action. It is the only way to trigger a state change.
+   *
+   * The `reducer` function, used to create the store, will be called with the
+   * current state tree and the given `action`. Its return value will
+   * be considered the **next** state of the tree, and the change listeners
+   * will be notified.
+   *
+   * The base implementation only supports plain object actions. If you want to
+   * dispatch a Promise, an Observable, a thunk, or something else, you need to
+   * wrap your store creating function into the corresponding middleware. For
+   * example, see the documentation for the `redux-thunk` package. Even the
+   * middleware will eventually dispatch plain object actions using this method.
+   *
+   * @param {Object} action A plain object representing “what changed”. It is
+   * a good idea to keep actions serializable so you can record and replay user
+   * sessions, or use the time travelling `redux-devtools`. An action must have
+   * a `type` property which may not be `undefined`. It is a good idea to use
+   * string constants for action types.
+   *
+   * @returns {Object} For convenience, the same action object you dispatched.
+   *
+   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
+   * return something else (for example, a Promise you can await).
+   */
+
+
+  function dispatch(action) {
+    if (!isPlainObject(action)) {
+      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');
+    }
+
+    if (typeof action.type === 'undefined') {
+      throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
+    }
+
+    if (isDispatching) {
+      throw new Error('Reducers may not dispatch actions.');
+    }
+
+    try {
+      isDispatching = true;
+      currentState = currentReducer(currentState, action);
+    } finally {
+      isDispatching = false;
+    }
+
+    var listeners = currentListeners = nextListeners;
+
+    for (var i = 0; i < listeners.length; i++) {
+      var listener = listeners[i];
+      listener();
+    }
+
+    return action;
+  }
+  /**
+   * Replaces the reducer currently used by the store to calculate the state.
+   *
+   * You might need this if your app implements code splitting and you want to
+   * load some of the reducers dynamically. You might also need this if you
+   * implement a hot reloading mechanism for Redux.
+   *
+   * @param {Function} nextReducer The reducer for the store to use instead.
+   * @returns {void}
+   */
+
+
+  function replaceReducer(nextReducer) {
+    if (typeof nextReducer !== 'function') {
+      throw new Error('Expected the nextReducer to be a function.');
+    }
+
+    currentReducer = nextReducer; // This action has a similiar effect to ActionTypes.INIT.
+    // Any reducers that existed in both the new and old rootReducer
+    // will receive the previous state. This effectively populates
+    // the new state tree with any relevant data from the old one.
+
+    dispatch({
+      type: ActionTypes.REPLACE
+    });
+  }
+  /**
+   * Interoperability point for observable/reactive libraries.
+   * @returns {observable} A minimal observable of state changes.
+   * For more information, see the observable proposal:
+   * https://github.com/tc39/proposal-observable
+   */
+
+
+  function observable() {
+    var _ref;
+
+    var outerSubscribe = subscribe;
+    return _ref = {
+      /**
+       * The minimal observable subscription method.
+       * @param {Object} observer Any object that can be used as an observer.
+       * The observer object should have a `next` method.
+       * @returns {subscription} An object with an `unsubscribe` method that can
+       * be used to unsubscribe the observable from the store, and prevent further
+       * emission of values from the observable.
+       */
+      subscribe: function subscribe(observer) {
+        if (typeof observer !== 'object' || observer === null) {
+          throw new TypeError('Expected the observer to be an object.');
+        }
+
+        function observeState() {
+          if (observer.next) {
+            observer.next(getState());
+          }
+        }
+
+        observeState();
+        var unsubscribe = outerSubscribe(observeState);
+        return {
+          unsubscribe: unsubscribe
+        };
+      }
+    }, _ref[symbol_observable__WEBPACK_IMPORTED_MODULE_0__["default"]] = function () {
+      return this;
+    }, _ref;
+  } // When a store is created, an "INIT" action is dispatched so that every
+  // reducer returns their initial state. This effectively populates
+  // the initial state tree.
+
+
+  dispatch({
+    type: ActionTypes.INIT
+  });
+  return _ref2 = {
+    dispatch: dispatch,
+    subscribe: subscribe,
+    getState: getState,
+    replaceReducer: replaceReducer
+  }, _ref2[symbol_observable__WEBPACK_IMPORTED_MODULE_0__["default"]] = observable, _ref2;
+}
+
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+
+
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+  } catch (e) {} // eslint-disable-line no-empty
+
+}
+
+function getUndefinedStateErrorMessage(key, action) {
+  var actionType = action && action.type;
+  var actionDescription = actionType && "action \"" + String(actionType) + "\"" || 'an action';
+  return "Given " + actionDescription + ", reducer \"" + key + "\" returned undefined. " + "To ignore an action, you must explicitly return the previous state. " + "If you want this reducer to hold no value, you can return null instead of undefined.";
+}
+
+function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
+  var reducerKeys = Object.keys(reducers);
+  var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+
+  if (reducerKeys.length === 0) {
+    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
+  }
+
+  if (!isPlainObject(inputState)) {
+    return "The " + argumentName + " has unexpected type of \"" + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + "\". Expected argument to be an object with the following " + ("keys: \"" + reducerKeys.join('", "') + "\"");
+  }
+
+  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
+  });
+  unexpectedKeys.forEach(function (key) {
+    unexpectedKeyCache[key] = true;
+  });
+  if (action && action.type === ActionTypes.REPLACE) return;
+
+  if (unexpectedKeys.length > 0) {
+    return "Unexpected " + (unexpectedKeys.length > 1 ? 'keys' : 'key') + " " + ("\"" + unexpectedKeys.join('", "') + "\" found in " + argumentName + ". ") + "Expected to find one of the known reducer keys instead: " + ("\"" + reducerKeys.join('", "') + "\". Unexpected keys will be ignored.");
+  }
+}
+
+function assertReducerShape(reducers) {
+  Object.keys(reducers).forEach(function (key) {
+    var reducer = reducers[key];
+    var initialState = reducer(undefined, {
+      type: ActionTypes.INIT
+    });
+
+    if (typeof initialState === 'undefined') {
+      throw new Error("Reducer \"" + key + "\" returned undefined during initialization. " + "If the state passed to the reducer is undefined, you must " + "explicitly return the initial state. The initial state may " + "not be undefined. If you don't want to set a value for this reducer, " + "you can use null instead of undefined.");
+    }
+
+    if (typeof reducer(undefined, {
+      type: ActionTypes.PROBE_UNKNOWN_ACTION()
+    }) === 'undefined') {
+      throw new Error("Reducer \"" + key + "\" returned undefined when probed with a random type. " + ("Don't try to handle " + ActionTypes.INIT + " or other actions in \"redux/*\" ") + "namespace. They are considered private. Instead, you must return the " + "current state for any unknown actions, unless it is undefined, " + "in which case you must return the initial state, regardless of the " + "action type. The initial state may not be undefined, but can be null.");
+    }
+  });
+}
+/**
+ * Turns an object whose values are different reducer functions, into a single
+ * reducer function. It will call every child reducer, and gather their results
+ * into a single state object, whose keys correspond to the keys of the passed
+ * reducer functions.
+ *
+ * @param {Object} reducers An object whose values correspond to different
+ * reducer functions that need to be combined into one. One handy way to obtain
+ * it is to use ES6 `import * as reducers` syntax. The reducers may never return
+ * undefined for any action. Instead, they should return their initial state
+ * if the state passed to them was undefined, and the current state for any
+ * unrecognized action.
+ *
+ * @returns {Function} A reducer function that invokes every reducer inside the
+ * passed object, and builds a state object with the same shape.
+ */
+
+
+function combineReducers(reducers) {
+  var reducerKeys = Object.keys(reducers);
+  var finalReducers = {};
+
+  for (var i = 0; i < reducerKeys.length; i++) {
+    var key = reducerKeys[i];
+
+    if (true) {
+      if (typeof reducers[key] === 'undefined') {
+        warning("No reducer provided for key \"" + key + "\"");
+      }
+    }
+
+    if (typeof reducers[key] === 'function') {
+      finalReducers[key] = reducers[key];
+    }
+  }
+
+  var finalReducerKeys = Object.keys(finalReducers); // This is used to make sure we don't warn about the same
+  // keys multiple times.
+
+  var unexpectedKeyCache;
+
+  if (true) {
+    unexpectedKeyCache = {};
+  }
+
+  var shapeAssertionError;
+
+  try {
+    assertReducerShape(finalReducers);
+  } catch (e) {
+    shapeAssertionError = e;
+  }
+
+  return function combination(state, action) {
+    if (state === void 0) {
+      state = {};
+    }
+
+    if (shapeAssertionError) {
+      throw shapeAssertionError;
+    }
+
+    if (true) {
+      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+
+      if (warningMessage) {
+        warning(warningMessage);
+      }
+    }
+
+    var hasChanged = false;
+    var nextState = {};
+
+    for (var _i = 0; _i < finalReducerKeys.length; _i++) {
+      var _key = finalReducerKeys[_i];
+      var reducer = finalReducers[_key];
+      var previousStateForKey = state[_key];
+      var nextStateForKey = reducer(previousStateForKey, action);
+
+      if (typeof nextStateForKey === 'undefined') {
+        var errorMessage = getUndefinedStateErrorMessage(_key, action);
+        throw new Error(errorMessage);
+      }
+
+      nextState[_key] = nextStateForKey;
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
+    }
+
+    hasChanged = hasChanged || finalReducerKeys.length !== Object.keys(state).length;
+    return hasChanged ? nextState : state;
+  };
+}
+
+function bindActionCreator(actionCreator, dispatch) {
+  return function () {
+    return dispatch(actionCreator.apply(this, arguments));
+  };
+}
+/**
+ * Turns an object whose values are action creators, into an object with the
+ * same keys, but with every function wrapped into a `dispatch` call so they
+ * may be invoked directly. This is just a convenience method, as you can call
+ * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
+ *
+ * For convenience, you can also pass an action creator as the first argument,
+ * and get a dispatch wrapped function in return.
+ *
+ * @param {Function|Object} actionCreators An object whose values are action
+ * creator functions. One handy way to obtain it is to use ES6 `import * as`
+ * syntax. You may also pass a single function.
+ *
+ * @param {Function} dispatch The `dispatch` function available on your Redux
+ * store.
+ *
+ * @returns {Function|Object} The object mimicking the original object, but with
+ * every action creator wrapped into the `dispatch` call. If you passed a
+ * function as `actionCreators`, the return value will also be a single
+ * function.
+ */
+
+
+function bindActionCreators(actionCreators, dispatch) {
+  if (typeof actionCreators === 'function') {
+    return bindActionCreator(actionCreators, dispatch);
+  }
+
+  if (typeof actionCreators !== 'object' || actionCreators === null) {
+    throw new Error("bindActionCreators expected an object or a function, instead received " + (actionCreators === null ? 'null' : typeof actionCreators) + ". " + "Did you write \"import ActionCreators from\" instead of \"import * as ActionCreators from\"?");
+  }
+
+  var boundActionCreators = {};
+
+  for (var key in actionCreators) {
+    var actionCreator = actionCreators[key];
+
+    if (typeof actionCreator === 'function') {
+      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
+    }
+  }
+
+  return boundActionCreators;
+}
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    keys.push.apply(keys, Object.getOwnPropertySymbols(object));
+  }
+
+  if (enumerableOnly) keys = keys.filter(function (sym) {
+    return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+  });
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(source, true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(source).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
+}
+
+/**
+ * Composes single-argument functions from right to left. The rightmost
+ * function can take multiple arguments as it provides the signature for
+ * the resulting composite function.
+ *
+ * @param {...Function} funcs The functions to compose.
+ * @returns {Function} A function obtained by composing the argument functions
+ * from right to left. For example, compose(f, g, h) is identical to doing
+ * (...args) => f(g(h(...args))).
+ */
+function compose() {
+  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
+  }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
+    };
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0];
+  }
+
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(void 0, arguments));
+    };
+  });
+}
+
+/**
+ * Creates a store enhancer that applies middleware to the dispatch method
+ * of the Redux store. This is handy for a variety of tasks, such as expressing
+ * asynchronous actions in a concise manner, or logging every action payload.
+ *
+ * See `redux-thunk` package as an example of the Redux middleware.
+ *
+ * Because middleware is potentially asynchronous, this should be the first
+ * store enhancer in the composition chain.
+ *
+ * Note that each middleware will be given the `dispatch` and `getState` functions
+ * as named arguments.
+ *
+ * @param {...Function} middlewares The middleware chain to be applied.
+ * @returns {Function} A store enhancer applying the middleware.
+ */
+
+function applyMiddleware() {
+  for (var _len = arguments.length, middlewares = new Array(_len), _key = 0; _key < _len; _key++) {
+    middlewares[_key] = arguments[_key];
+  }
+
+  return function (createStore) {
+    return function () {
+      var store = createStore.apply(void 0, arguments);
+
+      var _dispatch = function dispatch() {
+        throw new Error('Dispatching while constructing your middleware is not allowed. ' + 'Other middleware would not be applied to this dispatch.');
+      };
+
+      var middlewareAPI = {
+        getState: store.getState,
+        dispatch: function dispatch() {
+          return _dispatch.apply(void 0, arguments);
+        }
+      };
+      var chain = middlewares.map(function (middleware) {
+        return middleware(middlewareAPI);
+      });
+      _dispatch = compose.apply(void 0, chain)(store.dispatch);
+      return _objectSpread2({}, store, {
+        dispatch: _dispatch
+      });
+    };
+  };
+}
+
+/*
+ * This is a dummy function to check if the function name has been altered by minification.
+ * If the function has been minified and NODE_ENV !== 'production', warn the user.
+ */
+
+function isCrushed() {}
+
+if ( true && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+  warning('You are currently using minified code outside of NODE_ENV === "production". ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) ' + 'to ensure you have the correct code for your production build.');
+}
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/regenerator-runtime/runtime.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var runtime = (function (exports) {
+  "use strict";
+
+  var Op = Object.prototype;
+  var hasOwn = Op.hasOwnProperty;
+  var undefined; // More compressible than void 0.
+  var $Symbol = typeof Symbol === "function" ? Symbol : {};
+  var iteratorSymbol = $Symbol.iterator || "@@iterator";
+  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
+  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+
+    // The ._invoke method unifies the implementations of the .next,
+    // .throw, and .return methods.
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+
+    return generator;
+  }
+  exports.wrap = wrap;
+
+  // Try/catch helper to minimize deoptimizations. Returns a completion
+  // record like context.tryEntries[i].completion. This interface could
+  // have been (and was previously) designed to take a closure to be
+  // invoked without arguments, but in all the cases we care about we
+  // already have an existing method we want to call, so there's no need
+  // to create a new function object. We can even get away with assuming
+  // the method takes exactly one argument, since that happens to be true
+  // in every case, so we don't have to touch the arguments object. The
+  // only additional allocation required is the completion record, which
+  // has a stable shape and so hopefully should be cheap to allocate.
+  function tryCatch(fn, obj, arg) {
+    try {
+      return { type: "normal", arg: fn.call(obj, arg) };
+    } catch (err) {
+      return { type: "throw", arg: err };
+    }
+  }
+
+  var GenStateSuspendedStart = "suspendedStart";
+  var GenStateSuspendedYield = "suspendedYield";
+  var GenStateExecuting = "executing";
+  var GenStateCompleted = "completed";
+
+  // Returning this object from the innerFn has the same effect as
+  // breaking out of the dispatch switch statement.
+  var ContinueSentinel = {};
+
+  // Dummy constructor functions that we use as the .constructor and
+  // .constructor.prototype properties for functions that return Generator
+  // objects. For full spec compliance, you may wish to configure your
+  // minifier not to mangle the names of these two functions.
+  function Generator() {}
+  function GeneratorFunction() {}
+  function GeneratorFunctionPrototype() {}
+
+  // This is a polyfill for %IteratorPrototype% for environments that
+  // don't natively support it.
+  var IteratorPrototype = {};
+  IteratorPrototype[iteratorSymbol] = function () {
+    return this;
+  };
+
+  var getProto = Object.getPrototypeOf;
+  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
+  if (NativeIteratorPrototype &&
+      NativeIteratorPrototype !== Op &&
+      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
+    // This environment has a native %IteratorPrototype%; use it instead
+    // of the polyfill.
+    IteratorPrototype = NativeIteratorPrototype;
+  }
+
+  var Gp = GeneratorFunctionPrototype.prototype =
+    Generator.prototype = Object.create(IteratorPrototype);
+  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+  GeneratorFunctionPrototype.constructor = GeneratorFunction;
+  GeneratorFunctionPrototype[toStringTagSymbol] =
+    GeneratorFunction.displayName = "GeneratorFunction";
+
+  // Helper for defining the .next, .throw, and .return methods of the
+  // Iterator interface in terms of a single ._invoke method.
+  function defineIteratorMethods(prototype) {
+    ["next", "throw", "return"].forEach(function(method) {
+      prototype[method] = function(arg) {
+        return this._invoke(method, arg);
+      };
+    });
+  }
+
+  exports.isGeneratorFunction = function(genFun) {
+    var ctor = typeof genFun === "function" && genFun.constructor;
+    return ctor
+      ? ctor === GeneratorFunction ||
+        // For the native GeneratorFunction constructor, the best we can
+        // do is to check its .name property.
+        (ctor.displayName || ctor.name) === "GeneratorFunction"
+      : false;
+  };
+
+  exports.mark = function(genFun) {
+    if (Object.setPrototypeOf) {
+      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
+    } else {
+      genFun.__proto__ = GeneratorFunctionPrototype;
+      if (!(toStringTagSymbol in genFun)) {
+        genFun[toStringTagSymbol] = "GeneratorFunction";
+      }
+    }
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+
+  // Within the body of any async function, `await x` is transformed to
+  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
+  // `hasOwn.call(value, "__await")` to determine if the yielded value is
+  // meant to be awaited.
+  exports.awrap = function(arg) {
+    return { __await: arg };
+  };
+
+  function AsyncIterator(generator, PromiseImpl) {
+    function invoke(method, arg, resolve, reject) {
+      var record = tryCatch(generator[method], generator, arg);
+      if (record.type === "throw") {
+        reject(record.arg);
+      } else {
+        var result = record.arg;
+        var value = result.value;
+        if (value &&
+            typeof value === "object" &&
+            hasOwn.call(value, "__await")) {
+          return PromiseImpl.resolve(value.__await).then(function(value) {
+            invoke("next", value, resolve, reject);
+          }, function(err) {
+            invoke("throw", err, resolve, reject);
+          });
+        }
+
+        return PromiseImpl.resolve(value).then(function(unwrapped) {
+          // When a yielded Promise is resolved, its final value becomes
+          // the .value of the Promise<{value,done}> result for the
+          // current iteration.
+          result.value = unwrapped;
+          resolve(result);
+        }, function(error) {
+          // If a rejected Promise was yielded, throw the rejection back
+          // into the async generator function so it can be handled there.
+          return invoke("throw", error, resolve, reject);
+        });
+      }
+    }
+
+    var previousPromise;
+
+    function enqueue(method, arg) {
+      function callInvokeWithMethodAndArg() {
+        return new PromiseImpl(function(resolve, reject) {
+          invoke(method, arg, resolve, reject);
+        });
+      }
+
+      return previousPromise =
+        // If enqueue has been called before, then we want to wait until
+        // all previous Promises have been resolved before calling invoke,
+        // so that results are always delivered in the correct order. If
+        // enqueue has not been called before, then it is important to
+        // call invoke immediately, without waiting on a callback to fire,
+        // so that the async generator function has the opportunity to do
+        // any necessary setup in a predictable way. This predictability
+        // is why the Promise constructor synchronously invokes its
+        // executor callback, and why async functions synchronously
+        // execute code before the first await. Since we implement simple
+        // async functions in terms of async generators, it is especially
+        // important to get this right, even though it requires care.
+        previousPromise ? previousPromise.then(
+          callInvokeWithMethodAndArg,
+          // Avoid propagating failures to Promises returned by later
+          // invocations of the iterator.
+          callInvokeWithMethodAndArg
+        ) : callInvokeWithMethodAndArg();
+    }
+
+    // Define the unified helper method that is used to implement .next,
+    // .throw, and .return (see defineIteratorMethods).
+    this._invoke = enqueue;
+  }
+
+  defineIteratorMethods(AsyncIterator.prototype);
+  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
+    return this;
+  };
+  exports.AsyncIterator = AsyncIterator;
+
+  // Note that simple async functions are implemented on top of
+  // AsyncIterator objects; they just return a Promise for the value of
+  // the final result produced by the iterator.
+  exports.async = function(innerFn, outerFn, self, tryLocsList, PromiseImpl) {
+    if (PromiseImpl === void 0) PromiseImpl = Promise;
+
+    var iter = new AsyncIterator(
+      wrap(innerFn, outerFn, self, tryLocsList),
+      PromiseImpl
+    );
+
+    return exports.isGeneratorFunction(outerFn)
+      ? iter // If outerFn is a generator, return the full iterator.
+      : iter.next().then(function(result) {
+          return result.done ? result.value : iter.next();
+        });
+  };
+
+  function makeInvokeMethod(innerFn, self, context) {
+    var state = GenStateSuspendedStart;
+
+    return function invoke(method, arg) {
+      if (state === GenStateExecuting) {
+        throw new Error("Generator is already running");
+      }
+
+      if (state === GenStateCompleted) {
+        if (method === "throw") {
+          throw arg;
+        }
+
+        // Be forgiving, per 25.3.3.3.3 of the spec:
+        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
+        return doneResult();
+      }
+
+      context.method = method;
+      context.arg = arg;
+
+      while (true) {
+        var delegate = context.delegate;
+        if (delegate) {
+          var delegateResult = maybeInvokeDelegate(delegate, context);
+          if (delegateResult) {
+            if (delegateResult === ContinueSentinel) continue;
+            return delegateResult;
+          }
+        }
+
+        if (context.method === "next") {
+          // Setting context._sent for legacy support of Babel's
+          // function.sent implementation.
+          context.sent = context._sent = context.arg;
+
+        } else if (context.method === "throw") {
+          if (state === GenStateSuspendedStart) {
+            state = GenStateCompleted;
+            throw context.arg;
+          }
+
+          context.dispatchException(context.arg);
+
+        } else if (context.method === "return") {
+          context.abrupt("return", context.arg);
+        }
+
+        state = GenStateExecuting;
+
+        var record = tryCatch(innerFn, self, context);
+        if (record.type === "normal") {
+          // If an exception is thrown from innerFn, we leave state ===
+          // GenStateExecuting and loop back for another invocation.
+          state = context.done
+            ? GenStateCompleted
+            : GenStateSuspendedYield;
+
+          if (record.arg === ContinueSentinel) {
+            continue;
+          }
+
+          return {
+            value: record.arg,
+            done: context.done
+          };
+
+        } else if (record.type === "throw") {
+          state = GenStateCompleted;
+          // Dispatch the exception by looping back around to the
+          // context.dispatchException(context.arg) call above.
+          context.method = "throw";
+          context.arg = record.arg;
+        }
+      }
+    };
+  }
+
+  // Call delegate.iterator[context.method](context.arg) and handle the
+  // result, either by returning a { value, done } result from the
+  // delegate iterator, or by modifying context.method and context.arg,
+  // setting context.delegate to null, and returning the ContinueSentinel.
+  function maybeInvokeDelegate(delegate, context) {
+    var method = delegate.iterator[context.method];
+    if (method === undefined) {
+      // A .throw or .return when the delegate iterator has no .throw
+      // method always terminates the yield* loop.
+      context.delegate = null;
+
+      if (context.method === "throw") {
+        // Note: ["return"] must be used for ES3 parsing compatibility.
+        if (delegate.iterator["return"]) {
+          // If the delegate iterator has a return method, give it a
+          // chance to clean up.
+          context.method = "return";
+          context.arg = undefined;
+          maybeInvokeDelegate(delegate, context);
+
+          if (context.method === "throw") {
+            // If maybeInvokeDelegate(context) changed context.method from
+            // "return" to "throw", let that override the TypeError below.
+            return ContinueSentinel;
+          }
+        }
+
+        context.method = "throw";
+        context.arg = new TypeError(
+          "The iterator does not provide a 'throw' method");
+      }
+
+      return ContinueSentinel;
+    }
+
+    var record = tryCatch(method, delegate.iterator, context.arg);
+
+    if (record.type === "throw") {
+      context.method = "throw";
+      context.arg = record.arg;
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    var info = record.arg;
+
+    if (! info) {
+      context.method = "throw";
+      context.arg = new TypeError("iterator result is not an object");
+      context.delegate = null;
+      return ContinueSentinel;
+    }
+
+    if (info.done) {
+      // Assign the result of the finished delegate to the temporary
+      // variable specified by delegate.resultName (see delegateYield).
+      context[delegate.resultName] = info.value;
+
+      // Resume execution at the desired location (see delegateYield).
+      context.next = delegate.nextLoc;
+
+      // If context.method was "throw" but the delegate handled the
+      // exception, let the outer generator proceed normally. If
+      // context.method was "next", forget context.arg since it has been
+      // "consumed" by the delegate iterator. If context.method was
+      // "return", allow the original .return call to continue in the
+      // outer generator.
+      if (context.method !== "return") {
+        context.method = "next";
+        context.arg = undefined;
+      }
+
+    } else {
+      // Re-yield the result returned by the delegate method.
+      return info;
+    }
+
+    // The delegate iterator is finished, so forget it and continue with
+    // the outer generator.
+    context.delegate = null;
+    return ContinueSentinel;
+  }
+
+  // Define Generator.prototype.{next,throw,return} in terms of the
+  // unified ._invoke helper method.
+  defineIteratorMethods(Gp);
+
+  Gp[toStringTagSymbol] = "Generator";
+
+  // A Generator should always return itself as the iterator object when the
+  // @@iterator function is called on it. Some browsers' implementations of the
+  // iterator prototype chain incorrectly implement this, causing the Generator
+  // object to not be returned from this call. This ensures that doesn't happen.
+  // See https://github.com/facebook/regenerator/issues/274 for more details.
+  Gp[iteratorSymbol] = function() {
+    return this;
+  };
+
+  Gp.toString = function() {
+    return "[object Generator]";
+  };
+
+  function pushTryEntry(locs) {
+    var entry = { tryLoc: locs[0] };
+
+    if (1 in locs) {
+      entry.catchLoc = locs[1];
+    }
+
+    if (2 in locs) {
+      entry.finallyLoc = locs[2];
+      entry.afterLoc = locs[3];
+    }
+
+    this.tryEntries.push(entry);
+  }
+
+  function resetTryEntry(entry) {
+    var record = entry.completion || {};
+    record.type = "normal";
+    delete record.arg;
+    entry.completion = record;
+  }
+
+  function Context(tryLocsList) {
+    // The root entry object (effectively a try statement without a catch
+    // or a finally block) gives us a place to store values thrown from
+    // locations where there is no enclosing try statement.
+    this.tryEntries = [{ tryLoc: "root" }];
+    tryLocsList.forEach(pushTryEntry, this);
+    this.reset(true);
+  }
+
+  exports.keys = function(object) {
+    var keys = [];
+    for (var key in object) {
+      keys.push(key);
+    }
+    keys.reverse();
+
+    // Rather than returning an object with a next method, we keep
+    // things simple and return the next function itself.
+    return function next() {
+      while (keys.length) {
+        var key = keys.pop();
+        if (key in object) {
+          next.value = key;
+          next.done = false;
+          return next;
+        }
+      }
+
+      // To avoid creating an additional object, we just hang the .value
+      // and .done properties off the next function object itself. This
+      // also ensures that the minifier will not anonymize the function.
+      next.done = true;
+      return next;
+    };
+  };
+
+  function values(iterable) {
+    if (iterable) {
+      var iteratorMethod = iterable[iteratorSymbol];
+      if (iteratorMethod) {
+        return iteratorMethod.call(iterable);
+      }
+
+      if (typeof iterable.next === "function") {
+        return iterable;
+      }
+
+      if (!isNaN(iterable.length)) {
+        var i = -1, next = function next() {
+          while (++i < iterable.length) {
+            if (hasOwn.call(iterable, i)) {
+              next.value = iterable[i];
+              next.done = false;
+              return next;
+            }
+          }
+
+          next.value = undefined;
+          next.done = true;
+
+          return next;
+        };
+
+        return next.next = next;
+      }
+    }
+
+    // Return an iterator with no values.
+    return { next: doneResult };
+  }
+  exports.values = values;
+
+  function doneResult() {
+    return { value: undefined, done: true };
+  }
+
+  Context.prototype = {
+    constructor: Context,
+
+    reset: function(skipTempReset) {
+      this.prev = 0;
+      this.next = 0;
+      // Resetting context._sent for legacy support of Babel's
+      // function.sent implementation.
+      this.sent = this._sent = undefined;
+      this.done = false;
+      this.delegate = null;
+
+      this.method = "next";
+      this.arg = undefined;
+
+      this.tryEntries.forEach(resetTryEntry);
+
+      if (!skipTempReset) {
+        for (var name in this) {
+          // Not sure about the optimal order of these conditions:
+          if (name.charAt(0) === "t" &&
+              hasOwn.call(this, name) &&
+              !isNaN(+name.slice(1))) {
+            this[name] = undefined;
+          }
+        }
+      }
+    },
+
+    stop: function() {
+      this.done = true;
+
+      var rootEntry = this.tryEntries[0];
+      var rootRecord = rootEntry.completion;
+      if (rootRecord.type === "throw") {
+        throw rootRecord.arg;
+      }
+
+      return this.rval;
+    },
+
+    dispatchException: function(exception) {
+      if (this.done) {
+        throw exception;
+      }
+
+      var context = this;
+      function handle(loc, caught) {
+        record.type = "throw";
+        record.arg = exception;
+        context.next = loc;
+
+        if (caught) {
+          // If the dispatched exception was caught by a catch block,
+          // then let that catch block handle the exception normally.
+          context.method = "next";
+          context.arg = undefined;
+        }
+
+        return !! caught;
+      }
+
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        var record = entry.completion;
+
+        if (entry.tryLoc === "root") {
+          // Exception thrown outside of any try block that could handle
+          // it, so set the completion value of the entire function to
+          // throw the exception.
+          return handle("end");
+        }
+
+        if (entry.tryLoc <= this.prev) {
+          var hasCatch = hasOwn.call(entry, "catchLoc");
+          var hasFinally = hasOwn.call(entry, "finallyLoc");
+
+          if (hasCatch && hasFinally) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            } else if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else if (hasCatch) {
+            if (this.prev < entry.catchLoc) {
+              return handle(entry.catchLoc, true);
+            }
+
+          } else if (hasFinally) {
+            if (this.prev < entry.finallyLoc) {
+              return handle(entry.finallyLoc);
+            }
+
+          } else {
+            throw new Error("try statement without catch or finally");
+          }
+        }
+      }
+    },
+
+    abrupt: function(type, arg) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc <= this.prev &&
+            hasOwn.call(entry, "finallyLoc") &&
+            this.prev < entry.finallyLoc) {
+          var finallyEntry = entry;
+          break;
+        }
+      }
+
+      if (finallyEntry &&
+          (type === "break" ||
+           type === "continue") &&
+          finallyEntry.tryLoc <= arg &&
+          arg <= finallyEntry.finallyLoc) {
+        // Ignore the finally entry if control is not jumping to a
+        // location outside the try/catch block.
+        finallyEntry = null;
+      }
+
+      var record = finallyEntry ? finallyEntry.completion : {};
+      record.type = type;
+      record.arg = arg;
+
+      if (finallyEntry) {
+        this.method = "next";
+        this.next = finallyEntry.finallyLoc;
+        return ContinueSentinel;
+      }
+
+      return this.complete(record);
+    },
+
+    complete: function(record, afterLoc) {
+      if (record.type === "throw") {
+        throw record.arg;
+      }
+
+      if (record.type === "break" ||
+          record.type === "continue") {
+        this.next = record.arg;
+      } else if (record.type === "return") {
+        this.rval = this.arg = record.arg;
+        this.method = "return";
+        this.next = "end";
+      } else if (record.type === "normal" && afterLoc) {
+        this.next = afterLoc;
+      }
+
+      return ContinueSentinel;
+    },
+
+    finish: function(finallyLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.finallyLoc === finallyLoc) {
+          this.complete(entry.completion, entry.afterLoc);
+          resetTryEntry(entry);
+          return ContinueSentinel;
+        }
+      }
+    },
+
+    "catch": function(tryLoc) {
+      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
+        var entry = this.tryEntries[i];
+        if (entry.tryLoc === tryLoc) {
+          var record = entry.completion;
+          if (record.type === "throw") {
+            var thrown = record.arg;
+            resetTryEntry(entry);
+          }
+          return thrown;
+        }
+      }
+
+      // The context.catch method must only be called with a location
+      // argument that corresponds to a known catch block.
+      throw new Error("illegal catch attempt");
+    },
+
+    delegateYield: function(iterable, resultName, nextLoc) {
+      this.delegate = {
+        iterator: values(iterable),
+        resultName: resultName,
+        nextLoc: nextLoc
+      };
+
+      if (this.method === "next") {
+        // Deliberately forget the last sent value so that we don't
+        // accidentally pass it on to the delegate.
+        this.arg = undefined;
+      }
+
+      return ContinueSentinel;
+    }
+  };
+
+  // Regardless of whether this script is executing as a CommonJS module
+  // or not, return the runtime object so that we can declare the variable
+  // regeneratorRuntime in the outer scope, which allows this module to be
+  // injected easily by `bin/regenerator --include-runtime script.js`.
+  return exports;
+
+}(
+  // If this script is executing as a CommonJS module, use module.exports
+  // as the regeneratorRuntime namespace. Otherwise create a new empty
+  // object. Either way, the resulting object will be used to initialize
+  // the regeneratorRuntime variable at the top of this file.
+   true ? module.exports : undefined
+));
+
+try {
+  regeneratorRuntime = runtime;
+} catch (accidentalStrictMode) {
+  // This module should not be running in strict mode, so the above
+  // assignment should always work unless something is misconfigured. Just
+  // in case runtime.js accidentally runs in strict mode, we can escape
+  // strict mode using a global Function call. This could conceivably fail
+  // if a Content Security Policy forbids using Function, but in that case
+  // the proper solution is to fix the accidental strict mode problem. If
+  // you've misconfigured your bundler to force strict mode and applied a
+  // CSP to forbid Function, and you're not willing to fix either of those
+  // problems, please detail your unique predicament in a GitHub issue.
+  Function("r", "regeneratorRuntime = r")(runtime);
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/resolve-pathname/esm/resolve-pathname.js":
 /*!***************************************************************!*\
   !*** ./node_modules/resolve-pathname/esm/resolve-pathname.js ***!
@@ -69566,6 +72808,5785 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/secure-ls/dist/secure-ls.js":
+/*!**************************************************!*\
+  !*** ./node_modules/secure-ls/dist/secure-ls.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory();
+	else {}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _utils = __webpack_require__(1);
+	
+	var _utils2 = _interopRequireDefault(_utils);
+	
+	var _constants = __webpack_require__(2);
+	
+	var _constants2 = _interopRequireDefault(_constants);
+	
+	var _encUtf = __webpack_require__(8);
+	
+	var _encUtf2 = _interopRequireDefault(_encUtf);
+	
+	var _Base = __webpack_require__(9);
+	
+	var _Base2 = _interopRequireDefault(_Base);
+	
+	var _lzString = __webpack_require__(10);
+	
+	var _lzString2 = _interopRequireDefault(_lzString);
+	
+	var _aes = __webpack_require__(11);
+	
+	var _aes2 = _interopRequireDefault(_aes);
+	
+	var _tripledes = __webpack_require__(16);
+	
+	var _tripledes2 = _interopRequireDefault(_tripledes);
+	
+	var _rabbit = __webpack_require__(17);
+	
+	var _rabbit2 = _interopRequireDefault(_rabbit);
+	
+	var _rc = __webpack_require__(18);
+	
+	var _rc2 = _interopRequireDefault(_rc);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var SecureLS = function () {
+	  function SecureLS(config) {
+	    _classCallCheck(this, SecureLS);
+	
+	    config = config || {};
+	    this._name = 'secure-ls';
+	    this.utils = _utils2.default;
+	    this.constants = _constants2.default;
+	    this.Base64 = _Base2.default;
+	    this.LZString = _lzString2.default;
+	    this.AES = _aes2.default;
+	    this.DES = _tripledes2.default;
+	    this.RABBIT = _rabbit2.default;
+	    this.RC4 = _rc2.default;
+	    this.enc = _encUtf2.default;
+	
+	    this.config = {
+	      isCompression: true,
+	      encodingType: _constants2.default.EncrytionTypes.BASE64,
+	      encryptionSecret: config.encryptionSecret,
+	      encryptionNamespace: config.encryptionNamespace
+	    };
+	    this.config.isCompression = typeof config.isCompression !== 'undefined' ? config.isCompression : true;
+	    this.config.encodingType = typeof config.encodingType !== 'undefined' || config.encodingType === '' ? config.encodingType.toLowerCase() : _constants2.default.EncrytionTypes.BASE64;
+	
+	    this.ls = localStorage;
+	    this.init();
+	  }
+	
+	  _createClass(SecureLS, [{
+	    key: 'init',
+	    value: function init() {
+	      var metaData = this.getMetaData();
+	
+	      this.WarningEnum = this.constants.WarningEnum;
+	      this.WarningTypes = this.constants.WarningTypes;
+	      this.EncrytionTypes = this.constants.EncrytionTypes;
+	
+	      this._isBase64 = this._isBase64EncryptionType();
+	      this._isAES = this._isAESEncryptionType();
+	      this._isDES = this._isDESEncryptionType();
+	      this._isRabbit = this._isRabbitEncryptionType();
+	      this._isRC4 = this._isRC4EncryptionType();
+	      this._isCompression = this._isDataCompressionEnabled();
+	
+	      // fill the already present keys to the list of keys being used by secure-ls
+	      this.utils.allKeys = metaData.keys || this.resetAllKeys();
+	    }
+	  }, {
+	    key: '_isBase64EncryptionType',
+	    value: function _isBase64EncryptionType() {
+	      return _Base2.default && (typeof this.config.encodingType === 'undefined' || this.config.encodingType === this.constants.EncrytionTypes.BASE64);
+	    }
+	  }, {
+	    key: '_isAESEncryptionType',
+	    value: function _isAESEncryptionType() {
+	      return _aes2.default && this.config.encodingType === this.constants.EncrytionTypes.AES;
+	    }
+	  }, {
+	    key: '_isDESEncryptionType',
+	    value: function _isDESEncryptionType() {
+	      return _tripledes2.default && this.config.encodingType === this.constants.EncrytionTypes.DES;
+	    }
+	  }, {
+	    key: '_isRabbitEncryptionType',
+	    value: function _isRabbitEncryptionType() {
+	      return _rabbit2.default && this.config.encodingType === this.constants.EncrytionTypes.RABBIT;
+	    }
+	  }, {
+	    key: '_isRC4EncryptionType',
+	    value: function _isRC4EncryptionType() {
+	      return _rc2.default && this.config.encodingType === this.constants.EncrytionTypes.RC4;
+	    }
+	  }, {
+	    key: '_isDataCompressionEnabled',
+	    value: function _isDataCompressionEnabled() {
+	      return this.config.isCompression;
+	    }
+	  }, {
+	    key: 'getEncryptionSecret',
+	    value: function getEncryptionSecret(key) {
+	      var metaData = this.getMetaData();
+	      var obj = this.utils.getObjectFromKey(metaData.keys, key);
+	
+	      if (!obj) {
+	        return;
+	      }
+	
+	      if (this._isAES || this._isDES || this._isRabbit || this._isRC4) {
+	        if (typeof this.config.encryptionSecret === 'undefined') {
+	          this.utils.encryptionSecret = obj.s;
+	
+	          if (!this.utils.encryptionSecret) {
+	            this.utils.encryptionSecret = this.utils.generateSecretKey();
+	            this.setMetaData();
+	          }
+	        } else {
+	          this.utils.encryptionSecret = this.config.encryptionSecret || obj.s || '';
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'get',
+	    value: function get(key, isAllKeysData) {
+	      var decodedData = '',
+	          jsonData = '',
+	          deCompressedData = void 0,
+	          bytes = void 0,
+	          data = void 0;
+	
+	      if (!this.utils.is(key)) {
+	        this.utils.warn(this.WarningEnum.KEY_NOT_PROVIDED);
+	        return jsonData;
+	      }
+	
+	      data = this.getDataFromLocalStorage(key);
+	
+	      if (!data) {
+	        return jsonData;
+	      }
+	
+	      deCompressedData = data; // saves else
+	      if (this._isCompression || isAllKeysData) {
+	        // meta data always compressed
+	        deCompressedData = _lzString2.default.decompressFromUTF16(data);
+	      }
+	
+	      decodedData = deCompressedData; // saves else
+	      if (this._isBase64 || isAllKeysData) {
+	        // meta data always Base64
+	        decodedData = _Base2.default.decode(deCompressedData);
+	      } else {
+	        this.getEncryptionSecret(key);
+	        if (this._isAES) {
+	          bytes = _aes2.default.decrypt(deCompressedData.toString(), this.utils.encryptionSecret);
+	        } else if (this._isDES) {
+	          bytes = _tripledes2.default.decrypt(deCompressedData.toString(), this.utils.encryptionSecret);
+	        } else if (this._isRabbit) {
+	          bytes = _rabbit2.default.decrypt(deCompressedData.toString(), this.utils.encryptionSecret);
+	        } else if (this._isRC4) {
+	          bytes = _rc2.default.decrypt(deCompressedData.toString(), this.utils.encryptionSecret);
+	        }
+	
+	        if (bytes) {
+	          decodedData = bytes.toString(_encUtf2.default._Utf8);
+	        }
+	      }
+	
+	      try {
+	        jsonData = JSON.parse(decodedData);
+	      } catch (e) {
+	        throw new Error('Could not parse JSON');
+	      }
+	
+	      return jsonData;
+	    }
+	  }, {
+	    key: 'getDataFromLocalStorage',
+	    value: function getDataFromLocalStorage(key) {
+	      return this.ls.getItem(key, true);
+	    }
+	  }, {
+	    key: 'getAllKeys',
+	    value: function getAllKeys() {
+	      var data = this.getMetaData();
+	
+	      return this.utils.extractKeyNames(data) || [];
+	    }
+	  }, {
+	    key: 'set',
+	    value: function set(key, data) {
+	      var dataToStore = '';
+	
+	      if (!this.utils.is(key)) {
+	        this.utils.warn(this.WarningEnum.KEY_NOT_PROVIDED);
+	        return;
+	      }
+	
+	      this.getEncryptionSecret(key);
+	
+	      // add key(s) to Array if not already added, only for keys other than meta key
+	      if (!(String(key) === String(this.utils.metaKey))) {
+	        if (!this.utils.isKeyPresent(key)) {
+	          this.utils.addToKeysList(key);
+	          this.setMetaData();
+	        }
+	      }
+	
+	      dataToStore = this.processData(data);
+	      // Store the data to localStorage
+	      this.setDataToLocalStorage(key, dataToStore);
+	    }
+	  }, {
+	    key: 'setDataToLocalStorage',
+	    value: function setDataToLocalStorage(key, data) {
+	      this.ls.setItem(key, data);
+	    }
+	  }, {
+	    key: 'remove',
+	    value: function remove(key) {
+	      if (!this.utils.is(key)) {
+	        this.utils.warn(this.WarningEnum.KEY_NOT_PROVIDED);
+	        return;
+	      }
+	
+	      if (key === this.utils.metaKey && this.getAllKeys().length) {
+	        this.utils.warn(this.WarningEnum.META_KEY_REMOVE);
+	        return;
+	      }
+	
+	      if (this.utils.isKeyPresent(key)) {
+	        this.utils.removeFromKeysList(key);
+	        this.setMetaData();
+	      }
+	      this.ls.removeItem(key);
+	    }
+	  }, {
+	    key: 'removeAll',
+	    value: function removeAll() {
+	      var keys = void 0,
+	          i = void 0;
+	
+	      keys = this.getAllKeys();
+	      for (i = 0; i < keys.length; i++) {
+	        this.ls.removeItem(keys[i]);
+	      }
+	      this.ls.removeItem(this.utils.metaKey);
+	
+	      this.resetAllKeys();
+	    }
+	  }, {
+	    key: 'clear',
+	    value: function clear() {
+	      this.ls.clear();
+	      this.resetAllKeys();
+	    }
+	  }, {
+	    key: 'resetAllKeys',
+	    value: function resetAllKeys() {
+	      this.utils.allKeys = [];
+	      return [];
+	    }
+	  }, {
+	    key: 'processData',
+	    value: function processData(data, isAllKeysData) {
+	      if (data === null || data === undefined || data === '') {
+	        return '';
+	      }
+	
+	      var jsonData = void 0,
+	          encodedData = void 0,
+	          compressedData = void 0;
+	
+	      try {
+	        jsonData = JSON.stringify(data);
+	      } catch (e) {
+	        throw new Error('Could not stringify data.');
+	      }
+	
+	      // Encode Based on encoding type
+	      // If not set, default to Base64 for securing data
+	      encodedData = jsonData;
+	      if (this._isBase64 || isAllKeysData) {
+	        encodedData = _Base2.default.encode(jsonData);
+	      } else {
+	        if (this._isAES) {
+	          encodedData = _aes2.default.encrypt(jsonData, this.utils.encryptionSecret);
+	        } else if (this._isDES) {
+	          encodedData = _tripledes2.default.encrypt(jsonData, this.utils.encryptionSecret);
+	        } else if (this._isRabbit) {
+	          encodedData = _rabbit2.default.encrypt(jsonData, this.utils.encryptionSecret);
+	        } else if (this._isRC4) {
+	          encodedData = _rc2.default.encrypt(jsonData, this.utils.encryptionSecret);
+	        }
+	
+	        encodedData = encodedData && encodedData.toString();
+	      }
+	
+	      // Compress data if set to true
+	      compressedData = encodedData;
+	      if (this._isCompression || isAllKeysData) {
+	        compressedData = _lzString2.default.compressToUTF16(encodedData);
+	      }
+	
+	      return compressedData;
+	    }
+	  }, {
+	    key: 'setMetaData',
+	    value: function setMetaData() {
+	      var dataToStore = this.processData({
+	        keys: this.utils.allKeys
+	      }, true);
+	
+	      // Store the data to localStorage
+	      this.setDataToLocalStorage(this.getMetaKey(), dataToStore);
+	    }
+	  }, {
+	    key: 'getMetaData',
+	    value: function getMetaData() {
+	      return this.get(this.getMetaKey(), true) || {};
+	    }
+	  }, {
+	    key: 'getMetaKey',
+	    value: function getMetaKey() {
+	      return this.utils.metaKey + (this.config.encryptionNamespace ? '__' + this.config.encryptionNamespace : '');
+	    }
+	  }]);
+	
+	  return SecureLS;
+	}();
+	
+	exports.default = SecureLS;
+	;
+	module.exports = exports['default'];
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _constants = __webpack_require__(2);
+	
+	var _constants2 = _interopRequireDefault(_constants);
+	
+	var _WordArray = __webpack_require__(3);
+	
+	var _WordArray2 = _interopRequireDefault(_WordArray);
+	
+	var _pbkdf = __webpack_require__(4);
+	
+	var _pbkdf2 = _interopRequireDefault(_pbkdf);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var utils = {
+	  metaKey: '_secure__ls__metadata',
+	  encryptionSecret: '',
+	  secretPhrase: 's3cr3t$#@135^&*246',
+	  allKeys: [],
+	  is: function is(key) {
+	    if (key) {
+	      return true;
+	    }
+	    return false;
+	  },
+	  warn: function warn(reason) {
+	    reason = reason ? reason : _constants2.default.WarningEnum.DEFAULT_TEXT;
+	    console.warn(_constants2.default.WarningTypes[reason]);
+	  },
+	  generateSecretKey: function generateSecretKey() {
+	    var salt = _WordArray2.default.random(128 / 8);
+	    var key128Bits = (0, _pbkdf2.default)(this.secretPhrase, salt, { keySize: 128 / 32 });
+	
+	    return key128Bits && key128Bits.toString();
+	  },
+	  getObjectFromKey: function getObjectFromKey(data, key) {
+	    if (!data || !data.length) {
+	      return {};
+	    }
+	
+	    var i = void 0,
+	        obj = {};
+	
+	    for (i = 0; i < data.length; i++) {
+	      if (data[i].k === key) {
+	        obj = data[i];
+	        break;
+	      }
+	    }
+	
+	    return obj;
+	  },
+	  extractKeyNames: function extractKeyNames(data) {
+	    if (!data || !data.keys || !data.keys.length) {
+	      return [];
+	    }
+	
+	    return data.keys.map(function (keyData) {
+	      return keyData.k;
+	    });
+	  },
+	  getAllKeys: function getAllKeys() {
+	    return this.allKeys;
+	  },
+	  isKeyPresent: function isKeyPresent(key) {
+	    var isKeyAlreadyPresent = false;
+	
+	    for (var i = 0; i < this.allKeys.length; i++) {
+	      if (String(this.allKeys[i].k) === String(key)) {
+	        isKeyAlreadyPresent = true; // found
+	        break;
+	      }
+	    }
+	
+	    return isKeyAlreadyPresent;
+	  },
+	  addToKeysList: function addToKeysList(key) {
+	    this.allKeys.push({
+	      k: key,
+	      s: this.encryptionSecret
+	    });
+	  },
+	  removeFromKeysList: function removeFromKeysList(key) {
+	    var i = void 0,
+	        index = -1;
+	
+	    for (i = 0; i < this.allKeys.length; i++) {
+	      if (this.allKeys[i].k === key) {
+	        index = i;
+	        break;
+	      }
+	    }
+	    if (index !== -1) {
+	      this.allKeys.splice(index, 1);
+	    }
+	    return index;
+	  }
+	};
+	
+	module.exports = utils;
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var WarningEnum = {
+	  KEY_NOT_PROVIDED: 'keyNotProvided',
+	  META_KEY_REMOVE: 'metaKeyRemove',
+	  DEFAULT_TEXT: 'defaultText'
+	};
+	
+	var WarningTypes = {};
+	
+	WarningTypes[WarningEnum.KEY_NOT_PROVIDED] = 'Secure LS: Key not provided. Aborting operation!';
+	WarningTypes[WarningEnum.META_KEY_REMOVE] = 'Secure LS: Meta key can not be removed\nunless all keys created by Secure LS are removed!';
+	WarningTypes[WarningEnum.DEFAULT_TEXT] = 'Unexpected output';
+	
+	var constants = {
+	  WarningEnum: WarningEnum,
+	  WarningTypes: WarningTypes,
+	  EncrytionTypes: {
+	    BASE64: 'base64',
+	    AES: 'aes',
+	    DES: 'des',
+	    RABBIT: 'rabbit',
+	    RC4: 'rc4'
+	  }
+	};
+	
+	module.exports = constants;
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	/*
+	 ES6 compatible port of CryptoJS - WordArray for PBKDF2 password key generation
+	
+	 Source: https://github.com/brix/crypto-js
+	 LICENSE: MIT
+	 */
+	
+	var CryptoJSWordArray = {};
+	
+	CryptoJSWordArray.random = function (nBytes) {
+	  var words = [];
+	  var r = function r(mw) {
+	    var mz = 0x3ade68b1;
+	    var mask = 0xffffffff;
+	
+	    return function () {
+	      mz = 0x9069 * (mz & 0xFFFF) + (mz >> 0x10) & mask;
+	      mw = 0x4650 * (mw & 0xFFFF) + (mw >> 0x10) & mask;
+	      var result = (mz << 0x10) + mw & mask;
+	
+	      result /= 0x100000000;
+	      result += 0.5;
+	      return result * (Math.random() > 0.5 ? 1 : -1);
+	    };
+	  };
+	
+	  for (var i = 0, rcache; i < nBytes; i += 4) {
+	    var _r = r((rcache || Math.random()) * 0x100000000);
+	
+	    rcache = _r() * 0x3ade67b7;
+	    words.push(_r() * 0x100000000 | 0);
+	  }
+	
+	  return new this.Set(words, nBytes);
+	};
+	
+	CryptoJSWordArray.Set = function (words, sigBytes) {
+	  words = this.words = words || [];
+	
+	  if (sigBytes !== undefined) {
+	    this.sigBytes = sigBytes;
+	  } else {
+	    this.sigBytes = words.length * 8;
+	  }
+	};
+	
+	module.exports = CryptoJSWordArray;
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5), __webpack_require__(6), __webpack_require__(7));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var Base = C_lib.Base;
+		    var WordArray = C_lib.WordArray;
+		    var C_algo = C.algo;
+		    var SHA1 = C_algo.SHA1;
+		    var HMAC = C_algo.HMAC;
+	
+		    /**
+		     * Password-Based Key Derivation Function 2 algorithm.
+		     */
+		    var PBKDF2 = C_algo.PBKDF2 = Base.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {number} keySize The key size in words to generate. Default: 4 (128 bits)
+		         * @property {Hasher} hasher The hasher to use. Default: SHA1
+		         * @property {number} iterations The number of iterations to perform. Default: 1
+		         */
+		        cfg: Base.extend({
+		            keySize: 128/32,
+		            hasher: SHA1,
+		            iterations: 1
+		        }),
+	
+		        /**
+		         * Initializes a newly created key derivation function.
+		         *
+		         * @param {Object} cfg (Optional) The configuration options to use for the derivation.
+		         *
+		         * @example
+		         *
+		         *     var kdf = CryptoJS.algo.PBKDF2.create();
+		         *     var kdf = CryptoJS.algo.PBKDF2.create({ keySize: 8 });
+		         *     var kdf = CryptoJS.algo.PBKDF2.create({ keySize: 8, iterations: 1000 });
+		         */
+		        init: function (cfg) {
+		            this.cfg = this.cfg.extend(cfg);
+		        },
+	
+		        /**
+		         * Computes the Password-Based Key Derivation Function 2.
+		         *
+		         * @param {WordArray|string} password The password.
+		         * @param {WordArray|string} salt A salt.
+		         *
+		         * @return {WordArray} The derived key.
+		         *
+		         * @example
+		         *
+		         *     var key = kdf.compute(password, salt);
+		         */
+		        compute: function (password, salt) {
+		            // Shortcut
+		            var cfg = this.cfg;
+	
+		            // Init HMAC
+		            var hmac = HMAC.create(cfg.hasher, password);
+	
+		            // Initial values
+		            var derivedKey = WordArray.create();
+		            var blockIndex = WordArray.create([0x00000001]);
+	
+		            // Shortcuts
+		            var derivedKeyWords = derivedKey.words;
+		            var blockIndexWords = blockIndex.words;
+		            var keySize = cfg.keySize;
+		            var iterations = cfg.iterations;
+	
+		            // Generate key
+		            while (derivedKeyWords.length < keySize) {
+		                var block = hmac.update(salt).finalize(blockIndex);
+		                hmac.reset();
+	
+		                // Shortcuts
+		                var blockWords = block.words;
+		                var blockWordsLength = blockWords.length;
+	
+		                // Iterations
+		                var intermediate = block;
+		                for (var i = 1; i < iterations; i++) {
+		                    intermediate = hmac.finalize(intermediate);
+		                    hmac.reset();
+	
+		                    // Shortcut
+		                    var intermediateWords = intermediate.words;
+	
+		                    // XOR intermediate with block
+		                    for (var j = 0; j < blockWordsLength; j++) {
+		                        blockWords[j] ^= intermediateWords[j];
+		                    }
+		                }
+	
+		                derivedKey.concat(block);
+		                blockIndexWords[0]++;
+		            }
+		            derivedKey.sigBytes = keySize * 4;
+	
+		            return derivedKey;
+		        }
+		    });
+	
+		    /**
+		     * Computes the Password-Based Key Derivation Function 2.
+		     *
+		     * @param {WordArray|string} password The password.
+		     * @param {WordArray|string} salt A salt.
+		     * @param {Object} cfg (Optional) The configuration options to use for this computation.
+		     *
+		     * @return {WordArray} The derived key.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var key = CryptoJS.PBKDF2(password, salt);
+		     *     var key = CryptoJS.PBKDF2(password, salt, { keySize: 8 });
+		     *     var key = CryptoJS.PBKDF2(password, salt, { keySize: 8, iterations: 1000 });
+		     */
+		    C.PBKDF2 = function (password, salt, cfg) {
+		        return PBKDF2.create(cfg).compute(password, salt);
+		    };
+		}());
+	
+	
+		return CryptoJS.PBKDF2;
+	
+	}));
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory();
+		}
+		else {}
+	}(this, function () {
+	
+		/**
+		 * CryptoJS core components.
+		 */
+		var CryptoJS = CryptoJS || (function (Math, undefined) {
+		    /*
+		     * Local polyfil of Object.create
+		     */
+		    var create = Object.create || (function () {
+		        function F() {};
+	
+		        return function (obj) {
+		            var subtype;
+	
+		            F.prototype = obj;
+	
+		            subtype = new F();
+	
+		            F.prototype = null;
+	
+		            return subtype;
+		        };
+		    }())
+	
+		    /**
+		     * CryptoJS namespace.
+		     */
+		    var C = {};
+	
+		    /**
+		     * Library namespace.
+		     */
+		    var C_lib = C.lib = {};
+	
+		    /**
+		     * Base object for prototypal inheritance.
+		     */
+		    var Base = C_lib.Base = (function () {
+	
+	
+		        return {
+		            /**
+		             * Creates a new object that inherits from this object.
+		             *
+		             * @param {Object} overrides Properties to copy into the new object.
+		             *
+		             * @return {Object} The new object.
+		             *
+		             * @static
+		             *
+		             * @example
+		             *
+		             *     var MyType = CryptoJS.lib.Base.extend({
+		             *         field: 'value',
+		             *
+		             *         method: function () {
+		             *         }
+		             *     });
+		             */
+		            extend: function (overrides) {
+		                // Spawn
+		                var subtype = create(this);
+	
+		                // Augment
+		                if (overrides) {
+		                    subtype.mixIn(overrides);
+		                }
+	
+		                // Create default initializer
+		                if (!subtype.hasOwnProperty('init') || this.init === subtype.init) {
+		                    subtype.init = function () {
+		                        subtype.$super.init.apply(this, arguments);
+		                    };
+		                }
+	
+		                // Initializer's prototype is the subtype object
+		                subtype.init.prototype = subtype;
+	
+		                // Reference supertype
+		                subtype.$super = this;
+	
+		                return subtype;
+		            },
+	
+		            /**
+		             * Extends this object and runs the init method.
+		             * Arguments to create() will be passed to init().
+		             *
+		             * @return {Object} The new object.
+		             *
+		             * @static
+		             *
+		             * @example
+		             *
+		             *     var instance = MyType.create();
+		             */
+		            create: function () {
+		                var instance = this.extend();
+		                instance.init.apply(instance, arguments);
+	
+		                return instance;
+		            },
+	
+		            /**
+		             * Initializes a newly created object.
+		             * Override this method to add some logic when your objects are created.
+		             *
+		             * @example
+		             *
+		             *     var MyType = CryptoJS.lib.Base.extend({
+		             *         init: function () {
+		             *             // ...
+		             *         }
+		             *     });
+		             */
+		            init: function () {
+		            },
+	
+		            /**
+		             * Copies properties into this object.
+		             *
+		             * @param {Object} properties The properties to mix in.
+		             *
+		             * @example
+		             *
+		             *     MyType.mixIn({
+		             *         field: 'value'
+		             *     });
+		             */
+		            mixIn: function (properties) {
+		                for (var propertyName in properties) {
+		                    if (properties.hasOwnProperty(propertyName)) {
+		                        this[propertyName] = properties[propertyName];
+		                    }
+		                }
+	
+		                // IE won't copy toString using the loop above
+		                if (properties.hasOwnProperty('toString')) {
+		                    this.toString = properties.toString;
+		                }
+		            },
+	
+		            /**
+		             * Creates a copy of this object.
+		             *
+		             * @return {Object} The clone.
+		             *
+		             * @example
+		             *
+		             *     var clone = instance.clone();
+		             */
+		            clone: function () {
+		                return this.init.prototype.extend(this);
+		            }
+		        };
+		    }());
+	
+		    /**
+		     * An array of 32-bit words.
+		     *
+		     * @property {Array} words The array of 32-bit words.
+		     * @property {number} sigBytes The number of significant bytes in this word array.
+		     */
+		    var WordArray = C_lib.WordArray = Base.extend({
+		        /**
+		         * Initializes a newly created word array.
+		         *
+		         * @param {Array} words (Optional) An array of 32-bit words.
+		         * @param {number} sigBytes (Optional) The number of significant bytes in the words.
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.lib.WordArray.create();
+		         *     var wordArray = CryptoJS.lib.WordArray.create([0x00010203, 0x04050607]);
+		         *     var wordArray = CryptoJS.lib.WordArray.create([0x00010203, 0x04050607], 6);
+		         */
+		        init: function (words, sigBytes) {
+		            words = this.words = words || [];
+	
+		            if (sigBytes != undefined) {
+		                this.sigBytes = sigBytes;
+		            } else {
+		                this.sigBytes = words.length * 4;
+		            }
+		        },
+	
+		        /**
+		         * Converts this word array to a string.
+		         *
+		         * @param {Encoder} encoder (Optional) The encoding strategy to use. Default: CryptoJS.enc.Hex
+		         *
+		         * @return {string} The stringified word array.
+		         *
+		         * @example
+		         *
+		         *     var string = wordArray + '';
+		         *     var string = wordArray.toString();
+		         *     var string = wordArray.toString(CryptoJS.enc.Utf8);
+		         */
+		        toString: function (encoder) {
+		            return (encoder || Hex).stringify(this);
+		        },
+	
+		        /**
+		         * Concatenates a word array to this word array.
+		         *
+		         * @param {WordArray} wordArray The word array to append.
+		         *
+		         * @return {WordArray} This word array.
+		         *
+		         * @example
+		         *
+		         *     wordArray1.concat(wordArray2);
+		         */
+		        concat: function (wordArray) {
+		            // Shortcuts
+		            var thisWords = this.words;
+		            var thatWords = wordArray.words;
+		            var thisSigBytes = this.sigBytes;
+		            var thatSigBytes = wordArray.sigBytes;
+	
+		            // Clamp excess bits
+		            this.clamp();
+	
+		            // Concat
+		            if (thisSigBytes % 4) {
+		                // Copy one byte at a time
+		                for (var i = 0; i < thatSigBytes; i++) {
+		                    var thatByte = (thatWords[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+		                    thisWords[(thisSigBytes + i) >>> 2] |= thatByte << (24 - ((thisSigBytes + i) % 4) * 8);
+		                }
+		            } else {
+		                // Copy one word at a time
+		                for (var i = 0; i < thatSigBytes; i += 4) {
+		                    thisWords[(thisSigBytes + i) >>> 2] = thatWords[i >>> 2];
+		                }
+		            }
+		            this.sigBytes += thatSigBytes;
+	
+		            // Chainable
+		            return this;
+		        },
+	
+		        /**
+		         * Removes insignificant bits.
+		         *
+		         * @example
+		         *
+		         *     wordArray.clamp();
+		         */
+		        clamp: function () {
+		            // Shortcuts
+		            var words = this.words;
+		            var sigBytes = this.sigBytes;
+	
+		            // Clamp
+		            words[sigBytes >>> 2] &= 0xffffffff << (32 - (sigBytes % 4) * 8);
+		            words.length = Math.ceil(sigBytes / 4);
+		        },
+	
+		        /**
+		         * Creates a copy of this word array.
+		         *
+		         * @return {WordArray} The clone.
+		         *
+		         * @example
+		         *
+		         *     var clone = wordArray.clone();
+		         */
+		        clone: function () {
+		            var clone = Base.clone.call(this);
+		            clone.words = this.words.slice(0);
+	
+		            return clone;
+		        },
+	
+		        /**
+		         * Creates a word array filled with random bytes.
+		         *
+		         * @param {number} nBytes The number of random bytes to generate.
+		         *
+		         * @return {WordArray} The random word array.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.lib.WordArray.random(16);
+		         */
+		        random: function (nBytes) {
+		            var words = [];
+	
+		            var r = (function (m_w) {
+		                var m_w = m_w;
+		                var m_z = 0x3ade68b1;
+		                var mask = 0xffffffff;
+	
+		                return function () {
+		                    m_z = (0x9069 * (m_z & 0xFFFF) + (m_z >> 0x10)) & mask;
+		                    m_w = (0x4650 * (m_w & 0xFFFF) + (m_w >> 0x10)) & mask;
+		                    var result = ((m_z << 0x10) + m_w) & mask;
+		                    result /= 0x100000000;
+		                    result += 0.5;
+		                    return result * (Math.random() > .5 ? 1 : -1);
+		                }
+		            });
+	
+		            for (var i = 0, rcache; i < nBytes; i += 4) {
+		                var _r = r((rcache || Math.random()) * 0x100000000);
+	
+		                rcache = _r() * 0x3ade67b7;
+		                words.push((_r() * 0x100000000) | 0);
+		            }
+	
+		            return new WordArray.init(words, nBytes);
+		        }
+		    });
+	
+		    /**
+		     * Encoder namespace.
+		     */
+		    var C_enc = C.enc = {};
+	
+		    /**
+		     * Hex encoding strategy.
+		     */
+		    var Hex = C_enc.Hex = {
+		        /**
+		         * Converts a word array to a hex string.
+		         *
+		         * @param {WordArray} wordArray The word array.
+		         *
+		         * @return {string} The hex string.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var hexString = CryptoJS.enc.Hex.stringify(wordArray);
+		         */
+		        stringify: function (wordArray) {
+		            // Shortcuts
+		            var words = wordArray.words;
+		            var sigBytes = wordArray.sigBytes;
+	
+		            // Convert
+		            var hexChars = [];
+		            for (var i = 0; i < sigBytes; i++) {
+		                var bite = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+		                hexChars.push((bite >>> 4).toString(16));
+		                hexChars.push((bite & 0x0f).toString(16));
+		            }
+	
+		            return hexChars.join('');
+		        },
+	
+		        /**
+		         * Converts a hex string to a word array.
+		         *
+		         * @param {string} hexStr The hex string.
+		         *
+		         * @return {WordArray} The word array.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.enc.Hex.parse(hexString);
+		         */
+		        parse: function (hexStr) {
+		            // Shortcut
+		            var hexStrLength = hexStr.length;
+	
+		            // Convert
+		            var words = [];
+		            for (var i = 0; i < hexStrLength; i += 2) {
+		                words[i >>> 3] |= parseInt(hexStr.substr(i, 2), 16) << (24 - (i % 8) * 4);
+		            }
+	
+		            return new WordArray.init(words, hexStrLength / 2);
+		        }
+		    };
+	
+		    /**
+		     * Latin1 encoding strategy.
+		     */
+		    var Latin1 = C_enc.Latin1 = {
+		        /**
+		         * Converts a word array to a Latin1 string.
+		         *
+		         * @param {WordArray} wordArray The word array.
+		         *
+		         * @return {string} The Latin1 string.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var latin1String = CryptoJS.enc.Latin1.stringify(wordArray);
+		         */
+		        stringify: function (wordArray) {
+		            // Shortcuts
+		            var words = wordArray.words;
+		            var sigBytes = wordArray.sigBytes;
+	
+		            // Convert
+		            var latin1Chars = [];
+		            for (var i = 0; i < sigBytes; i++) {
+		                var bite = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xff;
+		                latin1Chars.push(String.fromCharCode(bite));
+		            }
+	
+		            return latin1Chars.join('');
+		        },
+	
+		        /**
+		         * Converts a Latin1 string to a word array.
+		         *
+		         * @param {string} latin1Str The Latin1 string.
+		         *
+		         * @return {WordArray} The word array.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.enc.Latin1.parse(latin1String);
+		         */
+		        parse: function (latin1Str) {
+		            // Shortcut
+		            var latin1StrLength = latin1Str.length;
+	
+		            // Convert
+		            var words = [];
+		            for (var i = 0; i < latin1StrLength; i++) {
+		                words[i >>> 2] |= (latin1Str.charCodeAt(i) & 0xff) << (24 - (i % 4) * 8);
+		            }
+	
+		            return new WordArray.init(words, latin1StrLength);
+		        }
+		    };
+	
+		    /**
+		     * UTF-8 encoding strategy.
+		     */
+		    var Utf8 = C_enc.Utf8 = {
+		        /**
+		         * Converts a word array to a UTF-8 string.
+		         *
+		         * @param {WordArray} wordArray The word array.
+		         *
+		         * @return {string} The UTF-8 string.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var utf8String = CryptoJS.enc.Utf8.stringify(wordArray);
+		         */
+		        stringify: function (wordArray) {
+		            try {
+		                return decodeURIComponent(escape(Latin1.stringify(wordArray)));
+		            } catch (e) {
+		                throw new Error('Malformed UTF-8 data');
+		            }
+		        },
+	
+		        /**
+		         * Converts a UTF-8 string to a word array.
+		         *
+		         * @param {string} utf8Str The UTF-8 string.
+		         *
+		         * @return {WordArray} The word array.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.enc.Utf8.parse(utf8String);
+		         */
+		        parse: function (utf8Str) {
+		            return Latin1.parse(unescape(encodeURIComponent(utf8Str)));
+		        }
+		    };
+	
+		    /**
+		     * Abstract buffered block algorithm template.
+		     *
+		     * The property blockSize must be implemented in a concrete subtype.
+		     *
+		     * @property {number} _minBufferSize The number of blocks that should be kept unprocessed in the buffer. Default: 0
+		     */
+		    var BufferedBlockAlgorithm = C_lib.BufferedBlockAlgorithm = Base.extend({
+		        /**
+		         * Resets this block algorithm's data buffer to its initial state.
+		         *
+		         * @example
+		         *
+		         *     bufferedBlockAlgorithm.reset();
+		         */
+		        reset: function () {
+		            // Initial values
+		            this._data = new WordArray.init();
+		            this._nDataBytes = 0;
+		        },
+	
+		        /**
+		         * Adds new data to this block algorithm's buffer.
+		         *
+		         * @param {WordArray|string} data The data to append. Strings are converted to a WordArray using UTF-8.
+		         *
+		         * @example
+		         *
+		         *     bufferedBlockAlgorithm._append('data');
+		         *     bufferedBlockAlgorithm._append(wordArray);
+		         */
+		        _append: function (data) {
+		            // Convert string to WordArray, else assume WordArray already
+		            if (typeof data == 'string') {
+		                data = Utf8.parse(data);
+		            }
+	
+		            // Append
+		            this._data.concat(data);
+		            this._nDataBytes += data.sigBytes;
+		        },
+	
+		        /**
+		         * Processes available data blocks.
+		         *
+		         * This method invokes _doProcessBlock(offset), which must be implemented by a concrete subtype.
+		         *
+		         * @param {boolean} doFlush Whether all blocks and partial blocks should be processed.
+		         *
+		         * @return {WordArray} The processed data.
+		         *
+		         * @example
+		         *
+		         *     var processedData = bufferedBlockAlgorithm._process();
+		         *     var processedData = bufferedBlockAlgorithm._process(!!'flush');
+		         */
+		        _process: function (doFlush) {
+		            // Shortcuts
+		            var data = this._data;
+		            var dataWords = data.words;
+		            var dataSigBytes = data.sigBytes;
+		            var blockSize = this.blockSize;
+		            var blockSizeBytes = blockSize * 4;
+	
+		            // Count blocks ready
+		            var nBlocksReady = dataSigBytes / blockSizeBytes;
+		            if (doFlush) {
+		                // Round up to include partial blocks
+		                nBlocksReady = Math.ceil(nBlocksReady);
+		            } else {
+		                // Round down to include only full blocks,
+		                // less the number of blocks that must remain in the buffer
+		                nBlocksReady = Math.max((nBlocksReady | 0) - this._minBufferSize, 0);
+		            }
+	
+		            // Count words ready
+		            var nWordsReady = nBlocksReady * blockSize;
+	
+		            // Count bytes ready
+		            var nBytesReady = Math.min(nWordsReady * 4, dataSigBytes);
+	
+		            // Process blocks
+		            if (nWordsReady) {
+		                for (var offset = 0; offset < nWordsReady; offset += blockSize) {
+		                    // Perform concrete-algorithm logic
+		                    this._doProcessBlock(dataWords, offset);
+		                }
+	
+		                // Remove processed words
+		                var processedWords = dataWords.splice(0, nWordsReady);
+		                data.sigBytes -= nBytesReady;
+		            }
+	
+		            // Return processed words
+		            return new WordArray.init(processedWords, nBytesReady);
+		        },
+	
+		        /**
+		         * Creates a copy of this object.
+		         *
+		         * @return {Object} The clone.
+		         *
+		         * @example
+		         *
+		         *     var clone = bufferedBlockAlgorithm.clone();
+		         */
+		        clone: function () {
+		            var clone = Base.clone.call(this);
+		            clone._data = this._data.clone();
+	
+		            return clone;
+		        },
+	
+		        _minBufferSize: 0
+		    });
+	
+		    /**
+		     * Abstract hasher template.
+		     *
+		     * @property {number} blockSize The number of 32-bit words this hasher operates on. Default: 16 (512 bits)
+		     */
+		    var Hasher = C_lib.Hasher = BufferedBlockAlgorithm.extend({
+		        /**
+		         * Configuration options.
+		         */
+		        cfg: Base.extend(),
+	
+		        /**
+		         * Initializes a newly created hasher.
+		         *
+		         * @param {Object} cfg (Optional) The configuration options to use for this hash computation.
+		         *
+		         * @example
+		         *
+		         *     var hasher = CryptoJS.algo.SHA256.create();
+		         */
+		        init: function (cfg) {
+		            // Apply config defaults
+		            this.cfg = this.cfg.extend(cfg);
+	
+		            // Set initial values
+		            this.reset();
+		        },
+	
+		        /**
+		         * Resets this hasher to its initial state.
+		         *
+		         * @example
+		         *
+		         *     hasher.reset();
+		         */
+		        reset: function () {
+		            // Reset data buffer
+		            BufferedBlockAlgorithm.reset.call(this);
+	
+		            // Perform concrete-hasher logic
+		            this._doReset();
+		        },
+	
+		        /**
+		         * Updates this hasher with a message.
+		         *
+		         * @param {WordArray|string} messageUpdate The message to append.
+		         *
+		         * @return {Hasher} This hasher.
+		         *
+		         * @example
+		         *
+		         *     hasher.update('message');
+		         *     hasher.update(wordArray);
+		         */
+		        update: function (messageUpdate) {
+		            // Append
+		            this._append(messageUpdate);
+	
+		            // Update the hash
+		            this._process();
+	
+		            // Chainable
+		            return this;
+		        },
+	
+		        /**
+		         * Finalizes the hash computation.
+		         * Note that the finalize operation is effectively a destructive, read-once operation.
+		         *
+		         * @param {WordArray|string} messageUpdate (Optional) A final message update.
+		         *
+		         * @return {WordArray} The hash.
+		         *
+		         * @example
+		         *
+		         *     var hash = hasher.finalize();
+		         *     var hash = hasher.finalize('message');
+		         *     var hash = hasher.finalize(wordArray);
+		         */
+		        finalize: function (messageUpdate) {
+		            // Final message update
+		            if (messageUpdate) {
+		                this._append(messageUpdate);
+		            }
+	
+		            // Perform concrete-hasher logic
+		            var hash = this._doFinalize();
+	
+		            return hash;
+		        },
+	
+		        blockSize: 512/32,
+	
+		        /**
+		         * Creates a shortcut function to a hasher's object interface.
+		         *
+		         * @param {Hasher} hasher The hasher to create a helper for.
+		         *
+		         * @return {Function} The shortcut function.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var SHA256 = CryptoJS.lib.Hasher._createHelper(CryptoJS.algo.SHA256);
+		         */
+		        _createHelper: function (hasher) {
+		            return function (message, cfg) {
+		                return new hasher.init(cfg).finalize(message);
+		            };
+		        },
+	
+		        /**
+		         * Creates a shortcut function to the HMAC's object interface.
+		         *
+		         * @param {Hasher} hasher The hasher to use in this HMAC helper.
+		         *
+		         * @return {Function} The shortcut function.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var HmacSHA256 = CryptoJS.lib.Hasher._createHmacHelper(CryptoJS.algo.SHA256);
+		         */
+		        _createHmacHelper: function (hasher) {
+		            return function (message, key) {
+		                return new C_algo.HMAC.init(hasher, key).finalize(message);
+		            };
+		        }
+		    });
+	
+		    /**
+		     * Algorithm namespace.
+		     */
+		    var C_algo = C.algo = {};
+	
+		    return C;
+		}(Math));
+	
+	
+		return CryptoJS;
+	
+	}));
+
+/***/ },
+/* 6 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var WordArray = C_lib.WordArray;
+		    var Hasher = C_lib.Hasher;
+		    var C_algo = C.algo;
+	
+		    // Reusable object
+		    var W = [];
+	
+		    /**
+		     * SHA-1 hash algorithm.
+		     */
+		    var SHA1 = C_algo.SHA1 = Hasher.extend({
+		        _doReset: function () {
+		            this._hash = new WordArray.init([
+		                0x67452301, 0xefcdab89,
+		                0x98badcfe, 0x10325476,
+		                0xc3d2e1f0
+		            ]);
+		        },
+	
+		        _doProcessBlock: function (M, offset) {
+		            // Shortcut
+		            var H = this._hash.words;
+	
+		            // Working variables
+		            var a = H[0];
+		            var b = H[1];
+		            var c = H[2];
+		            var d = H[3];
+		            var e = H[4];
+	
+		            // Computation
+		            for (var i = 0; i < 80; i++) {
+		                if (i < 16) {
+		                    W[i] = M[offset + i] | 0;
+		                } else {
+		                    var n = W[i - 3] ^ W[i - 8] ^ W[i - 14] ^ W[i - 16];
+		                    W[i] = (n << 1) | (n >>> 31);
+		                }
+	
+		                var t = ((a << 5) | (a >>> 27)) + e + W[i];
+		                if (i < 20) {
+		                    t += ((b & c) | (~b & d)) + 0x5a827999;
+		                } else if (i < 40) {
+		                    t += (b ^ c ^ d) + 0x6ed9eba1;
+		                } else if (i < 60) {
+		                    t += ((b & c) | (b & d) | (c & d)) - 0x70e44324;
+		                } else /* if (i < 80) */ {
+		                    t += (b ^ c ^ d) - 0x359d3e2a;
+		                }
+	
+		                e = d;
+		                d = c;
+		                c = (b << 30) | (b >>> 2);
+		                b = a;
+		                a = t;
+		            }
+	
+		            // Intermediate hash value
+		            H[0] = (H[0] + a) | 0;
+		            H[1] = (H[1] + b) | 0;
+		            H[2] = (H[2] + c) | 0;
+		            H[3] = (H[3] + d) | 0;
+		            H[4] = (H[4] + e) | 0;
+		        },
+	
+		        _doFinalize: function () {
+		            // Shortcuts
+		            var data = this._data;
+		            var dataWords = data.words;
+	
+		            var nBitsTotal = this._nDataBytes * 8;
+		            var nBitsLeft = data.sigBytes * 8;
+	
+		            // Add padding
+		            dataWords[nBitsLeft >>> 5] |= 0x80 << (24 - nBitsLeft % 32);
+		            dataWords[(((nBitsLeft + 64) >>> 9) << 4) + 14] = Math.floor(nBitsTotal / 0x100000000);
+		            dataWords[(((nBitsLeft + 64) >>> 9) << 4) + 15] = nBitsTotal;
+		            data.sigBytes = dataWords.length * 4;
+	
+		            // Hash final blocks
+		            this._process();
+	
+		            // Return final computed hash
+		            return this._hash;
+		        },
+	
+		        clone: function () {
+		            var clone = Hasher.clone.call(this);
+		            clone._hash = this._hash.clone();
+	
+		            return clone;
+		        }
+		    });
+	
+		    /**
+		     * Shortcut function to the hasher's object interface.
+		     *
+		     * @param {WordArray|string} message The message to hash.
+		     *
+		     * @return {WordArray} The hash.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var hash = CryptoJS.SHA1('message');
+		     *     var hash = CryptoJS.SHA1(wordArray);
+		     */
+		    C.SHA1 = Hasher._createHelper(SHA1);
+	
+		    /**
+		     * Shortcut function to the HMAC's object interface.
+		     *
+		     * @param {WordArray|string} message The message to hash.
+		     * @param {WordArray|string} key The secret key.
+		     *
+		     * @return {WordArray} The HMAC.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var hmac = CryptoJS.HmacSHA1(message, key);
+		     */
+		    C.HmacSHA1 = Hasher._createHmacHelper(SHA1);
+		}());
+	
+	
+		return CryptoJS.SHA1;
+	
+	}));
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var Base = C_lib.Base;
+		    var C_enc = C.enc;
+		    var Utf8 = C_enc.Utf8;
+		    var C_algo = C.algo;
+	
+		    /**
+		     * HMAC algorithm.
+		     */
+		    var HMAC = C_algo.HMAC = Base.extend({
+		        /**
+		         * Initializes a newly created HMAC.
+		         *
+		         * @param {Hasher} hasher The hash algorithm to use.
+		         * @param {WordArray|string} key The secret key.
+		         *
+		         * @example
+		         *
+		         *     var hmacHasher = CryptoJS.algo.HMAC.create(CryptoJS.algo.SHA256, key);
+		         */
+		        init: function (hasher, key) {
+		            // Init hasher
+		            hasher = this._hasher = new hasher.init();
+	
+		            // Convert string to WordArray, else assume WordArray already
+		            if (typeof key == 'string') {
+		                key = Utf8.parse(key);
+		            }
+	
+		            // Shortcuts
+		            var hasherBlockSize = hasher.blockSize;
+		            var hasherBlockSizeBytes = hasherBlockSize * 4;
+	
+		            // Allow arbitrary length keys
+		            if (key.sigBytes > hasherBlockSizeBytes) {
+		                key = hasher.finalize(key);
+		            }
+	
+		            // Clamp excess bits
+		            key.clamp();
+	
+		            // Clone key for inner and outer pads
+		            var oKey = this._oKey = key.clone();
+		            var iKey = this._iKey = key.clone();
+	
+		            // Shortcuts
+		            var oKeyWords = oKey.words;
+		            var iKeyWords = iKey.words;
+	
+		            // XOR keys with pad constants
+		            for (var i = 0; i < hasherBlockSize; i++) {
+		                oKeyWords[i] ^= 0x5c5c5c5c;
+		                iKeyWords[i] ^= 0x36363636;
+		            }
+		            oKey.sigBytes = iKey.sigBytes = hasherBlockSizeBytes;
+	
+		            // Set initial values
+		            this.reset();
+		        },
+	
+		        /**
+		         * Resets this HMAC to its initial state.
+		         *
+		         * @example
+		         *
+		         *     hmacHasher.reset();
+		         */
+		        reset: function () {
+		            // Shortcut
+		            var hasher = this._hasher;
+	
+		            // Reset
+		            hasher.reset();
+		            hasher.update(this._iKey);
+		        },
+	
+		        /**
+		         * Updates this HMAC with a message.
+		         *
+		         * @param {WordArray|string} messageUpdate The message to append.
+		         *
+		         * @return {HMAC} This HMAC instance.
+		         *
+		         * @example
+		         *
+		         *     hmacHasher.update('message');
+		         *     hmacHasher.update(wordArray);
+		         */
+		        update: function (messageUpdate) {
+		            this._hasher.update(messageUpdate);
+	
+		            // Chainable
+		            return this;
+		        },
+	
+		        /**
+		         * Finalizes the HMAC computation.
+		         * Note that the finalize operation is effectively a destructive, read-once operation.
+		         *
+		         * @param {WordArray|string} messageUpdate (Optional) A final message update.
+		         *
+		         * @return {WordArray} The HMAC.
+		         *
+		         * @example
+		         *
+		         *     var hmac = hmacHasher.finalize();
+		         *     var hmac = hmacHasher.finalize('message');
+		         *     var hmac = hmacHasher.finalize(wordArray);
+		         */
+		        finalize: function (messageUpdate) {
+		            // Shortcut
+		            var hasher = this._hasher;
+	
+		            // Compute HMAC
+		            var innerHash = hasher.finalize(messageUpdate);
+		            hasher.reset();
+		            var hmac = hasher.finalize(this._oKey.clone().concat(innerHash));
+	
+		            return hmac;
+		        }
+		    });
+		}());
+	
+	
+	}));
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	/*
+	 ES6 compatible port of CryptoJS - encoding
+	
+	 Source: https://github.com/brix/crypto-js
+	 LICENSE: MIT
+	 */
+	var enc = {};
+	
+	enc.Latin1 = {
+	  stringify: function stringify(wordArray) {
+	    // Shortcuts
+	    var words = wordArray.words;
+	    var sigBytes = wordArray.sigBytes;
+	    var latin1Chars = [],
+	        i = void 0,
+	        bite = void 0;
+	
+	    // Convert
+	    for (i = 0; i < sigBytes; i++) {
+	      bite = words[i >>> 2] >>> 24 - i % 4 * 8 & 0xff;
+	      latin1Chars.push(String.fromCharCode(bite));
+	    }
+	
+	    return latin1Chars.join('');
+	  }
+	};
+	
+	enc._Utf8 = {
+	  stringify: function stringify(wordArray) {
+	    try {
+	      return decodeURIComponent(escape(enc.Latin1.stringify(wordArray)));
+	    } catch (e) {
+	      throw new Error('Malformed UTF-8 data');
+	    }
+	  }
+	};
+	
+	module.exports = enc;
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	var Base64 = {
+	  _keyStr: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
+	  encode: function encode(e) {
+	    var t = '';
+	    var n = void 0,
+	        r = void 0,
+	        i = void 0,
+	        s = void 0,
+	        o = void 0,
+	        u = void 0,
+	        a = void 0;
+	    var f = 0;
+	
+	    e = Base64._utf8Encode(e);
+	    while (f < e.length) {
+	      n = e.charCodeAt(f++);
+	      r = e.charCodeAt(f++);
+	      i = e.charCodeAt(f++);
+	      s = n >> 2;
+	      o = (n & 3) << 4 | r >> 4;
+	      u = (r & 15) << 2 | i >> 6;
+	      a = i & 63;
+	      if (isNaN(r)) {
+	        u = a = 64;
+	      } else if (isNaN(i)) {
+	        a = 64;
+	      }
+	      t = t + this._keyStr.charAt(s) + this._keyStr.charAt(o) + this._keyStr.charAt(u) + this._keyStr.charAt(a);
+	    }
+	    return t;
+	  },
+	  decode: function decode(e) {
+	    var t = '';
+	    var n = void 0,
+	        r = void 0,
+	        i = void 0;
+	    var s = void 0,
+	        o = void 0,
+	        u = void 0,
+	        a = void 0;
+	    var f = 0;
+	
+	    e = e.replace(/[^A-Za-z0-9\+\/\=]/g, '');
+	    while (f < e.length) {
+	      s = this._keyStr.indexOf(e.charAt(f++));
+	      o = this._keyStr.indexOf(e.charAt(f++));
+	      u = this._keyStr.indexOf(e.charAt(f++));
+	      a = this._keyStr.indexOf(e.charAt(f++));
+	      n = s << 2 | o >> 4;
+	      r = (o & 15) << 4 | u >> 2;
+	      i = (u & 3) << 6 | a;
+	      t = t + String.fromCharCode(n);
+	      if (u !== 64) {
+	        t = t + String.fromCharCode(r);
+	      }
+	      if (a !== 64) {
+	        t = t + String.fromCharCode(i);
+	      }
+	    }
+	    t = Base64._utf8Decode(t);
+	    return t;
+	  },
+	  _utf8Encode: function _utf8Encode(e) {
+	    e = e.replace(/\r\n/g, '\n');
+	    var t = '';
+	
+	    for (var n = 0; n < e.length; n++) {
+	      var r = e.charCodeAt(n);
+	
+	      if (r < 128) {
+	        t += String.fromCharCode(r);
+	      } else if (r > 127 && r < 2048) {
+	        t += String.fromCharCode(r >> 6 | 192);
+	        t += String.fromCharCode(r & 63 | 128);
+	      } else {
+	        t += String.fromCharCode(r >> 12 | 224);
+	        t += String.fromCharCode(r >> 6 & 63 | 128);
+	        t += String.fromCharCode(r & 63 | 128);
+	      }
+	    }
+	    return t;
+	  },
+	  _utf8Decode: function _utf8Decode(e) {
+	    var t = '';
+	    var n = 0;
+	    var r = void 0,
+	        c2 = void 0,
+	        c3 = void 0;
+	
+	    r = c2 = 0;
+	    while (n < e.length) {
+	      r = e.charCodeAt(n);
+	      if (r < 128) {
+	        t += String.fromCharCode(r);
+	        n++;
+	      } else if (r > 191 && r < 224) {
+	        c2 = e.charCodeAt(n + 1);
+	        t += String.fromCharCode((r & 31) << 6 | c2 & 63);
+	        n += 2;
+	      } else {
+	        c2 = e.charCodeAt(n + 1);
+	        c3 = e.charCodeAt(n + 2);
+	        t += String.fromCharCode((r & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
+	        n += 3;
+	      }
+	    }
+	    return t;
+	  }
+	};
+	
+	module.exports = Base64;
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;// Copyright (c) 2013 Pieroxy <pieroxy@pieroxy.net>
+	// This work is free. You can redistribute it and/or modify it
+	// under the terms of the WTFPL, Version 2
+	// For more information see LICENSE.txt or http://www.wtfpl.net/
+	//
+	// For more information, the home page:
+	// http://pieroxy.net/blog/pages/lz-string/testing.html
+	//
+	// LZ-based compression algorithm, version 1.4.4
+	var LZString = (function() {
+	
+	// private property
+	var f = String.fromCharCode;
+	var keyStrBase64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+	var keyStrUriSafe = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$";
+	var baseReverseDic = {};
+	
+	function getBaseValue(alphabet, character) {
+	  if (!baseReverseDic[alphabet]) {
+	    baseReverseDic[alphabet] = {};
+	    for (var i=0 ; i<alphabet.length ; i++) {
+	      baseReverseDic[alphabet][alphabet.charAt(i)] = i;
+	    }
+	  }
+	  return baseReverseDic[alphabet][character];
+	}
+	
+	var LZString = {
+	  compressToBase64 : function (input) {
+	    if (input == null) return "";
+	    var res = LZString._compress(input, 6, function(a){return keyStrBase64.charAt(a);});
+	    switch (res.length % 4) { // To produce valid Base64
+	    default: // When could this happen ?
+	    case 0 : return res;
+	    case 1 : return res+"===";
+	    case 2 : return res+"==";
+	    case 3 : return res+"=";
+	    }
+	  },
+	
+	  decompressFromBase64 : function (input) {
+	    if (input == null) return "";
+	    if (input == "") return null;
+	    return LZString._decompress(input.length, 32, function(index) { return getBaseValue(keyStrBase64, input.charAt(index)); });
+	  },
+	
+	  compressToUTF16 : function (input) {
+	    if (input == null) return "";
+	    return LZString._compress(input, 15, function(a){return f(a+32);}) + " ";
+	  },
+	
+	  decompressFromUTF16: function (compressed) {
+	    if (compressed == null) return "";
+	    if (compressed == "") return null;
+	    return LZString._decompress(compressed.length, 16384, function(index) { return compressed.charCodeAt(index) - 32; });
+	  },
+	
+	  //compress into uint8array (UCS-2 big endian format)
+	  compressToUint8Array: function (uncompressed) {
+	    var compressed = LZString.compress(uncompressed);
+	    var buf=new Uint8Array(compressed.length*2); // 2 bytes per character
+	
+	    for (var i=0, TotalLen=compressed.length; i<TotalLen; i++) {
+	      var current_value = compressed.charCodeAt(i);
+	      buf[i*2] = current_value >>> 8;
+	      buf[i*2+1] = current_value % 256;
+	    }
+	    return buf;
+	  },
+	
+	  //decompress from uint8array (UCS-2 big endian format)
+	  decompressFromUint8Array:function (compressed) {
+	    if (compressed===null || compressed===undefined){
+	        return LZString.decompress(compressed);
+	    } else {
+	        var buf=new Array(compressed.length/2); // 2 bytes per character
+	        for (var i=0, TotalLen=buf.length; i<TotalLen; i++) {
+	          buf[i]=compressed[i*2]*256+compressed[i*2+1];
+	        }
+	
+	        var result = [];
+	        buf.forEach(function (c) {
+	          result.push(f(c));
+	        });
+	        return LZString.decompress(result.join(''));
+	
+	    }
+	
+	  },
+	
+	
+	  //compress into a string that is already URI encoded
+	  compressToEncodedURIComponent: function (input) {
+	    if (input == null) return "";
+	    return LZString._compress(input, 6, function(a){return keyStrUriSafe.charAt(a);});
+	  },
+	
+	  //decompress from an output of compressToEncodedURIComponent
+	  decompressFromEncodedURIComponent:function (input) {
+	    if (input == null) return "";
+	    if (input == "") return null;
+	    input = input.replace(/ /g, "+");
+	    return LZString._decompress(input.length, 32, function(index) { return getBaseValue(keyStrUriSafe, input.charAt(index)); });
+	  },
+	
+	  compress: function (uncompressed) {
+	    return LZString._compress(uncompressed, 16, function(a){return f(a);});
+	  },
+	  _compress: function (uncompressed, bitsPerChar, getCharFromInt) {
+	    if (uncompressed == null) return "";
+	    var i, value,
+	        context_dictionary= {},
+	        context_dictionaryToCreate= {},
+	        context_c="",
+	        context_wc="",
+	        context_w="",
+	        context_enlargeIn= 2, // Compensate for the first entry which should not count
+	        context_dictSize= 3,
+	        context_numBits= 2,
+	        context_data=[],
+	        context_data_val=0,
+	        context_data_position=0,
+	        ii;
+	
+	    for (ii = 0; ii < uncompressed.length; ii += 1) {
+	      context_c = uncompressed.charAt(ii);
+	      if (!Object.prototype.hasOwnProperty.call(context_dictionary,context_c)) {
+	        context_dictionary[context_c] = context_dictSize++;
+	        context_dictionaryToCreate[context_c] = true;
+	      }
+	
+	      context_wc = context_w + context_c;
+	      if (Object.prototype.hasOwnProperty.call(context_dictionary,context_wc)) {
+	        context_w = context_wc;
+	      } else {
+	        if (Object.prototype.hasOwnProperty.call(context_dictionaryToCreate,context_w)) {
+	          if (context_w.charCodeAt(0)<256) {
+	            for (i=0 ; i<context_numBits ; i++) {
+	              context_data_val = (context_data_val << 1);
+	              if (context_data_position == bitsPerChar-1) {
+	                context_data_position = 0;
+	                context_data.push(getCharFromInt(context_data_val));
+	                context_data_val = 0;
+	              } else {
+	                context_data_position++;
+	              }
+	            }
+	            value = context_w.charCodeAt(0);
+	            for (i=0 ; i<8 ; i++) {
+	              context_data_val = (context_data_val << 1) | (value&1);
+	              if (context_data_position == bitsPerChar-1) {
+	                context_data_position = 0;
+	                context_data.push(getCharFromInt(context_data_val));
+	                context_data_val = 0;
+	              } else {
+	                context_data_position++;
+	              }
+	              value = value >> 1;
+	            }
+	          } else {
+	            value = 1;
+	            for (i=0 ; i<context_numBits ; i++) {
+	              context_data_val = (context_data_val << 1) | value;
+	              if (context_data_position ==bitsPerChar-1) {
+	                context_data_position = 0;
+	                context_data.push(getCharFromInt(context_data_val));
+	                context_data_val = 0;
+	              } else {
+	                context_data_position++;
+	              }
+	              value = 0;
+	            }
+	            value = context_w.charCodeAt(0);
+	            for (i=0 ; i<16 ; i++) {
+	              context_data_val = (context_data_val << 1) | (value&1);
+	              if (context_data_position == bitsPerChar-1) {
+	                context_data_position = 0;
+	                context_data.push(getCharFromInt(context_data_val));
+	                context_data_val = 0;
+	              } else {
+	                context_data_position++;
+	              }
+	              value = value >> 1;
+	            }
+	          }
+	          context_enlargeIn--;
+	          if (context_enlargeIn == 0) {
+	            context_enlargeIn = Math.pow(2, context_numBits);
+	            context_numBits++;
+	          }
+	          delete context_dictionaryToCreate[context_w];
+	        } else {
+	          value = context_dictionary[context_w];
+	          for (i=0 ; i<context_numBits ; i++) {
+	            context_data_val = (context_data_val << 1) | (value&1);
+	            if (context_data_position == bitsPerChar-1) {
+	              context_data_position = 0;
+	              context_data.push(getCharFromInt(context_data_val));
+	              context_data_val = 0;
+	            } else {
+	              context_data_position++;
+	            }
+	            value = value >> 1;
+	          }
+	
+	
+	        }
+	        context_enlargeIn--;
+	        if (context_enlargeIn == 0) {
+	          context_enlargeIn = Math.pow(2, context_numBits);
+	          context_numBits++;
+	        }
+	        // Add wc to the dictionary.
+	        context_dictionary[context_wc] = context_dictSize++;
+	        context_w = String(context_c);
+	      }
+	    }
+	
+	    // Output the code for w.
+	    if (context_w !== "") {
+	      if (Object.prototype.hasOwnProperty.call(context_dictionaryToCreate,context_w)) {
+	        if (context_w.charCodeAt(0)<256) {
+	          for (i=0 ; i<context_numBits ; i++) {
+	            context_data_val = (context_data_val << 1);
+	            if (context_data_position == bitsPerChar-1) {
+	              context_data_position = 0;
+	              context_data.push(getCharFromInt(context_data_val));
+	              context_data_val = 0;
+	            } else {
+	              context_data_position++;
+	            }
+	          }
+	          value = context_w.charCodeAt(0);
+	          for (i=0 ; i<8 ; i++) {
+	            context_data_val = (context_data_val << 1) | (value&1);
+	            if (context_data_position == bitsPerChar-1) {
+	              context_data_position = 0;
+	              context_data.push(getCharFromInt(context_data_val));
+	              context_data_val = 0;
+	            } else {
+	              context_data_position++;
+	            }
+	            value = value >> 1;
+	          }
+	        } else {
+	          value = 1;
+	          for (i=0 ; i<context_numBits ; i++) {
+	            context_data_val = (context_data_val << 1) | value;
+	            if (context_data_position == bitsPerChar-1) {
+	              context_data_position = 0;
+	              context_data.push(getCharFromInt(context_data_val));
+	              context_data_val = 0;
+	            } else {
+	              context_data_position++;
+	            }
+	            value = 0;
+	          }
+	          value = context_w.charCodeAt(0);
+	          for (i=0 ; i<16 ; i++) {
+	            context_data_val = (context_data_val << 1) | (value&1);
+	            if (context_data_position == bitsPerChar-1) {
+	              context_data_position = 0;
+	              context_data.push(getCharFromInt(context_data_val));
+	              context_data_val = 0;
+	            } else {
+	              context_data_position++;
+	            }
+	            value = value >> 1;
+	          }
+	        }
+	        context_enlargeIn--;
+	        if (context_enlargeIn == 0) {
+	          context_enlargeIn = Math.pow(2, context_numBits);
+	          context_numBits++;
+	        }
+	        delete context_dictionaryToCreate[context_w];
+	      } else {
+	        value = context_dictionary[context_w];
+	        for (i=0 ; i<context_numBits ; i++) {
+	          context_data_val = (context_data_val << 1) | (value&1);
+	          if (context_data_position == bitsPerChar-1) {
+	            context_data_position = 0;
+	            context_data.push(getCharFromInt(context_data_val));
+	            context_data_val = 0;
+	          } else {
+	            context_data_position++;
+	          }
+	          value = value >> 1;
+	        }
+	
+	
+	      }
+	      context_enlargeIn--;
+	      if (context_enlargeIn == 0) {
+	        context_enlargeIn = Math.pow(2, context_numBits);
+	        context_numBits++;
+	      }
+	    }
+	
+	    // Mark the end of the stream
+	    value = 2;
+	    for (i=0 ; i<context_numBits ; i++) {
+	      context_data_val = (context_data_val << 1) | (value&1);
+	      if (context_data_position == bitsPerChar-1) {
+	        context_data_position = 0;
+	        context_data.push(getCharFromInt(context_data_val));
+	        context_data_val = 0;
+	      } else {
+	        context_data_position++;
+	      }
+	      value = value >> 1;
+	    }
+	
+	    // Flush the last char
+	    while (true) {
+	      context_data_val = (context_data_val << 1);
+	      if (context_data_position == bitsPerChar-1) {
+	        context_data.push(getCharFromInt(context_data_val));
+	        break;
+	      }
+	      else context_data_position++;
+	    }
+	    return context_data.join('');
+	  },
+	
+	  decompress: function (compressed) {
+	    if (compressed == null) return "";
+	    if (compressed == "") return null;
+	    return LZString._decompress(compressed.length, 32768, function(index) { return compressed.charCodeAt(index); });
+	  },
+	
+	  _decompress: function (length, resetValue, getNextValue) {
+	    var dictionary = [],
+	        next,
+	        enlargeIn = 4,
+	        dictSize = 4,
+	        numBits = 3,
+	        entry = "",
+	        result = [],
+	        i,
+	        w,
+	        bits, resb, maxpower, power,
+	        c,
+	        data = {val:getNextValue(0), position:resetValue, index:1};
+	
+	    for (i = 0; i < 3; i += 1) {
+	      dictionary[i] = i;
+	    }
+	
+	    bits = 0;
+	    maxpower = Math.pow(2,2);
+	    power=1;
+	    while (power!=maxpower) {
+	      resb = data.val & data.position;
+	      data.position >>= 1;
+	      if (data.position == 0) {
+	        data.position = resetValue;
+	        data.val = getNextValue(data.index++);
+	      }
+	      bits |= (resb>0 ? 1 : 0) * power;
+	      power <<= 1;
+	    }
+	
+	    switch (next = bits) {
+	      case 0:
+	          bits = 0;
+	          maxpower = Math.pow(2,8);
+	          power=1;
+	          while (power!=maxpower) {
+	            resb = data.val & data.position;
+	            data.position >>= 1;
+	            if (data.position == 0) {
+	              data.position = resetValue;
+	              data.val = getNextValue(data.index++);
+	            }
+	            bits |= (resb>0 ? 1 : 0) * power;
+	            power <<= 1;
+	          }
+	        c = f(bits);
+	        break;
+	      case 1:
+	          bits = 0;
+	          maxpower = Math.pow(2,16);
+	          power=1;
+	          while (power!=maxpower) {
+	            resb = data.val & data.position;
+	            data.position >>= 1;
+	            if (data.position == 0) {
+	              data.position = resetValue;
+	              data.val = getNextValue(data.index++);
+	            }
+	            bits |= (resb>0 ? 1 : 0) * power;
+	            power <<= 1;
+	          }
+	        c = f(bits);
+	        break;
+	      case 2:
+	        return "";
+	    }
+	    dictionary[3] = c;
+	    w = c;
+	    result.push(c);
+	    while (true) {
+	      if (data.index > length) {
+	        return "";
+	      }
+	
+	      bits = 0;
+	      maxpower = Math.pow(2,numBits);
+	      power=1;
+	      while (power!=maxpower) {
+	        resb = data.val & data.position;
+	        data.position >>= 1;
+	        if (data.position == 0) {
+	          data.position = resetValue;
+	          data.val = getNextValue(data.index++);
+	        }
+	        bits |= (resb>0 ? 1 : 0) * power;
+	        power <<= 1;
+	      }
+	
+	      switch (c = bits) {
+	        case 0:
+	          bits = 0;
+	          maxpower = Math.pow(2,8);
+	          power=1;
+	          while (power!=maxpower) {
+	            resb = data.val & data.position;
+	            data.position >>= 1;
+	            if (data.position == 0) {
+	              data.position = resetValue;
+	              data.val = getNextValue(data.index++);
+	            }
+	            bits |= (resb>0 ? 1 : 0) * power;
+	            power <<= 1;
+	          }
+	
+	          dictionary[dictSize++] = f(bits);
+	          c = dictSize-1;
+	          enlargeIn--;
+	          break;
+	        case 1:
+	          bits = 0;
+	          maxpower = Math.pow(2,16);
+	          power=1;
+	          while (power!=maxpower) {
+	            resb = data.val & data.position;
+	            data.position >>= 1;
+	            if (data.position == 0) {
+	              data.position = resetValue;
+	              data.val = getNextValue(data.index++);
+	            }
+	            bits |= (resb>0 ? 1 : 0) * power;
+	            power <<= 1;
+	          }
+	          dictionary[dictSize++] = f(bits);
+	          c = dictSize-1;
+	          enlargeIn--;
+	          break;
+	        case 2:
+	          return result.join('');
+	      }
+	
+	      if (enlargeIn == 0) {
+	        enlargeIn = Math.pow(2, numBits);
+	        numBits++;
+	      }
+	
+	      if (dictionary[c]) {
+	        entry = dictionary[c];
+	      } else {
+	        if (c === dictSize) {
+	          entry = w + w.charAt(0);
+	        } else {
+	          return null;
+	        }
+	      }
+	      result.push(entry);
+	
+	      // Add w+entry[0] to the dictionary.
+	      dictionary[dictSize++] = w + entry.charAt(0);
+	      enlargeIn--;
+	
+	      w = entry;
+	
+	      if (enlargeIn == 0) {
+	        enlargeIn = Math.pow(2, numBits);
+	        numBits++;
+	      }
+	
+	    }
+	  }
+	};
+	  return LZString;
+	})();
+	
+	if (true) {
+	  !(__WEBPACK_AMD_DEFINE_RESULT__ = function () { return LZString; }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5), __webpack_require__(12), __webpack_require__(13), __webpack_require__(14), __webpack_require__(15));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var BlockCipher = C_lib.BlockCipher;
+		    var C_algo = C.algo;
+	
+		    // Lookup tables
+		    var SBOX = [];
+		    var INV_SBOX = [];
+		    var SUB_MIX_0 = [];
+		    var SUB_MIX_1 = [];
+		    var SUB_MIX_2 = [];
+		    var SUB_MIX_3 = [];
+		    var INV_SUB_MIX_0 = [];
+		    var INV_SUB_MIX_1 = [];
+		    var INV_SUB_MIX_2 = [];
+		    var INV_SUB_MIX_3 = [];
+	
+		    // Compute lookup tables
+		    (function () {
+		        // Compute double table
+		        var d = [];
+		        for (var i = 0; i < 256; i++) {
+		            if (i < 128) {
+		                d[i] = i << 1;
+		            } else {
+		                d[i] = (i << 1) ^ 0x11b;
+		            }
+		        }
+	
+		        // Walk GF(2^8)
+		        var x = 0;
+		        var xi = 0;
+		        for (var i = 0; i < 256; i++) {
+		            // Compute sbox
+		            var sx = xi ^ (xi << 1) ^ (xi << 2) ^ (xi << 3) ^ (xi << 4);
+		            sx = (sx >>> 8) ^ (sx & 0xff) ^ 0x63;
+		            SBOX[x] = sx;
+		            INV_SBOX[sx] = x;
+	
+		            // Compute multiplication
+		            var x2 = d[x];
+		            var x4 = d[x2];
+		            var x8 = d[x4];
+	
+		            // Compute sub bytes, mix columns tables
+		            var t = (d[sx] * 0x101) ^ (sx * 0x1010100);
+		            SUB_MIX_0[x] = (t << 24) | (t >>> 8);
+		            SUB_MIX_1[x] = (t << 16) | (t >>> 16);
+		            SUB_MIX_2[x] = (t << 8)  | (t >>> 24);
+		            SUB_MIX_3[x] = t;
+	
+		            // Compute inv sub bytes, inv mix columns tables
+		            var t = (x8 * 0x1010101) ^ (x4 * 0x10001) ^ (x2 * 0x101) ^ (x * 0x1010100);
+		            INV_SUB_MIX_0[sx] = (t << 24) | (t >>> 8);
+		            INV_SUB_MIX_1[sx] = (t << 16) | (t >>> 16);
+		            INV_SUB_MIX_2[sx] = (t << 8)  | (t >>> 24);
+		            INV_SUB_MIX_3[sx] = t;
+	
+		            // Compute next counter
+		            if (!x) {
+		                x = xi = 1;
+		            } else {
+		                x = x2 ^ d[d[d[x8 ^ x2]]];
+		                xi ^= d[d[xi]];
+		            }
+		        }
+		    }());
+	
+		    // Precomputed Rcon lookup
+		    var RCON = [0x00, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36];
+	
+		    /**
+		     * AES block cipher algorithm.
+		     */
+		    var AES = C_algo.AES = BlockCipher.extend({
+		        _doReset: function () {
+		            // Skip reset of nRounds has been set before and key did not change
+		            if (this._nRounds && this._keyPriorReset === this._key) {
+		                return;
+		            }
+	
+		            // Shortcuts
+		            var key = this._keyPriorReset = this._key;
+		            var keyWords = key.words;
+		            var keySize = key.sigBytes / 4;
+	
+		            // Compute number of rounds
+		            var nRounds = this._nRounds = keySize + 6;
+	
+		            // Compute number of key schedule rows
+		            var ksRows = (nRounds + 1) * 4;
+	
+		            // Compute key schedule
+		            var keySchedule = this._keySchedule = [];
+		            for (var ksRow = 0; ksRow < ksRows; ksRow++) {
+		                if (ksRow < keySize) {
+		                    keySchedule[ksRow] = keyWords[ksRow];
+		                } else {
+		                    var t = keySchedule[ksRow - 1];
+	
+		                    if (!(ksRow % keySize)) {
+		                        // Rot word
+		                        t = (t << 8) | (t >>> 24);
+	
+		                        // Sub word
+		                        t = (SBOX[t >>> 24] << 24) | (SBOX[(t >>> 16) & 0xff] << 16) | (SBOX[(t >>> 8) & 0xff] << 8) | SBOX[t & 0xff];
+	
+		                        // Mix Rcon
+		                        t ^= RCON[(ksRow / keySize) | 0] << 24;
+		                    } else if (keySize > 6 && ksRow % keySize == 4) {
+		                        // Sub word
+		                        t = (SBOX[t >>> 24] << 24) | (SBOX[(t >>> 16) & 0xff] << 16) | (SBOX[(t >>> 8) & 0xff] << 8) | SBOX[t & 0xff];
+		                    }
+	
+		                    keySchedule[ksRow] = keySchedule[ksRow - keySize] ^ t;
+		                }
+		            }
+	
+		            // Compute inv key schedule
+		            var invKeySchedule = this._invKeySchedule = [];
+		            for (var invKsRow = 0; invKsRow < ksRows; invKsRow++) {
+		                var ksRow = ksRows - invKsRow;
+	
+		                if (invKsRow % 4) {
+		                    var t = keySchedule[ksRow];
+		                } else {
+		                    var t = keySchedule[ksRow - 4];
+		                }
+	
+		                if (invKsRow < 4 || ksRow <= 4) {
+		                    invKeySchedule[invKsRow] = t;
+		                } else {
+		                    invKeySchedule[invKsRow] = INV_SUB_MIX_0[SBOX[t >>> 24]] ^ INV_SUB_MIX_1[SBOX[(t >>> 16) & 0xff]] ^
+		                                               INV_SUB_MIX_2[SBOX[(t >>> 8) & 0xff]] ^ INV_SUB_MIX_3[SBOX[t & 0xff]];
+		                }
+		            }
+		        },
+	
+		        encryptBlock: function (M, offset) {
+		            this._doCryptBlock(M, offset, this._keySchedule, SUB_MIX_0, SUB_MIX_1, SUB_MIX_2, SUB_MIX_3, SBOX);
+		        },
+	
+		        decryptBlock: function (M, offset) {
+		            // Swap 2nd and 4th rows
+		            var t = M[offset + 1];
+		            M[offset + 1] = M[offset + 3];
+		            M[offset + 3] = t;
+	
+		            this._doCryptBlock(M, offset, this._invKeySchedule, INV_SUB_MIX_0, INV_SUB_MIX_1, INV_SUB_MIX_2, INV_SUB_MIX_3, INV_SBOX);
+	
+		            // Inv swap 2nd and 4th rows
+		            var t = M[offset + 1];
+		            M[offset + 1] = M[offset + 3];
+		            M[offset + 3] = t;
+		        },
+	
+		        _doCryptBlock: function (M, offset, keySchedule, SUB_MIX_0, SUB_MIX_1, SUB_MIX_2, SUB_MIX_3, SBOX) {
+		            // Shortcut
+		            var nRounds = this._nRounds;
+	
+		            // Get input, add round key
+		            var s0 = M[offset]     ^ keySchedule[0];
+		            var s1 = M[offset + 1] ^ keySchedule[1];
+		            var s2 = M[offset + 2] ^ keySchedule[2];
+		            var s3 = M[offset + 3] ^ keySchedule[3];
+	
+		            // Key schedule row counter
+		            var ksRow = 4;
+	
+		            // Rounds
+		            for (var round = 1; round < nRounds; round++) {
+		                // Shift rows, sub bytes, mix columns, add round key
+		                var t0 = SUB_MIX_0[s0 >>> 24] ^ SUB_MIX_1[(s1 >>> 16) & 0xff] ^ SUB_MIX_2[(s2 >>> 8) & 0xff] ^ SUB_MIX_3[s3 & 0xff] ^ keySchedule[ksRow++];
+		                var t1 = SUB_MIX_0[s1 >>> 24] ^ SUB_MIX_1[(s2 >>> 16) & 0xff] ^ SUB_MIX_2[(s3 >>> 8) & 0xff] ^ SUB_MIX_3[s0 & 0xff] ^ keySchedule[ksRow++];
+		                var t2 = SUB_MIX_0[s2 >>> 24] ^ SUB_MIX_1[(s3 >>> 16) & 0xff] ^ SUB_MIX_2[(s0 >>> 8) & 0xff] ^ SUB_MIX_3[s1 & 0xff] ^ keySchedule[ksRow++];
+		                var t3 = SUB_MIX_0[s3 >>> 24] ^ SUB_MIX_1[(s0 >>> 16) & 0xff] ^ SUB_MIX_2[(s1 >>> 8) & 0xff] ^ SUB_MIX_3[s2 & 0xff] ^ keySchedule[ksRow++];
+	
+		                // Update state
+		                s0 = t0;
+		                s1 = t1;
+		                s2 = t2;
+		                s3 = t3;
+		            }
+	
+		            // Shift rows, sub bytes, add round key
+		            var t0 = ((SBOX[s0 >>> 24] << 24) | (SBOX[(s1 >>> 16) & 0xff] << 16) | (SBOX[(s2 >>> 8) & 0xff] << 8) | SBOX[s3 & 0xff]) ^ keySchedule[ksRow++];
+		            var t1 = ((SBOX[s1 >>> 24] << 24) | (SBOX[(s2 >>> 16) & 0xff] << 16) | (SBOX[(s3 >>> 8) & 0xff] << 8) | SBOX[s0 & 0xff]) ^ keySchedule[ksRow++];
+		            var t2 = ((SBOX[s2 >>> 24] << 24) | (SBOX[(s3 >>> 16) & 0xff] << 16) | (SBOX[(s0 >>> 8) & 0xff] << 8) | SBOX[s1 & 0xff]) ^ keySchedule[ksRow++];
+		            var t3 = ((SBOX[s3 >>> 24] << 24) | (SBOX[(s0 >>> 16) & 0xff] << 16) | (SBOX[(s1 >>> 8) & 0xff] << 8) | SBOX[s2 & 0xff]) ^ keySchedule[ksRow++];
+	
+		            // Set output
+		            M[offset]     = t0;
+		            M[offset + 1] = t1;
+		            M[offset + 2] = t2;
+		            M[offset + 3] = t3;
+		        },
+	
+		        keySize: 256/32
+		    });
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.AES.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.AES.decrypt(ciphertext, key, cfg);
+		     */
+		    C.AES = BlockCipher._createHelper(AES);
+		}());
+	
+	
+		return CryptoJS.AES;
+	
+	}));
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var WordArray = C_lib.WordArray;
+		    var C_enc = C.enc;
+	
+		    /**
+		     * Base64 encoding strategy.
+		     */
+		    var Base64 = C_enc.Base64 = {
+		        /**
+		         * Converts a word array to a Base64 string.
+		         *
+		         * @param {WordArray} wordArray The word array.
+		         *
+		         * @return {string} The Base64 string.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var base64String = CryptoJS.enc.Base64.stringify(wordArray);
+		         */
+		        stringify: function (wordArray) {
+		            // Shortcuts
+		            var words = wordArray.words;
+		            var sigBytes = wordArray.sigBytes;
+		            var map = this._map;
+	
+		            // Clamp excess bits
+		            wordArray.clamp();
+	
+		            // Convert
+		            var base64Chars = [];
+		            for (var i = 0; i < sigBytes; i += 3) {
+		                var byte1 = (words[i >>> 2]       >>> (24 - (i % 4) * 8))       & 0xff;
+		                var byte2 = (words[(i + 1) >>> 2] >>> (24 - ((i + 1) % 4) * 8)) & 0xff;
+		                var byte3 = (words[(i + 2) >>> 2] >>> (24 - ((i + 2) % 4) * 8)) & 0xff;
+	
+		                var triplet = (byte1 << 16) | (byte2 << 8) | byte3;
+	
+		                for (var j = 0; (j < 4) && (i + j * 0.75 < sigBytes); j++) {
+		                    base64Chars.push(map.charAt((triplet >>> (6 * (3 - j))) & 0x3f));
+		                }
+		            }
+	
+		            // Add padding
+		            var paddingChar = map.charAt(64);
+		            if (paddingChar) {
+		                while (base64Chars.length % 4) {
+		                    base64Chars.push(paddingChar);
+		                }
+		            }
+	
+		            return base64Chars.join('');
+		        },
+	
+		        /**
+		         * Converts a Base64 string to a word array.
+		         *
+		         * @param {string} base64Str The Base64 string.
+		         *
+		         * @return {WordArray} The word array.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var wordArray = CryptoJS.enc.Base64.parse(base64String);
+		         */
+		        parse: function (base64Str) {
+		            // Shortcuts
+		            var base64StrLength = base64Str.length;
+		            var map = this._map;
+		            var reverseMap = this._reverseMap;
+	
+		            if (!reverseMap) {
+		                    reverseMap = this._reverseMap = [];
+		                    for (var j = 0; j < map.length; j++) {
+		                        reverseMap[map.charCodeAt(j)] = j;
+		                    }
+		            }
+	
+		            // Ignore padding
+		            var paddingChar = map.charAt(64);
+		            if (paddingChar) {
+		                var paddingIndex = base64Str.indexOf(paddingChar);
+		                if (paddingIndex !== -1) {
+		                    base64StrLength = paddingIndex;
+		                }
+		            }
+	
+		            // Convert
+		            return parseLoop(base64Str, base64StrLength, reverseMap);
+	
+		        },
+	
+		        _map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
+		    };
+	
+		    function parseLoop(base64Str, base64StrLength, reverseMap) {
+		      var words = [];
+		      var nBytes = 0;
+		      for (var i = 0; i < base64StrLength; i++) {
+		          if (i % 4) {
+		              var bits1 = reverseMap[base64Str.charCodeAt(i - 1)] << ((i % 4) * 2);
+		              var bits2 = reverseMap[base64Str.charCodeAt(i)] >>> (6 - (i % 4) * 2);
+		              words[nBytes >>> 2] |= (bits1 | bits2) << (24 - (nBytes % 4) * 8);
+		              nBytes++;
+		          }
+		      }
+		      return WordArray.create(words, nBytes);
+		    }
+		}());
+	
+	
+		return CryptoJS.enc.Base64;
+	
+	}));
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function (Math) {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var WordArray = C_lib.WordArray;
+		    var Hasher = C_lib.Hasher;
+		    var C_algo = C.algo;
+	
+		    // Constants table
+		    var T = [];
+	
+		    // Compute constants
+		    (function () {
+		        for (var i = 0; i < 64; i++) {
+		            T[i] = (Math.abs(Math.sin(i + 1)) * 0x100000000) | 0;
+		        }
+		    }());
+	
+		    /**
+		     * MD5 hash algorithm.
+		     */
+		    var MD5 = C_algo.MD5 = Hasher.extend({
+		        _doReset: function () {
+		            this._hash = new WordArray.init([
+		                0x67452301, 0xefcdab89,
+		                0x98badcfe, 0x10325476
+		            ]);
+		        },
+	
+		        _doProcessBlock: function (M, offset) {
+		            // Swap endian
+		            for (var i = 0; i < 16; i++) {
+		                // Shortcuts
+		                var offset_i = offset + i;
+		                var M_offset_i = M[offset_i];
+	
+		                M[offset_i] = (
+		                    (((M_offset_i << 8)  | (M_offset_i >>> 24)) & 0x00ff00ff) |
+		                    (((M_offset_i << 24) | (M_offset_i >>> 8))  & 0xff00ff00)
+		                );
+		            }
+	
+		            // Shortcuts
+		            var H = this._hash.words;
+	
+		            var M_offset_0  = M[offset + 0];
+		            var M_offset_1  = M[offset + 1];
+		            var M_offset_2  = M[offset + 2];
+		            var M_offset_3  = M[offset + 3];
+		            var M_offset_4  = M[offset + 4];
+		            var M_offset_5  = M[offset + 5];
+		            var M_offset_6  = M[offset + 6];
+		            var M_offset_7  = M[offset + 7];
+		            var M_offset_8  = M[offset + 8];
+		            var M_offset_9  = M[offset + 9];
+		            var M_offset_10 = M[offset + 10];
+		            var M_offset_11 = M[offset + 11];
+		            var M_offset_12 = M[offset + 12];
+		            var M_offset_13 = M[offset + 13];
+		            var M_offset_14 = M[offset + 14];
+		            var M_offset_15 = M[offset + 15];
+	
+		            // Working varialbes
+		            var a = H[0];
+		            var b = H[1];
+		            var c = H[2];
+		            var d = H[3];
+	
+		            // Computation
+		            a = FF(a, b, c, d, M_offset_0,  7,  T[0]);
+		            d = FF(d, a, b, c, M_offset_1,  12, T[1]);
+		            c = FF(c, d, a, b, M_offset_2,  17, T[2]);
+		            b = FF(b, c, d, a, M_offset_3,  22, T[3]);
+		            a = FF(a, b, c, d, M_offset_4,  7,  T[4]);
+		            d = FF(d, a, b, c, M_offset_5,  12, T[5]);
+		            c = FF(c, d, a, b, M_offset_6,  17, T[6]);
+		            b = FF(b, c, d, a, M_offset_7,  22, T[7]);
+		            a = FF(a, b, c, d, M_offset_8,  7,  T[8]);
+		            d = FF(d, a, b, c, M_offset_9,  12, T[9]);
+		            c = FF(c, d, a, b, M_offset_10, 17, T[10]);
+		            b = FF(b, c, d, a, M_offset_11, 22, T[11]);
+		            a = FF(a, b, c, d, M_offset_12, 7,  T[12]);
+		            d = FF(d, a, b, c, M_offset_13, 12, T[13]);
+		            c = FF(c, d, a, b, M_offset_14, 17, T[14]);
+		            b = FF(b, c, d, a, M_offset_15, 22, T[15]);
+	
+		            a = GG(a, b, c, d, M_offset_1,  5,  T[16]);
+		            d = GG(d, a, b, c, M_offset_6,  9,  T[17]);
+		            c = GG(c, d, a, b, M_offset_11, 14, T[18]);
+		            b = GG(b, c, d, a, M_offset_0,  20, T[19]);
+		            a = GG(a, b, c, d, M_offset_5,  5,  T[20]);
+		            d = GG(d, a, b, c, M_offset_10, 9,  T[21]);
+		            c = GG(c, d, a, b, M_offset_15, 14, T[22]);
+		            b = GG(b, c, d, a, M_offset_4,  20, T[23]);
+		            a = GG(a, b, c, d, M_offset_9,  5,  T[24]);
+		            d = GG(d, a, b, c, M_offset_14, 9,  T[25]);
+		            c = GG(c, d, a, b, M_offset_3,  14, T[26]);
+		            b = GG(b, c, d, a, M_offset_8,  20, T[27]);
+		            a = GG(a, b, c, d, M_offset_13, 5,  T[28]);
+		            d = GG(d, a, b, c, M_offset_2,  9,  T[29]);
+		            c = GG(c, d, a, b, M_offset_7,  14, T[30]);
+		            b = GG(b, c, d, a, M_offset_12, 20, T[31]);
+	
+		            a = HH(a, b, c, d, M_offset_5,  4,  T[32]);
+		            d = HH(d, a, b, c, M_offset_8,  11, T[33]);
+		            c = HH(c, d, a, b, M_offset_11, 16, T[34]);
+		            b = HH(b, c, d, a, M_offset_14, 23, T[35]);
+		            a = HH(a, b, c, d, M_offset_1,  4,  T[36]);
+		            d = HH(d, a, b, c, M_offset_4,  11, T[37]);
+		            c = HH(c, d, a, b, M_offset_7,  16, T[38]);
+		            b = HH(b, c, d, a, M_offset_10, 23, T[39]);
+		            a = HH(a, b, c, d, M_offset_13, 4,  T[40]);
+		            d = HH(d, a, b, c, M_offset_0,  11, T[41]);
+		            c = HH(c, d, a, b, M_offset_3,  16, T[42]);
+		            b = HH(b, c, d, a, M_offset_6,  23, T[43]);
+		            a = HH(a, b, c, d, M_offset_9,  4,  T[44]);
+		            d = HH(d, a, b, c, M_offset_12, 11, T[45]);
+		            c = HH(c, d, a, b, M_offset_15, 16, T[46]);
+		            b = HH(b, c, d, a, M_offset_2,  23, T[47]);
+	
+		            a = II(a, b, c, d, M_offset_0,  6,  T[48]);
+		            d = II(d, a, b, c, M_offset_7,  10, T[49]);
+		            c = II(c, d, a, b, M_offset_14, 15, T[50]);
+		            b = II(b, c, d, a, M_offset_5,  21, T[51]);
+		            a = II(a, b, c, d, M_offset_12, 6,  T[52]);
+		            d = II(d, a, b, c, M_offset_3,  10, T[53]);
+		            c = II(c, d, a, b, M_offset_10, 15, T[54]);
+		            b = II(b, c, d, a, M_offset_1,  21, T[55]);
+		            a = II(a, b, c, d, M_offset_8,  6,  T[56]);
+		            d = II(d, a, b, c, M_offset_15, 10, T[57]);
+		            c = II(c, d, a, b, M_offset_6,  15, T[58]);
+		            b = II(b, c, d, a, M_offset_13, 21, T[59]);
+		            a = II(a, b, c, d, M_offset_4,  6,  T[60]);
+		            d = II(d, a, b, c, M_offset_11, 10, T[61]);
+		            c = II(c, d, a, b, M_offset_2,  15, T[62]);
+		            b = II(b, c, d, a, M_offset_9,  21, T[63]);
+	
+		            // Intermediate hash value
+		            H[0] = (H[0] + a) | 0;
+		            H[1] = (H[1] + b) | 0;
+		            H[2] = (H[2] + c) | 0;
+		            H[3] = (H[3] + d) | 0;
+		        },
+	
+		        _doFinalize: function () {
+		            // Shortcuts
+		            var data = this._data;
+		            var dataWords = data.words;
+	
+		            var nBitsTotal = this._nDataBytes * 8;
+		            var nBitsLeft = data.sigBytes * 8;
+	
+		            // Add padding
+		            dataWords[nBitsLeft >>> 5] |= 0x80 << (24 - nBitsLeft % 32);
+	
+		            var nBitsTotalH = Math.floor(nBitsTotal / 0x100000000);
+		            var nBitsTotalL = nBitsTotal;
+		            dataWords[(((nBitsLeft + 64) >>> 9) << 4) + 15] = (
+		                (((nBitsTotalH << 8)  | (nBitsTotalH >>> 24)) & 0x00ff00ff) |
+		                (((nBitsTotalH << 24) | (nBitsTotalH >>> 8))  & 0xff00ff00)
+		            );
+		            dataWords[(((nBitsLeft + 64) >>> 9) << 4) + 14] = (
+		                (((nBitsTotalL << 8)  | (nBitsTotalL >>> 24)) & 0x00ff00ff) |
+		                (((nBitsTotalL << 24) | (nBitsTotalL >>> 8))  & 0xff00ff00)
+		            );
+	
+		            data.sigBytes = (dataWords.length + 1) * 4;
+	
+		            // Hash final blocks
+		            this._process();
+	
+		            // Shortcuts
+		            var hash = this._hash;
+		            var H = hash.words;
+	
+		            // Swap endian
+		            for (var i = 0; i < 4; i++) {
+		                // Shortcut
+		                var H_i = H[i];
+	
+		                H[i] = (((H_i << 8)  | (H_i >>> 24)) & 0x00ff00ff) |
+		                       (((H_i << 24) | (H_i >>> 8))  & 0xff00ff00);
+		            }
+	
+		            // Return final computed hash
+		            return hash;
+		        },
+	
+		        clone: function () {
+		            var clone = Hasher.clone.call(this);
+		            clone._hash = this._hash.clone();
+	
+		            return clone;
+		        }
+		    });
+	
+		    function FF(a, b, c, d, x, s, t) {
+		        var n = a + ((b & c) | (~b & d)) + x + t;
+		        return ((n << s) | (n >>> (32 - s))) + b;
+		    }
+	
+		    function GG(a, b, c, d, x, s, t) {
+		        var n = a + ((b & d) | (c & ~d)) + x + t;
+		        return ((n << s) | (n >>> (32 - s))) + b;
+		    }
+	
+		    function HH(a, b, c, d, x, s, t) {
+		        var n = a + (b ^ c ^ d) + x + t;
+		        return ((n << s) | (n >>> (32 - s))) + b;
+		    }
+	
+		    function II(a, b, c, d, x, s, t) {
+		        var n = a + (c ^ (b | ~d)) + x + t;
+		        return ((n << s) | (n >>> (32 - s))) + b;
+		    }
+	
+		    /**
+		     * Shortcut function to the hasher's object interface.
+		     *
+		     * @param {WordArray|string} message The message to hash.
+		     *
+		     * @return {WordArray} The hash.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var hash = CryptoJS.MD5('message');
+		     *     var hash = CryptoJS.MD5(wordArray);
+		     */
+		    C.MD5 = Hasher._createHelper(MD5);
+	
+		    /**
+		     * Shortcut function to the HMAC's object interface.
+		     *
+		     * @param {WordArray|string} message The message to hash.
+		     * @param {WordArray|string} key The secret key.
+		     *
+		     * @return {WordArray} The HMAC.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var hmac = CryptoJS.HmacMD5(message, key);
+		     */
+		    C.HmacMD5 = Hasher._createHmacHelper(MD5);
+		}(Math));
+	
+	
+		return CryptoJS.MD5;
+	
+	}));
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5), __webpack_require__(6), __webpack_require__(7));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var Base = C_lib.Base;
+		    var WordArray = C_lib.WordArray;
+		    var C_algo = C.algo;
+		    var MD5 = C_algo.MD5;
+	
+		    /**
+		     * This key derivation function is meant to conform with EVP_BytesToKey.
+		     * www.openssl.org/docs/crypto/EVP_BytesToKey.html
+		     */
+		    var EvpKDF = C_algo.EvpKDF = Base.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {number} keySize The key size in words to generate. Default: 4 (128 bits)
+		         * @property {Hasher} hasher The hash algorithm to use. Default: MD5
+		         * @property {number} iterations The number of iterations to perform. Default: 1
+		         */
+		        cfg: Base.extend({
+		            keySize: 128/32,
+		            hasher: MD5,
+		            iterations: 1
+		        }),
+	
+		        /**
+		         * Initializes a newly created key derivation function.
+		         *
+		         * @param {Object} cfg (Optional) The configuration options to use for the derivation.
+		         *
+		         * @example
+		         *
+		         *     var kdf = CryptoJS.algo.EvpKDF.create();
+		         *     var kdf = CryptoJS.algo.EvpKDF.create({ keySize: 8 });
+		         *     var kdf = CryptoJS.algo.EvpKDF.create({ keySize: 8, iterations: 1000 });
+		         */
+		        init: function (cfg) {
+		            this.cfg = this.cfg.extend(cfg);
+		        },
+	
+		        /**
+		         * Derives a key from a password.
+		         *
+		         * @param {WordArray|string} password The password.
+		         * @param {WordArray|string} salt A salt.
+		         *
+		         * @return {WordArray} The derived key.
+		         *
+		         * @example
+		         *
+		         *     var key = kdf.compute(password, salt);
+		         */
+		        compute: function (password, salt) {
+		            // Shortcut
+		            var cfg = this.cfg;
+	
+		            // Init hasher
+		            var hasher = cfg.hasher.create();
+	
+		            // Initial values
+		            var derivedKey = WordArray.create();
+	
+		            // Shortcuts
+		            var derivedKeyWords = derivedKey.words;
+		            var keySize = cfg.keySize;
+		            var iterations = cfg.iterations;
+	
+		            // Generate key
+		            while (derivedKeyWords.length < keySize) {
+		                if (block) {
+		                    hasher.update(block);
+		                }
+		                var block = hasher.update(password).finalize(salt);
+		                hasher.reset();
+	
+		                // Iterations
+		                for (var i = 1; i < iterations; i++) {
+		                    block = hasher.finalize(block);
+		                    hasher.reset();
+		                }
+	
+		                derivedKey.concat(block);
+		            }
+		            derivedKey.sigBytes = keySize * 4;
+	
+		            return derivedKey;
+		        }
+		    });
+	
+		    /**
+		     * Derives a key from a password.
+		     *
+		     * @param {WordArray|string} password The password.
+		     * @param {WordArray|string} salt A salt.
+		     * @param {Object} cfg (Optional) The configuration options to use for this computation.
+		     *
+		     * @return {WordArray} The derived key.
+		     *
+		     * @static
+		     *
+		     * @example
+		     *
+		     *     var key = CryptoJS.EvpKDF(password, salt);
+		     *     var key = CryptoJS.EvpKDF(password, salt, { keySize: 8 });
+		     *     var key = CryptoJS.EvpKDF(password, salt, { keySize: 8, iterations: 1000 });
+		     */
+		    C.EvpKDF = function (password, salt, cfg) {
+		        return EvpKDF.create(cfg).compute(password, salt);
+		    };
+		}());
+	
+	
+		return CryptoJS.EvpKDF;
+	
+	}));
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		/**
+		 * Cipher core components.
+		 */
+		CryptoJS.lib.Cipher || (function (undefined) {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var Base = C_lib.Base;
+		    var WordArray = C_lib.WordArray;
+		    var BufferedBlockAlgorithm = C_lib.BufferedBlockAlgorithm;
+		    var C_enc = C.enc;
+		    var Utf8 = C_enc.Utf8;
+		    var Base64 = C_enc.Base64;
+		    var C_algo = C.algo;
+		    var EvpKDF = C_algo.EvpKDF;
+	
+		    /**
+		     * Abstract base cipher template.
+		     *
+		     * @property {number} keySize This cipher's key size. Default: 4 (128 bits)
+		     * @property {number} ivSize This cipher's IV size. Default: 4 (128 bits)
+		     * @property {number} _ENC_XFORM_MODE A constant representing encryption mode.
+		     * @property {number} _DEC_XFORM_MODE A constant representing decryption mode.
+		     */
+		    var Cipher = C_lib.Cipher = BufferedBlockAlgorithm.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {WordArray} iv The IV to use for this operation.
+		         */
+		        cfg: Base.extend(),
+	
+		        /**
+		         * Creates this cipher in encryption mode.
+		         *
+		         * @param {WordArray} key The key.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {Cipher} A cipher instance.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var cipher = CryptoJS.algo.AES.createEncryptor(keyWordArray, { iv: ivWordArray });
+		         */
+		        createEncryptor: function (key, cfg) {
+		            return this.create(this._ENC_XFORM_MODE, key, cfg);
+		        },
+	
+		        /**
+		         * Creates this cipher in decryption mode.
+		         *
+		         * @param {WordArray} key The key.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {Cipher} A cipher instance.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var cipher = CryptoJS.algo.AES.createDecryptor(keyWordArray, { iv: ivWordArray });
+		         */
+		        createDecryptor: function (key, cfg) {
+		            return this.create(this._DEC_XFORM_MODE, key, cfg);
+		        },
+	
+		        /**
+		         * Initializes a newly created cipher.
+		         *
+		         * @param {number} xformMode Either the encryption or decryption transormation mode constant.
+		         * @param {WordArray} key The key.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @example
+		         *
+		         *     var cipher = CryptoJS.algo.AES.create(CryptoJS.algo.AES._ENC_XFORM_MODE, keyWordArray, { iv: ivWordArray });
+		         */
+		        init: function (xformMode, key, cfg) {
+		            // Apply config defaults
+		            this.cfg = this.cfg.extend(cfg);
+	
+		            // Store transform mode and key
+		            this._xformMode = xformMode;
+		            this._key = key;
+	
+		            // Set initial values
+		            this.reset();
+		        },
+	
+		        /**
+		         * Resets this cipher to its initial state.
+		         *
+		         * @example
+		         *
+		         *     cipher.reset();
+		         */
+		        reset: function () {
+		            // Reset data buffer
+		            BufferedBlockAlgorithm.reset.call(this);
+	
+		            // Perform concrete-cipher logic
+		            this._doReset();
+		        },
+	
+		        /**
+		         * Adds data to be encrypted or decrypted.
+		         *
+		         * @param {WordArray|string} dataUpdate The data to encrypt or decrypt.
+		         *
+		         * @return {WordArray} The data after processing.
+		         *
+		         * @example
+		         *
+		         *     var encrypted = cipher.process('data');
+		         *     var encrypted = cipher.process(wordArray);
+		         */
+		        process: function (dataUpdate) {
+		            // Append
+		            this._append(dataUpdate);
+	
+		            // Process available blocks
+		            return this._process();
+		        },
+	
+		        /**
+		         * Finalizes the encryption or decryption process.
+		         * Note that the finalize operation is effectively a destructive, read-once operation.
+		         *
+		         * @param {WordArray|string} dataUpdate The final data to encrypt or decrypt.
+		         *
+		         * @return {WordArray} The data after final processing.
+		         *
+		         * @example
+		         *
+		         *     var encrypted = cipher.finalize();
+		         *     var encrypted = cipher.finalize('data');
+		         *     var encrypted = cipher.finalize(wordArray);
+		         */
+		        finalize: function (dataUpdate) {
+		            // Final data update
+		            if (dataUpdate) {
+		                this._append(dataUpdate);
+		            }
+	
+		            // Perform concrete-cipher logic
+		            var finalProcessedData = this._doFinalize();
+	
+		            return finalProcessedData;
+		        },
+	
+		        keySize: 128/32,
+	
+		        ivSize: 128/32,
+	
+		        _ENC_XFORM_MODE: 1,
+	
+		        _DEC_XFORM_MODE: 2,
+	
+		        /**
+		         * Creates shortcut functions to a cipher's object interface.
+		         *
+		         * @param {Cipher} cipher The cipher to create a helper for.
+		         *
+		         * @return {Object} An object with encrypt and decrypt shortcut functions.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var AES = CryptoJS.lib.Cipher._createHelper(CryptoJS.algo.AES);
+		         */
+		        _createHelper: (function () {
+		            function selectCipherStrategy(key) {
+		                if (typeof key == 'string') {
+		                    return PasswordBasedCipher;
+		                } else {
+		                    return SerializableCipher;
+		                }
+		            }
+	
+		            return function (cipher) {
+		                return {
+		                    encrypt: function (message, key, cfg) {
+		                        return selectCipherStrategy(key).encrypt(cipher, message, key, cfg);
+		                    },
+	
+		                    decrypt: function (ciphertext, key, cfg) {
+		                        return selectCipherStrategy(key).decrypt(cipher, ciphertext, key, cfg);
+		                    }
+		                };
+		            };
+		        }())
+		    });
+	
+		    /**
+		     * Abstract base stream cipher template.
+		     *
+		     * @property {number} blockSize The number of 32-bit words this cipher operates on. Default: 1 (32 bits)
+		     */
+		    var StreamCipher = C_lib.StreamCipher = Cipher.extend({
+		        _doFinalize: function () {
+		            // Process partial blocks
+		            var finalProcessedBlocks = this._process(!!'flush');
+	
+		            return finalProcessedBlocks;
+		        },
+	
+		        blockSize: 1
+		    });
+	
+		    /**
+		     * Mode namespace.
+		     */
+		    var C_mode = C.mode = {};
+	
+		    /**
+		     * Abstract base block cipher mode template.
+		     */
+		    var BlockCipherMode = C_lib.BlockCipherMode = Base.extend({
+		        /**
+		         * Creates this mode for encryption.
+		         *
+		         * @param {Cipher} cipher A block cipher instance.
+		         * @param {Array} iv The IV words.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var mode = CryptoJS.mode.CBC.createEncryptor(cipher, iv.words);
+		         */
+		        createEncryptor: function (cipher, iv) {
+		            return this.Encryptor.create(cipher, iv);
+		        },
+	
+		        /**
+		         * Creates this mode for decryption.
+		         *
+		         * @param {Cipher} cipher A block cipher instance.
+		         * @param {Array} iv The IV words.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var mode = CryptoJS.mode.CBC.createDecryptor(cipher, iv.words);
+		         */
+		        createDecryptor: function (cipher, iv) {
+		            return this.Decryptor.create(cipher, iv);
+		        },
+	
+		        /**
+		         * Initializes a newly created mode.
+		         *
+		         * @param {Cipher} cipher A block cipher instance.
+		         * @param {Array} iv The IV words.
+		         *
+		         * @example
+		         *
+		         *     var mode = CryptoJS.mode.CBC.Encryptor.create(cipher, iv.words);
+		         */
+		        init: function (cipher, iv) {
+		            this._cipher = cipher;
+		            this._iv = iv;
+		        }
+		    });
+	
+		    /**
+		     * Cipher Block Chaining mode.
+		     */
+		    var CBC = C_mode.CBC = (function () {
+		        /**
+		         * Abstract base CBC mode.
+		         */
+		        var CBC = BlockCipherMode.extend();
+	
+		        /**
+		         * CBC encryptor.
+		         */
+		        CBC.Encryptor = CBC.extend({
+		            /**
+		             * Processes the data block at offset.
+		             *
+		             * @param {Array} words The data words to operate on.
+		             * @param {number} offset The offset where the block starts.
+		             *
+		             * @example
+		             *
+		             *     mode.processBlock(data.words, offset);
+		             */
+		            processBlock: function (words, offset) {
+		                // Shortcuts
+		                var cipher = this._cipher;
+		                var blockSize = cipher.blockSize;
+	
+		                // XOR and encrypt
+		                xorBlock.call(this, words, offset, blockSize);
+		                cipher.encryptBlock(words, offset);
+	
+		                // Remember this block to use with next block
+		                this._prevBlock = words.slice(offset, offset + blockSize);
+		            }
+		        });
+	
+		        /**
+		         * CBC decryptor.
+		         */
+		        CBC.Decryptor = CBC.extend({
+		            /**
+		             * Processes the data block at offset.
+		             *
+		             * @param {Array} words The data words to operate on.
+		             * @param {number} offset The offset where the block starts.
+		             *
+		             * @example
+		             *
+		             *     mode.processBlock(data.words, offset);
+		             */
+		            processBlock: function (words, offset) {
+		                // Shortcuts
+		                var cipher = this._cipher;
+		                var blockSize = cipher.blockSize;
+	
+		                // Remember this block to use with next block
+		                var thisBlock = words.slice(offset, offset + blockSize);
+	
+		                // Decrypt and XOR
+		                cipher.decryptBlock(words, offset);
+		                xorBlock.call(this, words, offset, blockSize);
+	
+		                // This block becomes the previous block
+		                this._prevBlock = thisBlock;
+		            }
+		        });
+	
+		        function xorBlock(words, offset, blockSize) {
+		            // Shortcut
+		            var iv = this._iv;
+	
+		            // Choose mixing block
+		            if (iv) {
+		                var block = iv;
+	
+		                // Remove IV for subsequent blocks
+		                this._iv = undefined;
+		            } else {
+		                var block = this._prevBlock;
+		            }
+	
+		            // XOR blocks
+		            for (var i = 0; i < blockSize; i++) {
+		                words[offset + i] ^= block[i];
+		            }
+		        }
+	
+		        return CBC;
+		    }());
+	
+		    /**
+		     * Padding namespace.
+		     */
+		    var C_pad = C.pad = {};
+	
+		    /**
+		     * PKCS #5/7 padding strategy.
+		     */
+		    var Pkcs7 = C_pad.Pkcs7 = {
+		        /**
+		         * Pads data using the algorithm defined in PKCS #5/7.
+		         *
+		         * @param {WordArray} data The data to pad.
+		         * @param {number} blockSize The multiple that the data should be padded to.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     CryptoJS.pad.Pkcs7.pad(wordArray, 4);
+		         */
+		        pad: function (data, blockSize) {
+		            // Shortcut
+		            var blockSizeBytes = blockSize * 4;
+	
+		            // Count padding bytes
+		            var nPaddingBytes = blockSizeBytes - data.sigBytes % blockSizeBytes;
+	
+		            // Create padding word
+		            var paddingWord = (nPaddingBytes << 24) | (nPaddingBytes << 16) | (nPaddingBytes << 8) | nPaddingBytes;
+	
+		            // Create padding
+		            var paddingWords = [];
+		            for (var i = 0; i < nPaddingBytes; i += 4) {
+		                paddingWords.push(paddingWord);
+		            }
+		            var padding = WordArray.create(paddingWords, nPaddingBytes);
+	
+		            // Add padding
+		            data.concat(padding);
+		        },
+	
+		        /**
+		         * Unpads data that had been padded using the algorithm defined in PKCS #5/7.
+		         *
+		         * @param {WordArray} data The data to unpad.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     CryptoJS.pad.Pkcs7.unpad(wordArray);
+		         */
+		        unpad: function (data) {
+		            // Get number of padding bytes from last byte
+		            var nPaddingBytes = data.words[(data.sigBytes - 1) >>> 2] & 0xff;
+	
+		            // Remove padding
+		            data.sigBytes -= nPaddingBytes;
+		        }
+		    };
+	
+		    /**
+		     * Abstract base block cipher template.
+		     *
+		     * @property {number} blockSize The number of 32-bit words this cipher operates on. Default: 4 (128 bits)
+		     */
+		    var BlockCipher = C_lib.BlockCipher = Cipher.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {Mode} mode The block mode to use. Default: CBC
+		         * @property {Padding} padding The padding strategy to use. Default: Pkcs7
+		         */
+		        cfg: Cipher.cfg.extend({
+		            mode: CBC,
+		            padding: Pkcs7
+		        }),
+	
+		        reset: function () {
+		            // Reset cipher
+		            Cipher.reset.call(this);
+	
+		            // Shortcuts
+		            var cfg = this.cfg;
+		            var iv = cfg.iv;
+		            var mode = cfg.mode;
+	
+		            // Reset block mode
+		            if (this._xformMode == this._ENC_XFORM_MODE) {
+		                var modeCreator = mode.createEncryptor;
+		            } else /* if (this._xformMode == this._DEC_XFORM_MODE) */ {
+		                var modeCreator = mode.createDecryptor;
+	
+		                // Keep at least one block in the buffer for unpadding
+		                this._minBufferSize = 1;
+		            }
+		            this._mode = modeCreator.call(mode, this, iv && iv.words);
+		        },
+	
+		        _doProcessBlock: function (words, offset) {
+		            this._mode.processBlock(words, offset);
+		        },
+	
+		        _doFinalize: function () {
+		            // Shortcut
+		            var padding = this.cfg.padding;
+	
+		            // Finalize
+		            if (this._xformMode == this._ENC_XFORM_MODE) {
+		                // Pad data
+		                padding.pad(this._data, this.blockSize);
+	
+		                // Process final blocks
+		                var finalProcessedBlocks = this._process(!!'flush');
+		            } else /* if (this._xformMode == this._DEC_XFORM_MODE) */ {
+		                // Process final blocks
+		                var finalProcessedBlocks = this._process(!!'flush');
+	
+		                // Unpad data
+		                padding.unpad(finalProcessedBlocks);
+		            }
+	
+		            return finalProcessedBlocks;
+		        },
+	
+		        blockSize: 128/32
+		    });
+	
+		    /**
+		     * A collection of cipher parameters.
+		     *
+		     * @property {WordArray} ciphertext The raw ciphertext.
+		     * @property {WordArray} key The key to this ciphertext.
+		     * @property {WordArray} iv The IV used in the ciphering operation.
+		     * @property {WordArray} salt The salt used with a key derivation function.
+		     * @property {Cipher} algorithm The cipher algorithm.
+		     * @property {Mode} mode The block mode used in the ciphering operation.
+		     * @property {Padding} padding The padding scheme used in the ciphering operation.
+		     * @property {number} blockSize The block size of the cipher.
+		     * @property {Format} formatter The default formatting strategy to convert this cipher params object to a string.
+		     */
+		    var CipherParams = C_lib.CipherParams = Base.extend({
+		        /**
+		         * Initializes a newly created cipher params object.
+		         *
+		         * @param {Object} cipherParams An object with any of the possible cipher parameters.
+		         *
+		         * @example
+		         *
+		         *     var cipherParams = CryptoJS.lib.CipherParams.create({
+		         *         ciphertext: ciphertextWordArray,
+		         *         key: keyWordArray,
+		         *         iv: ivWordArray,
+		         *         salt: saltWordArray,
+		         *         algorithm: CryptoJS.algo.AES,
+		         *         mode: CryptoJS.mode.CBC,
+		         *         padding: CryptoJS.pad.PKCS7,
+		         *         blockSize: 4,
+		         *         formatter: CryptoJS.format.OpenSSL
+		         *     });
+		         */
+		        init: function (cipherParams) {
+		            this.mixIn(cipherParams);
+		        },
+	
+		        /**
+		         * Converts this cipher params object to a string.
+		         *
+		         * @param {Format} formatter (Optional) The formatting strategy to use.
+		         *
+		         * @return {string} The stringified cipher params.
+		         *
+		         * @throws Error If neither the formatter nor the default formatter is set.
+		         *
+		         * @example
+		         *
+		         *     var string = cipherParams + '';
+		         *     var string = cipherParams.toString();
+		         *     var string = cipherParams.toString(CryptoJS.format.OpenSSL);
+		         */
+		        toString: function (formatter) {
+		            return (formatter || this.formatter).stringify(this);
+		        }
+		    });
+	
+		    /**
+		     * Format namespace.
+		     */
+		    var C_format = C.format = {};
+	
+		    /**
+		     * OpenSSL formatting strategy.
+		     */
+		    var OpenSSLFormatter = C_format.OpenSSL = {
+		        /**
+		         * Converts a cipher params object to an OpenSSL-compatible string.
+		         *
+		         * @param {CipherParams} cipherParams The cipher params object.
+		         *
+		         * @return {string} The OpenSSL-compatible string.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var openSSLString = CryptoJS.format.OpenSSL.stringify(cipherParams);
+		         */
+		        stringify: function (cipherParams) {
+		            // Shortcuts
+		            var ciphertext = cipherParams.ciphertext;
+		            var salt = cipherParams.salt;
+	
+		            // Format
+		            if (salt) {
+		                var wordArray = WordArray.create([0x53616c74, 0x65645f5f]).concat(salt).concat(ciphertext);
+		            } else {
+		                var wordArray = ciphertext;
+		            }
+	
+		            return wordArray.toString(Base64);
+		        },
+	
+		        /**
+		         * Converts an OpenSSL-compatible string to a cipher params object.
+		         *
+		         * @param {string} openSSLStr The OpenSSL-compatible string.
+		         *
+		         * @return {CipherParams} The cipher params object.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var cipherParams = CryptoJS.format.OpenSSL.parse(openSSLString);
+		         */
+		        parse: function (openSSLStr) {
+		            // Parse base64
+		            var ciphertext = Base64.parse(openSSLStr);
+	
+		            // Shortcut
+		            var ciphertextWords = ciphertext.words;
+	
+		            // Test for salt
+		            if (ciphertextWords[0] == 0x53616c74 && ciphertextWords[1] == 0x65645f5f) {
+		                // Extract salt
+		                var salt = WordArray.create(ciphertextWords.slice(2, 4));
+	
+		                // Remove salt from ciphertext
+		                ciphertextWords.splice(0, 4);
+		                ciphertext.sigBytes -= 16;
+		            }
+	
+		            return CipherParams.create({ ciphertext: ciphertext, salt: salt });
+		        }
+		    };
+	
+		    /**
+		     * A cipher wrapper that returns ciphertext as a serializable cipher params object.
+		     */
+		    var SerializableCipher = C_lib.SerializableCipher = Base.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {Formatter} format The formatting strategy to convert cipher param objects to and from a string. Default: OpenSSL
+		         */
+		        cfg: Base.extend({
+		            format: OpenSSLFormatter
+		        }),
+	
+		        /**
+		         * Encrypts a message.
+		         *
+		         * @param {Cipher} cipher The cipher algorithm to use.
+		         * @param {WordArray|string} message The message to encrypt.
+		         * @param {WordArray} key The key.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {CipherParams} A cipher params object.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var ciphertextParams = CryptoJS.lib.SerializableCipher.encrypt(CryptoJS.algo.AES, message, key);
+		         *     var ciphertextParams = CryptoJS.lib.SerializableCipher.encrypt(CryptoJS.algo.AES, message, key, { iv: iv });
+		         *     var ciphertextParams = CryptoJS.lib.SerializableCipher.encrypt(CryptoJS.algo.AES, message, key, { iv: iv, format: CryptoJS.format.OpenSSL });
+		         */
+		        encrypt: function (cipher, message, key, cfg) {
+		            // Apply config defaults
+		            cfg = this.cfg.extend(cfg);
+	
+		            // Encrypt
+		            var encryptor = cipher.createEncryptor(key, cfg);
+		            var ciphertext = encryptor.finalize(message);
+	
+		            // Shortcut
+		            var cipherCfg = encryptor.cfg;
+	
+		            // Create and return serializable cipher params
+		            return CipherParams.create({
+		                ciphertext: ciphertext,
+		                key: key,
+		                iv: cipherCfg.iv,
+		                algorithm: cipher,
+		                mode: cipherCfg.mode,
+		                padding: cipherCfg.padding,
+		                blockSize: cipher.blockSize,
+		                formatter: cfg.format
+		            });
+		        },
+	
+		        /**
+		         * Decrypts serialized ciphertext.
+		         *
+		         * @param {Cipher} cipher The cipher algorithm to use.
+		         * @param {CipherParams|string} ciphertext The ciphertext to decrypt.
+		         * @param {WordArray} key The key.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {WordArray} The plaintext.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var plaintext = CryptoJS.lib.SerializableCipher.decrypt(CryptoJS.algo.AES, formattedCiphertext, key, { iv: iv, format: CryptoJS.format.OpenSSL });
+		         *     var plaintext = CryptoJS.lib.SerializableCipher.decrypt(CryptoJS.algo.AES, ciphertextParams, key, { iv: iv, format: CryptoJS.format.OpenSSL });
+		         */
+		        decrypt: function (cipher, ciphertext, key, cfg) {
+		            // Apply config defaults
+		            cfg = this.cfg.extend(cfg);
+	
+		            // Convert string to CipherParams
+		            ciphertext = this._parse(ciphertext, cfg.format);
+	
+		            // Decrypt
+		            var plaintext = cipher.createDecryptor(key, cfg).finalize(ciphertext.ciphertext);
+	
+		            return plaintext;
+		        },
+	
+		        /**
+		         * Converts serialized ciphertext to CipherParams,
+		         * else assumed CipherParams already and returns ciphertext unchanged.
+		         *
+		         * @param {CipherParams|string} ciphertext The ciphertext.
+		         * @param {Formatter} format The formatting strategy to use to parse serialized ciphertext.
+		         *
+		         * @return {CipherParams} The unserialized ciphertext.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var ciphertextParams = CryptoJS.lib.SerializableCipher._parse(ciphertextStringOrParams, format);
+		         */
+		        _parse: function (ciphertext, format) {
+		            if (typeof ciphertext == 'string') {
+		                return format.parse(ciphertext, this);
+		            } else {
+		                return ciphertext;
+		            }
+		        }
+		    });
+	
+		    /**
+		     * Key derivation function namespace.
+		     */
+		    var C_kdf = C.kdf = {};
+	
+		    /**
+		     * OpenSSL key derivation function.
+		     */
+		    var OpenSSLKdf = C_kdf.OpenSSL = {
+		        /**
+		         * Derives a key and IV from a password.
+		         *
+		         * @param {string} password The password to derive from.
+		         * @param {number} keySize The size in words of the key to generate.
+		         * @param {number} ivSize The size in words of the IV to generate.
+		         * @param {WordArray|string} salt (Optional) A 64-bit salt to use. If omitted, a salt will be generated randomly.
+		         *
+		         * @return {CipherParams} A cipher params object with the key, IV, and salt.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var derivedParams = CryptoJS.kdf.OpenSSL.execute('Password', 256/32, 128/32);
+		         *     var derivedParams = CryptoJS.kdf.OpenSSL.execute('Password', 256/32, 128/32, 'saltsalt');
+		         */
+		        execute: function (password, keySize, ivSize, salt) {
+		            // Generate random salt
+		            if (!salt) {
+		                salt = WordArray.random(64/8);
+		            }
+	
+		            // Derive key and IV
+		            var key = EvpKDF.create({ keySize: keySize + ivSize }).compute(password, salt);
+	
+		            // Separate key and IV
+		            var iv = WordArray.create(key.words.slice(keySize), ivSize * 4);
+		            key.sigBytes = keySize * 4;
+	
+		            // Return params
+		            return CipherParams.create({ key: key, iv: iv, salt: salt });
+		        }
+		    };
+	
+		    /**
+		     * A serializable cipher wrapper that derives the key from a password,
+		     * and returns ciphertext as a serializable cipher params object.
+		     */
+		    var PasswordBasedCipher = C_lib.PasswordBasedCipher = SerializableCipher.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {KDF} kdf The key derivation function to use to generate a key and IV from a password. Default: OpenSSL
+		         */
+		        cfg: SerializableCipher.cfg.extend({
+		            kdf: OpenSSLKdf
+		        }),
+	
+		        /**
+		         * Encrypts a message using a password.
+		         *
+		         * @param {Cipher} cipher The cipher algorithm to use.
+		         * @param {WordArray|string} message The message to encrypt.
+		         * @param {string} password The password.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {CipherParams} A cipher params object.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var ciphertextParams = CryptoJS.lib.PasswordBasedCipher.encrypt(CryptoJS.algo.AES, message, 'password');
+		         *     var ciphertextParams = CryptoJS.lib.PasswordBasedCipher.encrypt(CryptoJS.algo.AES, message, 'password', { format: CryptoJS.format.OpenSSL });
+		         */
+		        encrypt: function (cipher, message, password, cfg) {
+		            // Apply config defaults
+		            cfg = this.cfg.extend(cfg);
+	
+		            // Derive key and other params
+		            var derivedParams = cfg.kdf.execute(password, cipher.keySize, cipher.ivSize);
+	
+		            // Add IV to config
+		            cfg.iv = derivedParams.iv;
+	
+		            // Encrypt
+		            var ciphertext = SerializableCipher.encrypt.call(this, cipher, message, derivedParams.key, cfg);
+	
+		            // Mix in derived params
+		            ciphertext.mixIn(derivedParams);
+	
+		            return ciphertext;
+		        },
+	
+		        /**
+		         * Decrypts serialized ciphertext using a password.
+		         *
+		         * @param {Cipher} cipher The cipher algorithm to use.
+		         * @param {CipherParams|string} ciphertext The ciphertext to decrypt.
+		         * @param {string} password The password.
+		         * @param {Object} cfg (Optional) The configuration options to use for this operation.
+		         *
+		         * @return {WordArray} The plaintext.
+		         *
+		         * @static
+		         *
+		         * @example
+		         *
+		         *     var plaintext = CryptoJS.lib.PasswordBasedCipher.decrypt(CryptoJS.algo.AES, formattedCiphertext, 'password', { format: CryptoJS.format.OpenSSL });
+		         *     var plaintext = CryptoJS.lib.PasswordBasedCipher.decrypt(CryptoJS.algo.AES, ciphertextParams, 'password', { format: CryptoJS.format.OpenSSL });
+		         */
+		        decrypt: function (cipher, ciphertext, password, cfg) {
+		            // Apply config defaults
+		            cfg = this.cfg.extend(cfg);
+	
+		            // Convert string to CipherParams
+		            ciphertext = this._parse(ciphertext, cfg.format);
+	
+		            // Derive key and other params
+		            var derivedParams = cfg.kdf.execute(password, cipher.keySize, cipher.ivSize, ciphertext.salt);
+	
+		            // Add IV to config
+		            cfg.iv = derivedParams.iv;
+	
+		            // Decrypt
+		            var plaintext = SerializableCipher.decrypt.call(this, cipher, ciphertext, derivedParams.key, cfg);
+	
+		            return plaintext;
+		        }
+		    });
+		}());
+	
+	
+	}));
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5), __webpack_require__(12), __webpack_require__(13), __webpack_require__(14), __webpack_require__(15));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var WordArray = C_lib.WordArray;
+		    var BlockCipher = C_lib.BlockCipher;
+		    var C_algo = C.algo;
+	
+		    // Permuted Choice 1 constants
+		    var PC1 = [
+		        57, 49, 41, 33, 25, 17, 9,  1,
+		        58, 50, 42, 34, 26, 18, 10, 2,
+		        59, 51, 43, 35, 27, 19, 11, 3,
+		        60, 52, 44, 36, 63, 55, 47, 39,
+		        31, 23, 15, 7,  62, 54, 46, 38,
+		        30, 22, 14, 6,  61, 53, 45, 37,
+		        29, 21, 13, 5,  28, 20, 12, 4
+		    ];
+	
+		    // Permuted Choice 2 constants
+		    var PC2 = [
+		        14, 17, 11, 24, 1,  5,
+		        3,  28, 15, 6,  21, 10,
+		        23, 19, 12, 4,  26, 8,
+		        16, 7,  27, 20, 13, 2,
+		        41, 52, 31, 37, 47, 55,
+		        30, 40, 51, 45, 33, 48,
+		        44, 49, 39, 56, 34, 53,
+		        46, 42, 50, 36, 29, 32
+		    ];
+	
+		    // Cumulative bit shift constants
+		    var BIT_SHIFTS = [1,  2,  4,  6,  8,  10, 12, 14, 15, 17, 19, 21, 23, 25, 27, 28];
+	
+		    // SBOXes and round permutation constants
+		    var SBOX_P = [
+		        {
+		            0x0: 0x808200,
+		            0x10000000: 0x8000,
+		            0x20000000: 0x808002,
+		            0x30000000: 0x2,
+		            0x40000000: 0x200,
+		            0x50000000: 0x808202,
+		            0x60000000: 0x800202,
+		            0x70000000: 0x800000,
+		            0x80000000: 0x202,
+		            0x90000000: 0x800200,
+		            0xa0000000: 0x8200,
+		            0xb0000000: 0x808000,
+		            0xc0000000: 0x8002,
+		            0xd0000000: 0x800002,
+		            0xe0000000: 0x0,
+		            0xf0000000: 0x8202,
+		            0x8000000: 0x0,
+		            0x18000000: 0x808202,
+		            0x28000000: 0x8202,
+		            0x38000000: 0x8000,
+		            0x48000000: 0x808200,
+		            0x58000000: 0x200,
+		            0x68000000: 0x808002,
+		            0x78000000: 0x2,
+		            0x88000000: 0x800200,
+		            0x98000000: 0x8200,
+		            0xa8000000: 0x808000,
+		            0xb8000000: 0x800202,
+		            0xc8000000: 0x800002,
+		            0xd8000000: 0x8002,
+		            0xe8000000: 0x202,
+		            0xf8000000: 0x800000,
+		            0x1: 0x8000,
+		            0x10000001: 0x2,
+		            0x20000001: 0x808200,
+		            0x30000001: 0x800000,
+		            0x40000001: 0x808002,
+		            0x50000001: 0x8200,
+		            0x60000001: 0x200,
+		            0x70000001: 0x800202,
+		            0x80000001: 0x808202,
+		            0x90000001: 0x808000,
+		            0xa0000001: 0x800002,
+		            0xb0000001: 0x8202,
+		            0xc0000001: 0x202,
+		            0xd0000001: 0x800200,
+		            0xe0000001: 0x8002,
+		            0xf0000001: 0x0,
+		            0x8000001: 0x808202,
+		            0x18000001: 0x808000,
+		            0x28000001: 0x800000,
+		            0x38000001: 0x200,
+		            0x48000001: 0x8000,
+		            0x58000001: 0x800002,
+		            0x68000001: 0x2,
+		            0x78000001: 0x8202,
+		            0x88000001: 0x8002,
+		            0x98000001: 0x800202,
+		            0xa8000001: 0x202,
+		            0xb8000001: 0x808200,
+		            0xc8000001: 0x800200,
+		            0xd8000001: 0x0,
+		            0xe8000001: 0x8200,
+		            0xf8000001: 0x808002
+		        },
+		        {
+		            0x0: 0x40084010,
+		            0x1000000: 0x4000,
+		            0x2000000: 0x80000,
+		            0x3000000: 0x40080010,
+		            0x4000000: 0x40000010,
+		            0x5000000: 0x40084000,
+		            0x6000000: 0x40004000,
+		            0x7000000: 0x10,
+		            0x8000000: 0x84000,
+		            0x9000000: 0x40004010,
+		            0xa000000: 0x40000000,
+		            0xb000000: 0x84010,
+		            0xc000000: 0x80010,
+		            0xd000000: 0x0,
+		            0xe000000: 0x4010,
+		            0xf000000: 0x40080000,
+		            0x800000: 0x40004000,
+		            0x1800000: 0x84010,
+		            0x2800000: 0x10,
+		            0x3800000: 0x40004010,
+		            0x4800000: 0x40084010,
+		            0x5800000: 0x40000000,
+		            0x6800000: 0x80000,
+		            0x7800000: 0x40080010,
+		            0x8800000: 0x80010,
+		            0x9800000: 0x0,
+		            0xa800000: 0x4000,
+		            0xb800000: 0x40080000,
+		            0xc800000: 0x40000010,
+		            0xd800000: 0x84000,
+		            0xe800000: 0x40084000,
+		            0xf800000: 0x4010,
+		            0x10000000: 0x0,
+		            0x11000000: 0x40080010,
+		            0x12000000: 0x40004010,
+		            0x13000000: 0x40084000,
+		            0x14000000: 0x40080000,
+		            0x15000000: 0x10,
+		            0x16000000: 0x84010,
+		            0x17000000: 0x4000,
+		            0x18000000: 0x4010,
+		            0x19000000: 0x80000,
+		            0x1a000000: 0x80010,
+		            0x1b000000: 0x40000010,
+		            0x1c000000: 0x84000,
+		            0x1d000000: 0x40004000,
+		            0x1e000000: 0x40000000,
+		            0x1f000000: 0x40084010,
+		            0x10800000: 0x84010,
+		            0x11800000: 0x80000,
+		            0x12800000: 0x40080000,
+		            0x13800000: 0x4000,
+		            0x14800000: 0x40004000,
+		            0x15800000: 0x40084010,
+		            0x16800000: 0x10,
+		            0x17800000: 0x40000000,
+		            0x18800000: 0x40084000,
+		            0x19800000: 0x40000010,
+		            0x1a800000: 0x40004010,
+		            0x1b800000: 0x80010,
+		            0x1c800000: 0x0,
+		            0x1d800000: 0x4010,
+		            0x1e800000: 0x40080010,
+		            0x1f800000: 0x84000
+		        },
+		        {
+		            0x0: 0x104,
+		            0x100000: 0x0,
+		            0x200000: 0x4000100,
+		            0x300000: 0x10104,
+		            0x400000: 0x10004,
+		            0x500000: 0x4000004,
+		            0x600000: 0x4010104,
+		            0x700000: 0x4010000,
+		            0x800000: 0x4000000,
+		            0x900000: 0x4010100,
+		            0xa00000: 0x10100,
+		            0xb00000: 0x4010004,
+		            0xc00000: 0x4000104,
+		            0xd00000: 0x10000,
+		            0xe00000: 0x4,
+		            0xf00000: 0x100,
+		            0x80000: 0x4010100,
+		            0x180000: 0x4010004,
+		            0x280000: 0x0,
+		            0x380000: 0x4000100,
+		            0x480000: 0x4000004,
+		            0x580000: 0x10000,
+		            0x680000: 0x10004,
+		            0x780000: 0x104,
+		            0x880000: 0x4,
+		            0x980000: 0x100,
+		            0xa80000: 0x4010000,
+		            0xb80000: 0x10104,
+		            0xc80000: 0x10100,
+		            0xd80000: 0x4000104,
+		            0xe80000: 0x4010104,
+		            0xf80000: 0x4000000,
+		            0x1000000: 0x4010100,
+		            0x1100000: 0x10004,
+		            0x1200000: 0x10000,
+		            0x1300000: 0x4000100,
+		            0x1400000: 0x100,
+		            0x1500000: 0x4010104,
+		            0x1600000: 0x4000004,
+		            0x1700000: 0x0,
+		            0x1800000: 0x4000104,
+		            0x1900000: 0x4000000,
+		            0x1a00000: 0x4,
+		            0x1b00000: 0x10100,
+		            0x1c00000: 0x4010000,
+		            0x1d00000: 0x104,
+		            0x1e00000: 0x10104,
+		            0x1f00000: 0x4010004,
+		            0x1080000: 0x4000000,
+		            0x1180000: 0x104,
+		            0x1280000: 0x4010100,
+		            0x1380000: 0x0,
+		            0x1480000: 0x10004,
+		            0x1580000: 0x4000100,
+		            0x1680000: 0x100,
+		            0x1780000: 0x4010004,
+		            0x1880000: 0x10000,
+		            0x1980000: 0x4010104,
+		            0x1a80000: 0x10104,
+		            0x1b80000: 0x4000004,
+		            0x1c80000: 0x4000104,
+		            0x1d80000: 0x4010000,
+		            0x1e80000: 0x4,
+		            0x1f80000: 0x10100
+		        },
+		        {
+		            0x0: 0x80401000,
+		            0x10000: 0x80001040,
+		            0x20000: 0x401040,
+		            0x30000: 0x80400000,
+		            0x40000: 0x0,
+		            0x50000: 0x401000,
+		            0x60000: 0x80000040,
+		            0x70000: 0x400040,
+		            0x80000: 0x80000000,
+		            0x90000: 0x400000,
+		            0xa0000: 0x40,
+		            0xb0000: 0x80001000,
+		            0xc0000: 0x80400040,
+		            0xd0000: 0x1040,
+		            0xe0000: 0x1000,
+		            0xf0000: 0x80401040,
+		            0x8000: 0x80001040,
+		            0x18000: 0x40,
+		            0x28000: 0x80400040,
+		            0x38000: 0x80001000,
+		            0x48000: 0x401000,
+		            0x58000: 0x80401040,
+		            0x68000: 0x0,
+		            0x78000: 0x80400000,
+		            0x88000: 0x1000,
+		            0x98000: 0x80401000,
+		            0xa8000: 0x400000,
+		            0xb8000: 0x1040,
+		            0xc8000: 0x80000000,
+		            0xd8000: 0x400040,
+		            0xe8000: 0x401040,
+		            0xf8000: 0x80000040,
+		            0x100000: 0x400040,
+		            0x110000: 0x401000,
+		            0x120000: 0x80000040,
+		            0x130000: 0x0,
+		            0x140000: 0x1040,
+		            0x150000: 0x80400040,
+		            0x160000: 0x80401000,
+		            0x170000: 0x80001040,
+		            0x180000: 0x80401040,
+		            0x190000: 0x80000000,
+		            0x1a0000: 0x80400000,
+		            0x1b0000: 0x401040,
+		            0x1c0000: 0x80001000,
+		            0x1d0000: 0x400000,
+		            0x1e0000: 0x40,
+		            0x1f0000: 0x1000,
+		            0x108000: 0x80400000,
+		            0x118000: 0x80401040,
+		            0x128000: 0x0,
+		            0x138000: 0x401000,
+		            0x148000: 0x400040,
+		            0x158000: 0x80000000,
+		            0x168000: 0x80001040,
+		            0x178000: 0x40,
+		            0x188000: 0x80000040,
+		            0x198000: 0x1000,
+		            0x1a8000: 0x80001000,
+		            0x1b8000: 0x80400040,
+		            0x1c8000: 0x1040,
+		            0x1d8000: 0x80401000,
+		            0x1e8000: 0x400000,
+		            0x1f8000: 0x401040
+		        },
+		        {
+		            0x0: 0x80,
+		            0x1000: 0x1040000,
+		            0x2000: 0x40000,
+		            0x3000: 0x20000000,
+		            0x4000: 0x20040080,
+		            0x5000: 0x1000080,
+		            0x6000: 0x21000080,
+		            0x7000: 0x40080,
+		            0x8000: 0x1000000,
+		            0x9000: 0x20040000,
+		            0xa000: 0x20000080,
+		            0xb000: 0x21040080,
+		            0xc000: 0x21040000,
+		            0xd000: 0x0,
+		            0xe000: 0x1040080,
+		            0xf000: 0x21000000,
+		            0x800: 0x1040080,
+		            0x1800: 0x21000080,
+		            0x2800: 0x80,
+		            0x3800: 0x1040000,
+		            0x4800: 0x40000,
+		            0x5800: 0x20040080,
+		            0x6800: 0x21040000,
+		            0x7800: 0x20000000,
+		            0x8800: 0x20040000,
+		            0x9800: 0x0,
+		            0xa800: 0x21040080,
+		            0xb800: 0x1000080,
+		            0xc800: 0x20000080,
+		            0xd800: 0x21000000,
+		            0xe800: 0x1000000,
+		            0xf800: 0x40080,
+		            0x10000: 0x40000,
+		            0x11000: 0x80,
+		            0x12000: 0x20000000,
+		            0x13000: 0x21000080,
+		            0x14000: 0x1000080,
+		            0x15000: 0x21040000,
+		            0x16000: 0x20040080,
+		            0x17000: 0x1000000,
+		            0x18000: 0x21040080,
+		            0x19000: 0x21000000,
+		            0x1a000: 0x1040000,
+		            0x1b000: 0x20040000,
+		            0x1c000: 0x40080,
+		            0x1d000: 0x20000080,
+		            0x1e000: 0x0,
+		            0x1f000: 0x1040080,
+		            0x10800: 0x21000080,
+		            0x11800: 0x1000000,
+		            0x12800: 0x1040000,
+		            0x13800: 0x20040080,
+		            0x14800: 0x20000000,
+		            0x15800: 0x1040080,
+		            0x16800: 0x80,
+		            0x17800: 0x21040000,
+		            0x18800: 0x40080,
+		            0x19800: 0x21040080,
+		            0x1a800: 0x0,
+		            0x1b800: 0x21000000,
+		            0x1c800: 0x1000080,
+		            0x1d800: 0x40000,
+		            0x1e800: 0x20040000,
+		            0x1f800: 0x20000080
+		        },
+		        {
+		            0x0: 0x10000008,
+		            0x100: 0x2000,
+		            0x200: 0x10200000,
+		            0x300: 0x10202008,
+		            0x400: 0x10002000,
+		            0x500: 0x200000,
+		            0x600: 0x200008,
+		            0x700: 0x10000000,
+		            0x800: 0x0,
+		            0x900: 0x10002008,
+		            0xa00: 0x202000,
+		            0xb00: 0x8,
+		            0xc00: 0x10200008,
+		            0xd00: 0x202008,
+		            0xe00: 0x2008,
+		            0xf00: 0x10202000,
+		            0x80: 0x10200000,
+		            0x180: 0x10202008,
+		            0x280: 0x8,
+		            0x380: 0x200000,
+		            0x480: 0x202008,
+		            0x580: 0x10000008,
+		            0x680: 0x10002000,
+		            0x780: 0x2008,
+		            0x880: 0x200008,
+		            0x980: 0x2000,
+		            0xa80: 0x10002008,
+		            0xb80: 0x10200008,
+		            0xc80: 0x0,
+		            0xd80: 0x10202000,
+		            0xe80: 0x202000,
+		            0xf80: 0x10000000,
+		            0x1000: 0x10002000,
+		            0x1100: 0x10200008,
+		            0x1200: 0x10202008,
+		            0x1300: 0x2008,
+		            0x1400: 0x200000,
+		            0x1500: 0x10000000,
+		            0x1600: 0x10000008,
+		            0x1700: 0x202000,
+		            0x1800: 0x202008,
+		            0x1900: 0x0,
+		            0x1a00: 0x8,
+		            0x1b00: 0x10200000,
+		            0x1c00: 0x2000,
+		            0x1d00: 0x10002008,
+		            0x1e00: 0x10202000,
+		            0x1f00: 0x200008,
+		            0x1080: 0x8,
+		            0x1180: 0x202000,
+		            0x1280: 0x200000,
+		            0x1380: 0x10000008,
+		            0x1480: 0x10002000,
+		            0x1580: 0x2008,
+		            0x1680: 0x10202008,
+		            0x1780: 0x10200000,
+		            0x1880: 0x10202000,
+		            0x1980: 0x10200008,
+		            0x1a80: 0x2000,
+		            0x1b80: 0x202008,
+		            0x1c80: 0x200008,
+		            0x1d80: 0x0,
+		            0x1e80: 0x10000000,
+		            0x1f80: 0x10002008
+		        },
+		        {
+		            0x0: 0x100000,
+		            0x10: 0x2000401,
+		            0x20: 0x400,
+		            0x30: 0x100401,
+		            0x40: 0x2100401,
+		            0x50: 0x0,
+		            0x60: 0x1,
+		            0x70: 0x2100001,
+		            0x80: 0x2000400,
+		            0x90: 0x100001,
+		            0xa0: 0x2000001,
+		            0xb0: 0x2100400,
+		            0xc0: 0x2100000,
+		            0xd0: 0x401,
+		            0xe0: 0x100400,
+		            0xf0: 0x2000000,
+		            0x8: 0x2100001,
+		            0x18: 0x0,
+		            0x28: 0x2000401,
+		            0x38: 0x2100400,
+		            0x48: 0x100000,
+		            0x58: 0x2000001,
+		            0x68: 0x2000000,
+		            0x78: 0x401,
+		            0x88: 0x100401,
+		            0x98: 0x2000400,
+		            0xa8: 0x2100000,
+		            0xb8: 0x100001,
+		            0xc8: 0x400,
+		            0xd8: 0x2100401,
+		            0xe8: 0x1,
+		            0xf8: 0x100400,
+		            0x100: 0x2000000,
+		            0x110: 0x100000,
+		            0x120: 0x2000401,
+		            0x130: 0x2100001,
+		            0x140: 0x100001,
+		            0x150: 0x2000400,
+		            0x160: 0x2100400,
+		            0x170: 0x100401,
+		            0x180: 0x401,
+		            0x190: 0x2100401,
+		            0x1a0: 0x100400,
+		            0x1b0: 0x1,
+		            0x1c0: 0x0,
+		            0x1d0: 0x2100000,
+		            0x1e0: 0x2000001,
+		            0x1f0: 0x400,
+		            0x108: 0x100400,
+		            0x118: 0x2000401,
+		            0x128: 0x2100001,
+		            0x138: 0x1,
+		            0x148: 0x2000000,
+		            0x158: 0x100000,
+		            0x168: 0x401,
+		            0x178: 0x2100400,
+		            0x188: 0x2000001,
+		            0x198: 0x2100000,
+		            0x1a8: 0x0,
+		            0x1b8: 0x2100401,
+		            0x1c8: 0x100401,
+		            0x1d8: 0x400,
+		            0x1e8: 0x2000400,
+		            0x1f8: 0x100001
+		        },
+		        {
+		            0x0: 0x8000820,
+		            0x1: 0x20000,
+		            0x2: 0x8000000,
+		            0x3: 0x20,
+		            0x4: 0x20020,
+		            0x5: 0x8020820,
+		            0x6: 0x8020800,
+		            0x7: 0x800,
+		            0x8: 0x8020000,
+		            0x9: 0x8000800,
+		            0xa: 0x20800,
+		            0xb: 0x8020020,
+		            0xc: 0x820,
+		            0xd: 0x0,
+		            0xe: 0x8000020,
+		            0xf: 0x20820,
+		            0x80000000: 0x800,
+		            0x80000001: 0x8020820,
+		            0x80000002: 0x8000820,
+		            0x80000003: 0x8000000,
+		            0x80000004: 0x8020000,
+		            0x80000005: 0x20800,
+		            0x80000006: 0x20820,
+		            0x80000007: 0x20,
+		            0x80000008: 0x8000020,
+		            0x80000009: 0x820,
+		            0x8000000a: 0x20020,
+		            0x8000000b: 0x8020800,
+		            0x8000000c: 0x0,
+		            0x8000000d: 0x8020020,
+		            0x8000000e: 0x8000800,
+		            0x8000000f: 0x20000,
+		            0x10: 0x20820,
+		            0x11: 0x8020800,
+		            0x12: 0x20,
+		            0x13: 0x800,
+		            0x14: 0x8000800,
+		            0x15: 0x8000020,
+		            0x16: 0x8020020,
+		            0x17: 0x20000,
+		            0x18: 0x0,
+		            0x19: 0x20020,
+		            0x1a: 0x8020000,
+		            0x1b: 0x8000820,
+		            0x1c: 0x8020820,
+		            0x1d: 0x20800,
+		            0x1e: 0x820,
+		            0x1f: 0x8000000,
+		            0x80000010: 0x20000,
+		            0x80000011: 0x800,
+		            0x80000012: 0x8020020,
+		            0x80000013: 0x20820,
+		            0x80000014: 0x20,
+		            0x80000015: 0x8020000,
+		            0x80000016: 0x8000000,
+		            0x80000017: 0x8000820,
+		            0x80000018: 0x8020820,
+		            0x80000019: 0x8000020,
+		            0x8000001a: 0x8000800,
+		            0x8000001b: 0x0,
+		            0x8000001c: 0x20800,
+		            0x8000001d: 0x820,
+		            0x8000001e: 0x20020,
+		            0x8000001f: 0x8020800
+		        }
+		    ];
+	
+		    // Masks that select the SBOX input
+		    var SBOX_MASK = [
+		        0xf8000001, 0x1f800000, 0x01f80000, 0x001f8000,
+		        0x0001f800, 0x00001f80, 0x000001f8, 0x8000001f
+		    ];
+	
+		    /**
+		     * DES block cipher algorithm.
+		     */
+		    var DES = C_algo.DES = BlockCipher.extend({
+		        _doReset: function () {
+		            // Shortcuts
+		            var key = this._key;
+		            var keyWords = key.words;
+	
+		            // Select 56 bits according to PC1
+		            var keyBits = [];
+		            for (var i = 0; i < 56; i++) {
+		                var keyBitPos = PC1[i] - 1;
+		                keyBits[i] = (keyWords[keyBitPos >>> 5] >>> (31 - keyBitPos % 32)) & 1;
+		            }
+	
+		            // Assemble 16 subkeys
+		            var subKeys = this._subKeys = [];
+		            for (var nSubKey = 0; nSubKey < 16; nSubKey++) {
+		                // Create subkey
+		                var subKey = subKeys[nSubKey] = [];
+	
+		                // Shortcut
+		                var bitShift = BIT_SHIFTS[nSubKey];
+	
+		                // Select 48 bits according to PC2
+		                for (var i = 0; i < 24; i++) {
+		                    // Select from the left 28 key bits
+		                    subKey[(i / 6) | 0] |= keyBits[((PC2[i] - 1) + bitShift) % 28] << (31 - i % 6);
+	
+		                    // Select from the right 28 key bits
+		                    subKey[4 + ((i / 6) | 0)] |= keyBits[28 + (((PC2[i + 24] - 1) + bitShift) % 28)] << (31 - i % 6);
+		                }
+	
+		                // Since each subkey is applied to an expanded 32-bit input,
+		                // the subkey can be broken into 8 values scaled to 32-bits,
+		                // which allows the key to be used without expansion
+		                subKey[0] = (subKey[0] << 1) | (subKey[0] >>> 31);
+		                for (var i = 1; i < 7; i++) {
+		                    subKey[i] = subKey[i] >>> ((i - 1) * 4 + 3);
+		                }
+		                subKey[7] = (subKey[7] << 5) | (subKey[7] >>> 27);
+		            }
+	
+		            // Compute inverse subkeys
+		            var invSubKeys = this._invSubKeys = [];
+		            for (var i = 0; i < 16; i++) {
+		                invSubKeys[i] = subKeys[15 - i];
+		            }
+		        },
+	
+		        encryptBlock: function (M, offset) {
+		            this._doCryptBlock(M, offset, this._subKeys);
+		        },
+	
+		        decryptBlock: function (M, offset) {
+		            this._doCryptBlock(M, offset, this._invSubKeys);
+		        },
+	
+		        _doCryptBlock: function (M, offset, subKeys) {
+		            // Get input
+		            this._lBlock = M[offset];
+		            this._rBlock = M[offset + 1];
+	
+		            // Initial permutation
+		            exchangeLR.call(this, 4,  0x0f0f0f0f);
+		            exchangeLR.call(this, 16, 0x0000ffff);
+		            exchangeRL.call(this, 2,  0x33333333);
+		            exchangeRL.call(this, 8,  0x00ff00ff);
+		            exchangeLR.call(this, 1,  0x55555555);
+	
+		            // Rounds
+		            for (var round = 0; round < 16; round++) {
+		                // Shortcuts
+		                var subKey = subKeys[round];
+		                var lBlock = this._lBlock;
+		                var rBlock = this._rBlock;
+	
+		                // Feistel function
+		                var f = 0;
+		                for (var i = 0; i < 8; i++) {
+		                    f |= SBOX_P[i][((rBlock ^ subKey[i]) & SBOX_MASK[i]) >>> 0];
+		                }
+		                this._lBlock = rBlock;
+		                this._rBlock = lBlock ^ f;
+		            }
+	
+		            // Undo swap from last round
+		            var t = this._lBlock;
+		            this._lBlock = this._rBlock;
+		            this._rBlock = t;
+	
+		            // Final permutation
+		            exchangeLR.call(this, 1,  0x55555555);
+		            exchangeRL.call(this, 8,  0x00ff00ff);
+		            exchangeRL.call(this, 2,  0x33333333);
+		            exchangeLR.call(this, 16, 0x0000ffff);
+		            exchangeLR.call(this, 4,  0x0f0f0f0f);
+	
+		            // Set output
+		            M[offset] = this._lBlock;
+		            M[offset + 1] = this._rBlock;
+		        },
+	
+		        keySize: 64/32,
+	
+		        ivSize: 64/32,
+	
+		        blockSize: 64/32
+		    });
+	
+		    // Swap bits across the left and right words
+		    function exchangeLR(offset, mask) {
+		        var t = ((this._lBlock >>> offset) ^ this._rBlock) & mask;
+		        this._rBlock ^= t;
+		        this._lBlock ^= t << offset;
+		    }
+	
+		    function exchangeRL(offset, mask) {
+		        var t = ((this._rBlock >>> offset) ^ this._lBlock) & mask;
+		        this._lBlock ^= t;
+		        this._rBlock ^= t << offset;
+		    }
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.DES.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.DES.decrypt(ciphertext, key, cfg);
+		     */
+		    C.DES = BlockCipher._createHelper(DES);
+	
+		    /**
+		     * Triple-DES block cipher algorithm.
+		     */
+		    var TripleDES = C_algo.TripleDES = BlockCipher.extend({
+		        _doReset: function () {
+		            // Shortcuts
+		            var key = this._key;
+		            var keyWords = key.words;
+	
+		            // Create DES instances
+		            this._des1 = DES.createEncryptor(WordArray.create(keyWords.slice(0, 2)));
+		            this._des2 = DES.createEncryptor(WordArray.create(keyWords.slice(2, 4)));
+		            this._des3 = DES.createEncryptor(WordArray.create(keyWords.slice(4, 6)));
+		        },
+	
+		        encryptBlock: function (M, offset) {
+		            this._des1.encryptBlock(M, offset);
+		            this._des2.decryptBlock(M, offset);
+		            this._des3.encryptBlock(M, offset);
+		        },
+	
+		        decryptBlock: function (M, offset) {
+		            this._des3.decryptBlock(M, offset);
+		            this._des2.encryptBlock(M, offset);
+		            this._des1.decryptBlock(M, offset);
+		        },
+	
+		        keySize: 192/32,
+	
+		        ivSize: 64/32,
+	
+		        blockSize: 64/32
+		    });
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.TripleDES.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.TripleDES.decrypt(ciphertext, key, cfg);
+		     */
+		    C.TripleDES = BlockCipher._createHelper(TripleDES);
+		}());
+	
+	
+		return CryptoJS.TripleDES;
+	
+	}));
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5), __webpack_require__(12), __webpack_require__(13), __webpack_require__(14), __webpack_require__(15));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var StreamCipher = C_lib.StreamCipher;
+		    var C_algo = C.algo;
+	
+		    // Reusable objects
+		    var S  = [];
+		    var C_ = [];
+		    var G  = [];
+	
+		    /**
+		     * Rabbit stream cipher algorithm
+		     */
+		    var Rabbit = C_algo.Rabbit = StreamCipher.extend({
+		        _doReset: function () {
+		            // Shortcuts
+		            var K = this._key.words;
+		            var iv = this.cfg.iv;
+	
+		            // Swap endian
+		            for (var i = 0; i < 4; i++) {
+		                K[i] = (((K[i] << 8)  | (K[i] >>> 24)) & 0x00ff00ff) |
+		                       (((K[i] << 24) | (K[i] >>> 8))  & 0xff00ff00);
+		            }
+	
+		            // Generate initial state values
+		            var X = this._X = [
+		                K[0], (K[3] << 16) | (K[2] >>> 16),
+		                K[1], (K[0] << 16) | (K[3] >>> 16),
+		                K[2], (K[1] << 16) | (K[0] >>> 16),
+		                K[3], (K[2] << 16) | (K[1] >>> 16)
+		            ];
+	
+		            // Generate initial counter values
+		            var C = this._C = [
+		                (K[2] << 16) | (K[2] >>> 16), (K[0] & 0xffff0000) | (K[1] & 0x0000ffff),
+		                (K[3] << 16) | (K[3] >>> 16), (K[1] & 0xffff0000) | (K[2] & 0x0000ffff),
+		                (K[0] << 16) | (K[0] >>> 16), (K[2] & 0xffff0000) | (K[3] & 0x0000ffff),
+		                (K[1] << 16) | (K[1] >>> 16), (K[3] & 0xffff0000) | (K[0] & 0x0000ffff)
+		            ];
+	
+		            // Carry bit
+		            this._b = 0;
+	
+		            // Iterate the system four times
+		            for (var i = 0; i < 4; i++) {
+		                nextState.call(this);
+		            }
+	
+		            // Modify the counters
+		            for (var i = 0; i < 8; i++) {
+		                C[i] ^= X[(i + 4) & 7];
+		            }
+	
+		            // IV setup
+		            if (iv) {
+		                // Shortcuts
+		                var IV = iv.words;
+		                var IV_0 = IV[0];
+		                var IV_1 = IV[1];
+	
+		                // Generate four subvectors
+		                var i0 = (((IV_0 << 8) | (IV_0 >>> 24)) & 0x00ff00ff) | (((IV_0 << 24) | (IV_0 >>> 8)) & 0xff00ff00);
+		                var i2 = (((IV_1 << 8) | (IV_1 >>> 24)) & 0x00ff00ff) | (((IV_1 << 24) | (IV_1 >>> 8)) & 0xff00ff00);
+		                var i1 = (i0 >>> 16) | (i2 & 0xffff0000);
+		                var i3 = (i2 << 16)  | (i0 & 0x0000ffff);
+	
+		                // Modify counter values
+		                C[0] ^= i0;
+		                C[1] ^= i1;
+		                C[2] ^= i2;
+		                C[3] ^= i3;
+		                C[4] ^= i0;
+		                C[5] ^= i1;
+		                C[6] ^= i2;
+		                C[7] ^= i3;
+	
+		                // Iterate the system four times
+		                for (var i = 0; i < 4; i++) {
+		                    nextState.call(this);
+		                }
+		            }
+		        },
+	
+		        _doProcessBlock: function (M, offset) {
+		            // Shortcut
+		            var X = this._X;
+	
+		            // Iterate the system
+		            nextState.call(this);
+	
+		            // Generate four keystream words
+		            S[0] = X[0] ^ (X[5] >>> 16) ^ (X[3] << 16);
+		            S[1] = X[2] ^ (X[7] >>> 16) ^ (X[5] << 16);
+		            S[2] = X[4] ^ (X[1] >>> 16) ^ (X[7] << 16);
+		            S[3] = X[6] ^ (X[3] >>> 16) ^ (X[1] << 16);
+	
+		            for (var i = 0; i < 4; i++) {
+		                // Swap endian
+		                S[i] = (((S[i] << 8)  | (S[i] >>> 24)) & 0x00ff00ff) |
+		                       (((S[i] << 24) | (S[i] >>> 8))  & 0xff00ff00);
+	
+		                // Encrypt
+		                M[offset + i] ^= S[i];
+		            }
+		        },
+	
+		        blockSize: 128/32,
+	
+		        ivSize: 64/32
+		    });
+	
+		    function nextState() {
+		        // Shortcuts
+		        var X = this._X;
+		        var C = this._C;
+	
+		        // Save old counter values
+		        for (var i = 0; i < 8; i++) {
+		            C_[i] = C[i];
+		        }
+	
+		        // Calculate new counter values
+		        C[0] = (C[0] + 0x4d34d34d + this._b) | 0;
+		        C[1] = (C[1] + 0xd34d34d3 + ((C[0] >>> 0) < (C_[0] >>> 0) ? 1 : 0)) | 0;
+		        C[2] = (C[2] + 0x34d34d34 + ((C[1] >>> 0) < (C_[1] >>> 0) ? 1 : 0)) | 0;
+		        C[3] = (C[3] + 0x4d34d34d + ((C[2] >>> 0) < (C_[2] >>> 0) ? 1 : 0)) | 0;
+		        C[4] = (C[4] + 0xd34d34d3 + ((C[3] >>> 0) < (C_[3] >>> 0) ? 1 : 0)) | 0;
+		        C[5] = (C[5] + 0x34d34d34 + ((C[4] >>> 0) < (C_[4] >>> 0) ? 1 : 0)) | 0;
+		        C[6] = (C[6] + 0x4d34d34d + ((C[5] >>> 0) < (C_[5] >>> 0) ? 1 : 0)) | 0;
+		        C[7] = (C[7] + 0xd34d34d3 + ((C[6] >>> 0) < (C_[6] >>> 0) ? 1 : 0)) | 0;
+		        this._b = (C[7] >>> 0) < (C_[7] >>> 0) ? 1 : 0;
+	
+		        // Calculate the g-values
+		        for (var i = 0; i < 8; i++) {
+		            var gx = X[i] + C[i];
+	
+		            // Construct high and low argument for squaring
+		            var ga = gx & 0xffff;
+		            var gb = gx >>> 16;
+	
+		            // Calculate high and low result of squaring
+		            var gh = ((((ga * ga) >>> 17) + ga * gb) >>> 15) + gb * gb;
+		            var gl = (((gx & 0xffff0000) * gx) | 0) + (((gx & 0x0000ffff) * gx) | 0);
+	
+		            // High XOR low
+		            G[i] = gh ^ gl;
+		        }
+	
+		        // Calculate new state values
+		        X[0] = (G[0] + ((G[7] << 16) | (G[7] >>> 16)) + ((G[6] << 16) | (G[6] >>> 16))) | 0;
+		        X[1] = (G[1] + ((G[0] << 8)  | (G[0] >>> 24)) + G[7]) | 0;
+		        X[2] = (G[2] + ((G[1] << 16) | (G[1] >>> 16)) + ((G[0] << 16) | (G[0] >>> 16))) | 0;
+		        X[3] = (G[3] + ((G[2] << 8)  | (G[2] >>> 24)) + G[1]) | 0;
+		        X[4] = (G[4] + ((G[3] << 16) | (G[3] >>> 16)) + ((G[2] << 16) | (G[2] >>> 16))) | 0;
+		        X[5] = (G[5] + ((G[4] << 8)  | (G[4] >>> 24)) + G[3]) | 0;
+		        X[6] = (G[6] + ((G[5] << 16) | (G[5] >>> 16)) + ((G[4] << 16) | (G[4] >>> 16))) | 0;
+		        X[7] = (G[7] + ((G[6] << 8)  | (G[6] >>> 24)) + G[5]) | 0;
+		    }
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.Rabbit.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.Rabbit.decrypt(ciphertext, key, cfg);
+		     */
+		    C.Rabbit = StreamCipher._createHelper(Rabbit);
+		}());
+	
+	
+		return CryptoJS.Rabbit;
+	
+	}));
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function (root, factory, undef) {
+		if (true) {
+			// CommonJS
+			module.exports = exports = factory(__webpack_require__(5), __webpack_require__(12), __webpack_require__(13), __webpack_require__(14), __webpack_require__(15));
+		}
+		else {}
+	}(this, function (CryptoJS) {
+	
+		(function () {
+		    // Shortcuts
+		    var C = CryptoJS;
+		    var C_lib = C.lib;
+		    var StreamCipher = C_lib.StreamCipher;
+		    var C_algo = C.algo;
+	
+		    /**
+		     * RC4 stream cipher algorithm.
+		     */
+		    var RC4 = C_algo.RC4 = StreamCipher.extend({
+		        _doReset: function () {
+		            // Shortcuts
+		            var key = this._key;
+		            var keyWords = key.words;
+		            var keySigBytes = key.sigBytes;
+	
+		            // Init sbox
+		            var S = this._S = [];
+		            for (var i = 0; i < 256; i++) {
+		                S[i] = i;
+		            }
+	
+		            // Key setup
+		            for (var i = 0, j = 0; i < 256; i++) {
+		                var keyByteIndex = i % keySigBytes;
+		                var keyByte = (keyWords[keyByteIndex >>> 2] >>> (24 - (keyByteIndex % 4) * 8)) & 0xff;
+	
+		                j = (j + S[i] + keyByte) % 256;
+	
+		                // Swap
+		                var t = S[i];
+		                S[i] = S[j];
+		                S[j] = t;
+		            }
+	
+		            // Counters
+		            this._i = this._j = 0;
+		        },
+	
+		        _doProcessBlock: function (M, offset) {
+		            M[offset] ^= generateKeystreamWord.call(this);
+		        },
+	
+		        keySize: 256/32,
+	
+		        ivSize: 0
+		    });
+	
+		    function generateKeystreamWord() {
+		        // Shortcuts
+		        var S = this._S;
+		        var i = this._i;
+		        var j = this._j;
+	
+		        // Generate keystream word
+		        var keystreamWord = 0;
+		        for (var n = 0; n < 4; n++) {
+		            i = (i + 1) % 256;
+		            j = (j + S[i]) % 256;
+	
+		            // Swap
+		            var t = S[i];
+		            S[i] = S[j];
+		            S[j] = t;
+	
+		            keystreamWord |= S[(S[i] + S[j]) % 256] << (24 - n * 8);
+		        }
+	
+		        // Update counters
+		        this._i = i;
+		        this._j = j;
+	
+		        return keystreamWord;
+		    }
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.RC4.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.RC4.decrypt(ciphertext, key, cfg);
+		     */
+		    C.RC4 = StreamCipher._createHelper(RC4);
+	
+		    /**
+		     * Modified RC4 stream cipher algorithm.
+		     */
+		    var RC4Drop = C_algo.RC4Drop = RC4.extend({
+		        /**
+		         * Configuration options.
+		         *
+		         * @property {number} drop The number of keystream words to drop. Default 192
+		         */
+		        cfg: RC4.cfg.extend({
+		            drop: 192
+		        }),
+	
+		        _doReset: function () {
+		            RC4._doReset.call(this);
+	
+		            // Drop
+		            for (var i = this.cfg.drop; i > 0; i--) {
+		                generateKeystreamWord.call(this);
+		            }
+		        }
+		    });
+	
+		    /**
+		     * Shortcut functions to the cipher's object interface.
+		     *
+		     * @example
+		     *
+		     *     var ciphertext = CryptoJS.RC4Drop.encrypt(message, key, cfg);
+		     *     var plaintext  = CryptoJS.RC4Drop.decrypt(ciphertext, key, cfg);
+		     */
+		    C.RC4Drop = StreamCipher._createHelper(RC4Drop);
+		}());
+	
+	
+		return CryptoJS.RC4;
+	
+	}));
+
+/***/ }
+/******/ ])
+});
+;
+//# sourceMappingURL=secure-ls.js.map
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/addStyles.js":
+/*!****************************************************!*\
+  !*** ./node_modules/style-loader/lib/addStyles.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/urls.js":
+/*!***********************************************!*\
+  !*** ./node_modules/style-loader/lib/urls.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/symbol-observable/es/index.js":
+/*!****************************************************!*\
+  !*** ./node_modules/symbol-observable/es/index.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ponyfill.js */ "./node_modules/symbol-observable/es/ponyfill.js");
+/* global window */
+
+
+var root;
+
+if (typeof self !== 'undefined') {
+  root = self;
+} else if (typeof window !== 'undefined') {
+  root = window;
+} else if (typeof global !== 'undefined') {
+  root = global;
+} else if (true) {
+  root = module;
+} else {}
+
+var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
+/* harmony default export */ __webpack_exports__["default"] = (result);
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./node_modules/symbol-observable/es/ponyfill.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/symbol-observable/es/ponyfill.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return symbolObservablePonyfill; });
+function symbolObservablePonyfill(root) {
+	var result;
+	var Symbol = root.Symbol;
+
+	if (typeof Symbol === 'function') {
+		if (Symbol.observable) {
+			result = Symbol.observable;
+		} else {
+			result = Symbol('observable');
+			Symbol.observable = result;
+		}
+	} else {
+		result = '@@observable';
+	}
+
+	return result;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/tiny-invariant/dist/tiny-invariant.esm.js ***!
@@ -69705,6 +78726,41 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./node_modules/webpack/buildin/harmony-module.js":
+/*!*******************************************!*\
+  !*** (webpack)/buildin/harmony-module.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(originalModule) {
+	if (!originalModule.webpackPolyfill) {
+		var module = Object.create(originalModule);
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		Object.defineProperty(module, "exports", {
+			enumerable: true
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/webpack/buildin/module.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/module.js ***!
@@ -69792,6 +78848,8 @@ try {
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 axios.defaults.withCredentials = true;
+window.axios.defaults.baseURL = 'http://mycolors.dev/api'; // setting the base-URL
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -69821,13 +78879,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _routes_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./routes/index */ "./resources/js/src/routes/index.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/store */ "./resources/js/src/store/store.js");
+/* harmony import */ var _routes_index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routes/index */ "./resources/js/src/routes/index.js");
+
+
 
 
 
 
 function Index(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_routes_index__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_2__["Provider"], {
+    store: _store_store__WEBPACK_IMPORTED_MODULE_3__["default"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_routes_index__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
@@ -69849,6 +78913,9 @@ if (document.getElementById('react')) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/header.css */ "./resources/js/src/components/css/header.css");
+/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_header_css__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 var Header = function Header(props) {
@@ -69858,6 +78925,122 @@ var Header = function Header(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
+
+/***/ }),
+
+/***/ "./resources/js/src/components/css/auth.css":
+/*!**************************************************!*\
+  !*** ./resources/js/src/components/css/auth.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./auth.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/src/components/css/auth.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/src/components/css/header.css":
+/*!****************************************************!*\
+  !*** ./resources/js/src/components/css/header.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../node_modules/css-loader??ref--6-1!../../../../../node_modules/postcss-loader/src??ref--6-2!./header.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./resources/js/src/components/css/header.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./resources/js/src/components/layouts/CredentialsLayout.js":
+/*!******************************************************************!*\
+  !*** ./resources/js/src/components/layouts/CredentialsLayout.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Header */ "./resources/js/src/components/Header.js");
+
+
+
+var CredentialsLayout = function CredentialsLayout(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "default-page"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "page-area"
+  }, props.children));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (CredentialsLayout);
+
+/***/ }),
+
+/***/ "./resources/js/src/components/layouts/DashboardLayout.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/src/components/layouts/DashboardLayout.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _middleware_authenticationCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../middleware/authenticationCheck */ "./resources/js/src/middleware/authenticationCheck.js");
+
+
+
+var DashboardLayout = function DashboardLayout(props) {
+  //check Auth middleware
+  Object(_middleware_authenticationCheck__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "dashboard-page"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Header of Dashboard"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "page-area"
+  }, props.children));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (DashboardLayout);
 
 /***/ }),
 
@@ -69888,6 +79071,28 @@ var DefaultLayout = function DefaultLayout(props) {
 
 /***/ }),
 
+/***/ "./resources/js/src/components/pages/AboutPage.js":
+/*!********************************************************!*\
+  !*** ./resources/js/src/components/pages/AboutPage.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function AboutPage(props) {
+  //
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "About Page"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (AboutPage);
+
+/***/ }),
+
 /***/ "./resources/js/src/components/pages/HomePage.js":
 /*!*******************************************************!*\
   !*** ./resources/js/src/components/pages/HomePage.js ***!
@@ -69906,6 +79111,94 @@ var HomePage = function HomePage(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (HomePage);
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/LoginPage.js":
+/*!********************************************************!*\
+  !*** ./resources/js/src/components/pages/LoginPage.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _css_auth_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/auth.css */ "./resources/js/src/components/css/auth.css");
+/* harmony import */ var _css_auth_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_auth_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _store_actions_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/actions/auth */ "./resources/js/src/store/actions/auth.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+var LoginPage = function LoginPage(props) {
+  // Local State for form data
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    username: '',
+    password: ''
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      user = _useState2[0],
+      setUser = _useState2[1]; // de-structure
+
+
+  var username = user.username,
+      password = user.password; // on change handle
+
+  var onchangeData = function onchangeData(e) {
+    setUser(_objectSpread(_objectSpread({}, user), {}, _defineProperty({}, e.target.name, e.target.value)));
+  };
+
+  var onsubmitForm = function onsubmitForm(e) {
+    e.preventDefault(); // pass user now
+    //login(user);
+
+    console.log(props);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "auth-page"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "form",
+    onSubmit: onsubmitForm
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "username",
+    placeholder: "Username",
+    onChange: onchangeData
+  }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "password",
+    placeholder: "Password",
+    onChange: onchangeData
+  }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn",
+    type: "submit"
+  }, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Need an account ? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    to: "/register"
+  }, "Create an account"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (LoginPage);
 
 /***/ }),
 
@@ -69930,6 +79223,111 @@ var NotFound = function NotFound(props) {
 
 /***/ }),
 
+/***/ "./resources/js/src/components/pages/RegisterPage.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/src/components/pages/RegisterPage.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _css_auth_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/auth.css */ "./resources/js/src/components/css/auth.css");
+/* harmony import */ var _css_auth_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_auth_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var RegisterPage = function RegisterPage(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "auth-page"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Registration"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "form"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "name",
+    placeholder: "Full Name"
+  }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "email",
+    placeholder: "Email Address"
+  }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "username",
+    placeholder: "Username"
+  }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "password",
+    placeholder: "Password"
+  }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    name: "c_password",
+    placeholder: "Confirm Password"
+  }), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn",
+    type: "submit"
+  }, "Sign up"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Already have an account ? ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+    to: "/login"
+  }, "Login Now"))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (RegisterPage);
+
+/***/ }),
+
+/***/ "./resources/js/src/components/pages/dashboard/IndexPage.js":
+/*!******************************************************************!*\
+  !*** ./resources/js/src/components/pages/dashboard/IndexPage.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function IndexPage(props) {
+  //
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Dashboard Index Page"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (IndexPage);
+
+/***/ }),
+
+/***/ "./resources/js/src/middleware/authenticationCheck.js":
+/*!************************************************************!*\
+  !*** ./resources/js/src/middleware/authenticationCheck.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+
+
+
+var checkAuth = function checkAuth() {
+  // init auth reducer
+  var authState = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
+    return state.authReducer;
+  });
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    authState.isAuthenticated === true ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+      to: "/login"
+    });
+  }, [authState]);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (checkAuth);
+
+/***/ }),
+
 /***/ "./resources/js/src/routes/index.js":
 /*!******************************************!*\
   !*** ./resources/js/src/routes/index.js ***!
@@ -69944,8 +79342,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _register__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./register */ "./resources/js/src/routes/register.js");
 /* harmony import */ var _components_layouts_DefaultLayout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../components/layouts/DefaultLayout */ "./resources/js/src/components/layouts/DefaultLayout.js");
-/* harmony import */ var _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../components/pages/HomePage */ "./resources/js/src/components/pages/HomePage.js");
-/* harmony import */ var _components_pages_NotFound__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../components/pages/NotFound */ "./resources/js/src/components/pages/NotFound.js");
+/* harmony import */ var _components_layouts_DashboardLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../components/layouts/DashboardLayout */ "./resources/js/src/components/layouts/DashboardLayout.js");
+/* harmony import */ var _components_layouts_CredentialsLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../components/layouts/CredentialsLayout */ "./resources/js/src/components/layouts/CredentialsLayout.js");
+/* harmony import */ var _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../components/pages/HomePage */ "./resources/js/src/components/pages/HomePage.js");
+/* harmony import */ var _components_pages_AboutPage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../components/pages/AboutPage */ "./resources/js/src/components/pages/AboutPage.js");
+/* harmony import */ var _components_pages_NotFound__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../components/pages/NotFound */ "./resources/js/src/components/pages/NotFound.js");
+/* harmony import */ var _components_pages_LoginPage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../components/pages/LoginPage */ "./resources/js/src/components/pages/LoginPage.js");
+/* harmony import */ var _components_pages_RegisterPage__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./../components/pages/RegisterPage */ "./resources/js/src/components/pages/RegisterPage.js");
+/* harmony import */ var _components_pages_dashboard_IndexPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/pages/dashboard/IndexPage */ "./resources/js/src/components/pages/dashboard/IndexPage.js");
+/* harmony import */ var _private_AuthCheck__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./private/AuthCheck */ "./resources/js/src/routes/private/AuthCheck.js");
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
@@ -69955,6 +79360,13 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
  // pages
+
+
+
+
+
+
+
 
 
 
@@ -69982,12 +79394,30 @@ function Routes(props) {
     exact: true,
     path: "/",
     layout: _components_layouts_DefaultLayout__WEBPACK_IMPORTED_MODULE_3__["default"],
-    component: _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppRoute, {
     exact: true,
-    path: "/home",
+    path: "/about",
     layout: _components_layouts_DefaultLayout__WEBPACK_IMPORTED_MODULE_3__["default"],
-    component: _components_pages_HomePage__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _components_pages_AboutPage__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppRoute, {
+    exact: true,
+    path: "/login",
+    layout: _components_layouts_CredentialsLayout__WEBPACK_IMPORTED_MODULE_5__["default"],
+    component: _components_pages_LoginPage__WEBPACK_IMPORTED_MODULE_9__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AppRoute, {
+    exact: true,
+    path: "/register",
+    layout: _components_layouts_CredentialsLayout__WEBPACK_IMPORTED_MODULE_5__["default"],
+    component: _components_pages_RegisterPage__WEBPACK_IMPORTED_MODULE_10__["default"]
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: _register__WEBPACK_IMPORTED_MODULE_2__["dashboardRoutes"]
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_private_AuthCheck__WEBPACK_IMPORTED_MODULE_12__["default"], {
+    exact: true,
+    path: "/dashboard",
+    layout: _components_layouts_DashboardLayout__WEBPACK_IMPORTED_MODULE_4__["default"],
+    component: _components_pages_dashboard_IndexPage__WEBPACK_IMPORTED_MODULE_11__["default"]
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "*"
@@ -69995,11 +79425,62 @@ function Routes(props) {
     exact: true,
     path: "*",
     layout: _components_layouts_DefaultLayout__WEBPACK_IMPORTED_MODULE_3__["default"],
-    component: _components_pages_NotFound__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _components_pages_NotFound__WEBPACK_IMPORTED_MODULE_8__["default"]
   }))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Routes);
+
+/***/ }),
+
+/***/ "./resources/js/src/routes/private/AuthCheck.js":
+/*!******************************************************!*\
+  !*** ./resources/js/src/routes/private/AuthCheck.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+
+
+
+
+function AuthCheckRoute(props) {
+  // Authentication check
+  var auth = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
+    return state.authReducer;
+  });
+  console.log(auth);
+
+  var AuthCheck = function AuthCheck(_ref) {
+    var Component = _ref.component,
+        Layout = _ref.layout,
+        rest = _objectWithoutProperties(_ref, ["component", "layout"]);
+
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], _extends({}, rest, {
+      render: function render(props) {
+        return auth.isAuthenticated === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Layout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Component, props)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Redirect"], {
+          to: "/login"
+        });
+      }
+    }));
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AuthCheck, null);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (AuthCheckRoute);
 
 /***/ }),
 
@@ -70015,7 +79496,374 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dashboardRoutes", function() { return dashboardRoutes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defaultRoutes", function() { return defaultRoutes; });
 var dashboardRoutes = ["/dashboard", "/dashboard/demo"];
-var defaultRoutes = ["/", "/home", "/login", "/register"];
+var defaultRoutes = ["/", "/home", "/about", "/login", '/register'];
+
+/***/ }),
+
+/***/ "./resources/js/src/store/actions/auth.js":
+/*!************************************************!*\
+  !*** ./resources/js/src/store/actions/auth.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types */ "./resources/js/src/store/actions/types.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _utils_secureLS__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../utils/secureLS */ "./resources/js/src/utils/secureLS.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+
+
+ //setAuthToken-Initial
+
+var AuthTokenInit = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.prev = 0;
+
+            if (!_utils_secureLS__WEBPACK_IMPORTED_MODULE_3__["default"].get('token')) {
+              _context.next = 6;
+              break;
+            }
+
+            _context.next = 4;
+            return setAuthToken(JSON.parse(_utils_secureLS__WEBPACK_IMPORTED_MODULE_3__["default"].get('token')));
+
+          case 4:
+            _context.next = 7;
+            break;
+
+          case 6:
+            console.log('Token is not set');
+
+          case 7:
+            _context.next = 13;
+            break;
+
+          case 9:
+            _context.prev = 9;
+            _context.t0 = _context["catch"](0);
+            console.log('ERROR!');
+            console.log(_context.t0);
+
+          case 13:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee, null, [[0, 9]]);
+  }));
+
+  return function AuthTokenInit() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+AuthTokenInit(); // checking token for already logged in or not
+// Load User
+
+var loadUser = /*#__PURE__*/function () {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+    var config, res;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            _context2.prev = 0;
+
+            if (_utils_secureLS__WEBPACK_IMPORTED_MODULE_3__["default"].get('token')) {
+              setAuthToken(JSON.parse(_utils_secureLS__WEBPACK_IMPORTED_MODULE_3__["default"].get('token')));
+            }
+
+            config = {
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            };
+            _context2.next = 5;
+            return axios.get(baseURL + '/auth/user', config);
+
+          case 5:
+            res = _context2.sent;
+            Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])({
+              type: 'LOAD_USER',
+              payload: res.data
+            });
+            _context2.next = 12;
+            break;
+
+          case 9:
+            _context2.prev = 9;
+            _context2.t0 = _context2["catch"](0);
+            Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])({
+              type: 'LOGIN_ERROR'
+            });
+
+          case 12:
+          case "end":
+            return _context2.stop();
+        }
+      }
+    }, _callee2, null, [[0, 9]]);
+  }));
+
+  return function loadUser() {
+    return _ref2.apply(this, arguments);
+  };
+}();
+/*
+const loadUser = () => {
+    return {
+        type: LOAD_USER
+    }
+}; */
+// User Login
+
+
+var login = /*#__PURE__*/function () {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(formData) {
+    var config;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            // user login
+            config = {
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            };
+            _context3.prev = 1;
+            _context3.next = 4;
+            return axios.post(baseURL + "/login", formData, config).then(function (res) {
+              console.log(res.data); // dispatch
+
+              Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])({
+                type: 'LOGIN_SUCCESS',
+                payload: res.data
+              });
+            })["catch"](function (err) {
+              console.log(err);
+            });
+
+          case 4:
+            // callign load-user-data-infos
+            loadUser();
+            _context3.next = 10;
+            break;
+
+          case 7:
+            _context3.prev = 7;
+            _context3.t0 = _context3["catch"](1);
+            Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useDispatch"])({
+              type: 'LOGIN_FAIL',
+              payload: _context3.t0.response.data
+            });
+
+          case 10:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3, null, [[1, 7]]);
+  }));
+
+  return function login(_x) {
+    return _ref3.apply(this, arguments);
+  };
+}();
+
+var loginSuccess = function loginSuccess() {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_1__["LOGIN_SUCCESS"]
+  };
+};
+
+var loginFail = function loginFail() {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_1__["LOGIN_FAIL"]
+  };
+};
+
+var loginErr = function loginErr() {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_1__["LOGIN_ERROR"]
+  };
+}; // export all actions
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  login: login,
+  loadUser: loadUser,
+  loginSuccess: loginSuccess,
+  loginFail: loginFail,
+  loginErr: loginErr
+});
+
+/***/ }),
+
+/***/ "./resources/js/src/store/actions/types.js":
+/*!*************************************************!*\
+  !*** ./resources/js/src/store/actions/types.js ***!
+  \*************************************************/
+/*! exports provided: THEME_TOG, LOGIN_SUCCESS, LOGIN_FAIL, LOGIN_ERROR, REG_SUCCESS, REG_FAIL, REG_ERROR, LOAD_USER */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "THEME_TOG", function() { return THEME_TOG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGIN_SUCCESS", function() { return LOGIN_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGIN_FAIL", function() { return LOGIN_FAIL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOGIN_ERROR", function() { return LOGIN_ERROR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REG_SUCCESS", function() { return REG_SUCCESS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REG_FAIL", function() { return REG_FAIL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REG_ERROR", function() { return REG_ERROR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOAD_USER", function() { return LOAD_USER; });
+/**
+ * Action Types Register File
+ */
+var THEME_TOG = "THEME_TOG"; // Login
+
+var LOGIN_SUCCESS = "LOGIN_SUCCESS";
+var LOGIN_FAIL = "LOGIN_FAIL";
+var LOGIN_ERROR = "LOGIN_ERROR"; // Register 
+
+var REG_SUCCESS = "REG_SUCCESS";
+var REG_FAIL = "REG_FAIL";
+var REG_ERROR = "REG_ERROR"; //load user data
+
+var LOAD_USER = "LOAD_USER";
+
+/***/ }),
+
+/***/ "./resources/js/src/store/reducers/auth.js":
+/*!*************************************************!*\
+  !*** ./resources/js/src/store/reducers/auth.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/types */ "./resources/js/src/store/actions/types.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+ // initial state
+
+var initState = {
+  isAuthenticated: false,
+  user: null,
+  profile: null,
+  pals: null,
+  _token: null
+}; // reducer
+
+var authReducer = function authReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  // switch case
+  switch (action.type) {
+    // AUTH_LOG
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["LOAD_USER"]:
+      return _objectSpread({}, state);
+
+    case _actions_types__WEBPACK_IMPORTED_MODULE_0__["LOGIN_SUCCESS"]:
+      return _objectSpread({}, state);
+
+    default:
+      return _objectSpread({}, state);
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (authReducer);
+
+/***/ }),
+
+/***/ "./resources/js/src/store/reducers/index.js":
+/*!**************************************************!*\
+  !*** ./resources/js/src/store/reducers/index.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var _auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth */ "./resources/js/src/store/reducers/auth.js");
+
+
+var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
+  authReducer: _auth__WEBPACK_IMPORTED_MODULE_1__["default"]
+});
+/* harmony default export */ __webpack_exports__["default"] = (rootReducer);
+
+/***/ }),
+
+/***/ "./resources/js/src/store/store.js":
+/*!*****************************************!*\
+  !*** ./resources/js/src/store/store.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
+/* harmony import */ var _reducers_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reducers/index */ "./resources/js/src/store/reducers/index.js");
+
+
+
+var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_index__WEBPACK_IMPORTED_MODULE_2__["default"], Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__["default"]), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+/***/ }),
+
+/***/ "./resources/js/src/utils/secureLS.js":
+/*!********************************************!*\
+  !*** ./resources/js/src/utils/secureLS.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var secure_ls__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! secure-ls */ "./node_modules/secure-ls/dist/secure-ls.js");
+/* harmony import */ var secure_ls__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(secure_ls__WEBPACK_IMPORTED_MODULE_0__);
+
+var ls = new secure_ls__WEBPACK_IMPORTED_MODULE_0___default.a({
+  encodingType: 'aec',
+  isCompression: true,
+  encryptionSecret: process.env.SECRET
+});
+/**
+ * ls.set('key-name', <object>); // set a value with key into localStorage ex. {test: 'secured'}
+ * ls.get('key-name'); // get value by key-name
+ * ls.clear(); // clear localStorage
+ * ls.remove('key-name'); // remove value by key-name
+ * ls.removeAll(); // remove all keys with values from localStorage
+ * ls.getAllKeys(); // return all keys from localStorage
+ */
+
+console.log(process.env.SECRET);
+/* harmony default export */ __webpack_exports__["default"] = (ls);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 

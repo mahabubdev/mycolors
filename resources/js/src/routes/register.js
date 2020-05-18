@@ -6,6 +6,7 @@ export const dashboardRoutes = [
 export const defaultRoutes = [
     "/",
     "/home",
+    "/about",
     "/login",
-    "/register"
+    '/register'
 ];
