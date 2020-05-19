@@ -25,7 +25,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     ];
     return response()->json($data, 200);
 });
-
+// authentications
 Route::post('/login', 'API\AuthController@login')->name('login');
 Route::post('/register', 'API\AuthController@register')->name('register');
 Route::middleware('auth:sanctum')->post('/logout', 'API\AuthController@logout')->name('logout');
+
+//palette
+Route::middleware('auth:sanctum')->get('/pal/{slug}', 'API\PaletteController@palPage')->name('pal.page');
+Route::middleware('auth:sanctum')->post('/pal/add', 'API\PaletteController@palCreate')->name('pal.create');
+
+// colors
+Route::middleware('auth:sanctum')->post('/{palette}/color/add', 'API\ColorController@colorCreate')->name('color.add');
+

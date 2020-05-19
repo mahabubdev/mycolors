@@ -18,9 +18,9 @@ class Palette extends Model
     // Eloquent Relations
 
     // author user
-    public function user()
+    public function author()
     {
-        return $this->belongsToMany(\App\User::class);
+        return $this->belongsTo(\App\User::class);
     }
 
     public function colors()
