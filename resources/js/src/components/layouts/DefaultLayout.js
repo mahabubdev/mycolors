@@ -5,7 +5,7 @@ const DefaultLayout = (props) => {
     return (
         <div className="default-page">
             <Header />
-            <div className="page-area">
+            <div className="container">
                 { props.children }
             </div>
         </div>

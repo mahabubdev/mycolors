@@ -12,8 +12,6 @@ const LoginPage = (props) =>  {
     // initiate dispatch
     const dispatch = useDispatch();
 
-    const auth = useSelector( state => (state.auth) ); // Auth State
-
     // Login Form handling
     const [loginData , setLoginData] = useState({ username: '', password: '' });
 
@@ -44,13 +42,13 @@ const LoginPage = (props) =>  {
             <h2>Login</h2>
             <hr />
             <form className="form" onSubmit={formSubmit}>
-                <p>Current Status: { auth.isAuthenticated ? "TRUE" : "FALSE" }</p>
                 <input name="username" placeholder="Username" onChange={inputHandleChange}  /> <br />
                 <input name="password" placeholder="Password" onChange={inputHandleChange}  /> <br />
                 <button className="btn" type="submit">Login</button>
                 <hr />
                 <p>
-                    Need an account ? <NavLink to="/register">Create an account</NavLink>
+                    Need an account ? <NavLink to="/register">Create an account</NavLink> <br />
+                    <NavLink to="/home"> | Go Back | </NavLink>
                 </p>
             </form>
         </div>

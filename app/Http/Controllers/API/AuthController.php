@@ -110,6 +110,23 @@ class AuthController extends Controller
 
 
 
+    ### LOGOUT -->>
+    public function logout(Request $req)
+    {
+        // revoke auth access snactum token...thats the logout
+        
+        auth()->user()->tokens()->where('id', auth()->user()->id)->delete();
+
+        return response()->json([
+            'msg'   => 'Logout successfull!'
+        ], 200); 
+
+        
+    }
+
+
+
+
 
 
 

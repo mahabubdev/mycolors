@@ -3,7 +3,8 @@ import {
     LOGIN_ERR,
     LOAD_USER,
     REG_SUCCESS,
-    REG_ERR
+    REG_ERR,
+    LOGOUT
 } from '../actions/types';
 
 import ls from './../../utils/secureLS'; // secure localStorage Data
@@ -112,6 +113,18 @@ export default function (state = initState, action) {
         return {
             ...state,
             //
+        }
+
+
+
+        // LOGOUT 
+        case LOGOUT: 
+        // payload
+        //console.log(action.payload)
+        ls.removeAll()
+        return {
+            ...state,
+            isAuthenticated: false
         }
 
 

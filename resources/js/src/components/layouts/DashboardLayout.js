@@ -21,7 +21,7 @@ const DashboardLayout = (props) => {
             <div className="dashboard-header">
                 <h2>Dashboard Header</h2>
             </div>
-            <div className="page-area">
+            <div className="container">
                 { props.children }
             </div>
             

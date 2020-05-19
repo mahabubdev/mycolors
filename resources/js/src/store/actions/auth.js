@@ -3,13 +3,16 @@ import {
     LOGIN_ERR,
     LOAD_USER,
     REG_SUCCESS,
-    REG_ERR
+    REG_ERR,
+    LOGOUT
 } from "./types";
 
-import { useDispatch } from 'react-redux';
 
 import axios from "axios";
 import { apiHeader, apiURL } from './../../config/Axios';
+
+
+
 
 
 
@@ -26,12 +29,31 @@ export const loadUser = () => {
                 type: LOAD_USER,
                 payload: resposne.data
             })
+            
         })
         .catch(error => {
             console.log('Load User failed...!')
         })
     }
 }
+
+// Logout 
+export const logOut = () => {
+    return function(dispatch) {
+        axios.post(apiURL + '/logout', apiHeader)
+        .then( res => {
+            console.log('Logging out ...')
+            dispatch({
+                type: LOGOUT
+            })
+        })
+        .catch(err => {
+            console.log('Logout operation failed ...')
+        })
+    }
+}
+
+
 
 
 export const registerReq = (data) => {
@@ -70,6 +92,8 @@ export const loginReq = (data) => {
                 type: LOGIN_SUCCESS, 
                 payload: resposne.data
          })
+         // notify
+
      })
      .catch(error => {
          console.log('Login Failded or gone wrong ... ')

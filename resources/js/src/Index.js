@@ -8,12 +8,15 @@ import Routes from './routes/index';
 
 
 
+
+
+
 function Index( props ) {
 
     return (
     <Provider store={store}>
         <Routes />
-      </Provider>
+    </Provider>
     );
 }
 
