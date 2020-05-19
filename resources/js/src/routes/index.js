@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { 
     authRoutes,
     defaultRoutes,
     dashboardRoutes,
 } from "./register";
+
+// load user test
+import { useDispatch, useSelector } from 'react-redux';
+import { loadUser } from '../store/actions/auth'
 
 // layouts
 import DefaultLayout from './../components/layouts/DefaultLayout';
@@ -21,11 +25,12 @@ import RegisterPage from './../components/pages/auth/RegisterPage';
 import NotFound from './../components/pages/NotFound';
 
 
-function Routes( props )  {
+function Routes(props)  {
 
     // Dynamic Routes and Components
     const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
         <Route {...rest} render={ props => (
+            
             <Layout>
                 <Component {...props}></Component>
             </Layout>

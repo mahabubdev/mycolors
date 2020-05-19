@@ -6,7 +6,10 @@ import store from './store/store';
 
 import Routes from './routes/index';
 
+
+
 function Index( props ) {
+
     return (
     <Provider store={store}>
         <Routes />

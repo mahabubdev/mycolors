@@ -10,7 +10,7 @@ use Hash;
 
 class AuthController extends Controller
 {
-    # Login 
+    ### Login 
     public function login(Request $req)
     {
         // Login Controller
@@ -61,7 +61,8 @@ class AuthController extends Controller
                             'msg'           =>  'Login Successfull!',
                             'access_token'  =>  $accessToken,
                             'user'          =>  auth()->user(),
-                            'profile'       =>  auth()->user()->profile()->get(),
+                            'profile'       =>  auth()->user()->profile()->get()[0],
+                            'pals'          =>  auth()->user()->pals()->get(),
                             'loginerr'      =>  false
                         ], 202);
                     }
@@ -105,4 +106,123 @@ class AuthController extends Controller
         }
 
     }
+
+
+
+
+
+
+
+    ### REGISTER
+    public function register(Request $req)
+    {
+        // REGISTER CONTROLLER
+        $regData = Validator::make($req->all(), [
+            'name'      =>  ['required', 'string', 'min:5', 'max:100'],
+            'username'  =>  ['required', 'string', 'min:4', 'max:16'],
+            'email'     =>  ['required', 'string', 'email'],
+            'password'  =>  ['required', 'string', 'min:8', 'max:191', 'confirmed'],
+        ]);
+
+        // Validation after logics
+        if ($regData->fails())
+        {
+            // when request data will not validated | Validation Error
+            return response()->json($regData->messages(), 400);
+        }
+
+        else {
+            // when validation has no error | Proced next logics
+            $val = $regData->validated();
+            
+            // find user by username + email for unique check
+            $userName = \App\User::where('username', $val['username']);
+            $userEmail = \App\User::where('email', $val['email']);
+
+            $userExist = $userName->exists() || $userEmail->exists();
+
+            if ($userExist) {
+                // it means, any of them exists
+                if ( $userName->exists() && $userEmail->exists() ) {
+                    return response()->json( [
+                        'error'     => 'Username / Email taken',
+                        'regErr'    =>  true
+                    ], 400);
+                }
+
+                else if($userName->exists()){
+                    //dd("Username taken");
+                    return response()->json( [
+                        'error'     => 'Username taken. Try different',
+                        'regErr'    =>  true
+                    ], 400);
+                }
+                else if($userEmail->exists()){
+                    //dd("Email taken");
+                    return response()->json( [
+                        'error'     => 'Email already exists!',
+                        'regErr'    =>  true
+                    ], 400);
+                }
+            } 
+
+            // All error handles gone
+            else {
+                // USER now ready to create
+                //dd('User registered');
+                /*
+                \App\User::create([
+                    'name'      => $val['name'],
+                    'username'  => $val['username'],
+                    'email'     => $val['email'],
+                    'password'  => Hash::make($val['password']),
+                ]); */
+
+                $newUser = new \App\User();
+
+                $newUser->name = $val['name'];
+                $newUser->username = $val['username'];
+                $newUser->email = $val['email'];
+                $newUser->password = Hash::make($val['password']);
+
+                $newUser->save();
+
+                \App\Model\Profile::create([
+                    'user_id'   =>  $newUser->id
+                ]);
+
+                // make him as Logged in
+                $loginNow = [
+                    'username'  => $val['username'],
+                    'password'  => $val['password']
+                ];
+
+                Auth::attempt($loginNow); // attempt as logged in
+                        // creating the access token
+                        $accessToken = auth()->user()
+                                        ->createToken('authToken')
+                                        ->plainTextToken;
+
+
+
+
+                
+                return response()->json( [
+                    'msg'     => 'Registration success!',
+                    'access_token'  =>  $accessToken,
+                    'user'          =>  auth()->user(),
+                    'profile'       =>  auth()->user()->profile()->get()[0],
+                    'pals'          =>  auth()->user()->pals()->get(),
+                    'regErr'    =>  false
+                ], 202);
+                
+            }
+
+            //dd($userEmail->exists());
+
+
+
+        }
+    }
+
 }

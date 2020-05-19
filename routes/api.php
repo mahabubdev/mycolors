@@ -15,12 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    $user = auth()->user();
+    $profile = auth()->user()->profile()->get();
+    $pals = auth()->user()->pals()->get();
     $data = [
-        "user" => auth()->user(),
-        "profile" => auth()->user()->profile()->get(),
-        "palettes" => auth()->user()->pals()->get()
+        "user" => $user,
+        "profile" => $profile[0],
+        "pals" => $pals
     ];
     return response()->json($data, 200);
 });
 
 Route::post('/login', 'API\AuthController@login')->name('login');
+Route::post('/register', 'API\AuthController@register')->name('login');

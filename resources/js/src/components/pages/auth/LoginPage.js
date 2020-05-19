@@ -6,6 +6,7 @@ import "../../css/auth.css";
 import { loginReq } from '../../../store/actions/auth'
 
 
+
 const LoginPage = (props) =>  {
 
     // initiate dispatch
@@ -32,8 +33,9 @@ const LoginPage = (props) =>  {
         console.log(loginData);
         //loginReq(loginData); // send to loginReq action
         dispatch(loginReq(loginData));
-        //useCallback( dispatch(loginReq(loginData), [dispatch]) );
+
     }
+
 
 
 
