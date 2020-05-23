@@ -37,22 +37,6 @@ export const loadUser = () => {
     }
 }
 
-// Logout 
-export const logOut = () => {
-    return function(dispatch) {
-        axios.post(apiURL + '/logout', apiHeader)
-        .then( res => {
-            console.log('Logging out ...')
-            dispatch({
-                type: LOGOUT
-            })
-        })
-        .catch(err => {
-            console.log('Logout operation failed ...')
-        })
-    }
-}
-
 
 
 
@@ -103,6 +87,23 @@ export const loginReq = (data) => {
      });
     }
 
+}
+
+
+// Logout 
+export const logOut = async () => {
+    return function(dispatch) {
+        axios.post(apiURL + '/logout', apiHeader)
+        .then( res => {
+            console.log('Logging out ...')
+            dispatch({
+                type: LOGOUT
+            })
+        })
+        .catch(err => {
+            console.log('Logout operation failed ...')
+        })
+    }
 }
 
 

@@ -7,8 +7,8 @@ import {
 } from "./register";
 
 // load user test
-import { useDispatch, useSelector } from 'react-redux';
-import { loadUser } from '../store/actions/auth'
+import { useSelector } from 'react-redux';
+//import { loadUser } from '../store/actions/auth'
 
 // layouts
 import DefaultLayout from './../components/layouts/DefaultLayout';
@@ -26,7 +26,34 @@ import RegisterPage from './../components/pages/auth/RegisterPage';
 import NotFound from './../components/pages/NotFound';
 
 
+
+import ls from '../utils/secureLS'; // secure localStorage Data
+// set Auth Token if authenticated ... 
+import setAuthToken from '../token/setAuthToken';
+
+
 function Routes(props)  {
+
+    const auth = useSelector( state => (state.auth));
+
+    // set auth token
+    useEffect(() => {
+        const AuthTokenInit = () => {
+            const setTokenNow = () => {
+                if (ls.get('token')) {
+                    setAuthToken(ls.get('token'));
+                    //console.log(JSON.parse(localStorage.getItem('token')));
+                    console.log('Token setuped')
+                }
+                else {
+                    console.log('Token is not set');
+                }
+            }
+            setTokenNow(); //called
+        }
+        AuthTokenInit(); // checking token for already logged in or not
+    }, [auth])
+
 
     // Dynamic Routes and Components
     const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (

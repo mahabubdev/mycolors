@@ -114,12 +114,34 @@ class AuthController extends Controller
     public function logout(Request $req)
     {
         // revoke auth access snactum token...thats the logout
-        
-        auth()->user()->tokens()->where('id', auth()->user()->id)->delete();
 
-        return response()->json([
-            'msg'   => 'Logout successfull!'
-        ], 200); 
+        //dd(auth()->user()->tokens()->exists());
+
+        try {
+            $authToken = auth()->user()->tokens();
+
+            if ($authToken->exists()) {
+                $authToken->delete();
+                $authToken->where('id', auth()->user()->id)->delete();
+                // return message
+                return response()->json([
+                    'msg'   => 'Logout successfull!'
+                ], 200); 
+            }
+            else {
+                // return message
+                return response()->json([
+                    'error'   => 'Already logged out ... !'
+                ], 400); 
+            }
+        }
+        catch(Exeption $error) {
+            // return message
+            return response()->json([
+                'msg'   => 'Operation Error!',
+                'error' => $error
+            ], 400); 
+        }
 
         
     }

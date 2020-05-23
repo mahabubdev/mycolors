@@ -9,25 +9,6 @@ import {
 
 import ls from './../../utils/secureLS'; // secure localStorage Data
 
-// set Auth Token if authenticated ... 
-import setAuthToken from '../../token/setAuthToken';
-
-//setAuthToken-Initial
-const AuthTokenInit = async () => {
-    const setTokenNow = () => {
-        if (ls.get('token')) {
-            setAuthToken(ls.get('token'));
-            //console.log(JSON.parse(localStorage.getItem('token')));
-            console.log('Token setuped')
-        }
-        else {
-            console.log('Token is not set');
-        }
-    }
-    await setTokenNow(); //called
-}
-AuthTokenInit(); // checking token for already logged in or not
-
 // initState
 const initState = {
     isAuthenticated: ls.get('token') ? ls.get('token') : null,
@@ -101,7 +82,10 @@ export default function (state = initState, action) {
         console.log(action.payload)
         return {
             ...state,
-            isAuthenticated: true
+            isAuthenticated: true,
+            user : action.payload.user,
+            pals: action.payload.pals,
+            profile: action.payload.profile
             //
         }
 

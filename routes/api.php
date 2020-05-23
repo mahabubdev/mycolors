@@ -28,7 +28,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // authentications
 Route::post('/login', 'API\AuthController@login')->name('login');
 Route::post('/register', 'API\AuthController@register')->name('register');
-Route::middleware('auth:sanctum')->post('/logout', 'API\AuthController@logout')->name('logout');
+Route::middleware('auth:sanctum')->post('/logout', 'API\AuthController@logout')->name('user.logout');
 
 //palette
 Route::middleware('auth:sanctum')->get('/pal/{slug}', 'API\PaletteController@palPage')->name('pal.page');
