@@ -3,3 +3,44 @@
     padding: 10px 0;
     background-color: #fbfbfb;
 }
+.navbar-brand {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 24px;
+    color: #3b3b3b;
+}
+
+nav ul li a,
+nav ul li a.btn,
+nav ul li button.btn
+{
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 20px;
+    font-weight: 400;
+    color: #3a3a3a;
+}
+
+
+.btn-log,
+.btn-reg,
+.btn-dash,
+.btn-lgt {
+    padding: 5px 20px;
+    border: 1px solid #3a3a3a;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.btn-log:hover,
+.btn-reg:hover,
+.btn-dash:hover,
+.btn-lgt:hover {
+    box-shadow: 0 5px 25px 0 rgba(0,0,0,0.1) !important;
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+}

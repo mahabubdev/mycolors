@@ -20,6 +20,7 @@ import HomePage from './../components/pages/HomePage';
 import AboutPage from './../components/pages/AboutPage';
 import ContactPage from './../components/pages/ContactPage';
 import IndexPage from './../components/pages/dashboard/IndexPage';
+import Palette from '../components/pages/dashboard/Palette';
 import LoginPage from './../components/pages/auth/LoginPage';
 import RegisterPage from './../components/pages/auth/RegisterPage';
 import NotFound from './../components/pages/NotFound';
@@ -87,6 +88,12 @@ function Routes(props)  {
                     exact path="/dashboard"
                     layout={DashboardLayout}
                     component={IndexPage}
+                    />
+
+                    <AppRoute
+                    exact path="/dashboard/pal"
+                    layout={DashboardLayout}
+                    component={Palette}
                     />
                 </Route>
 

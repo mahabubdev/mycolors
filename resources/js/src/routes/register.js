@@ -12,5 +12,6 @@ export const authRoutes = [
 
 export const dashboardRoutes = [
     "/dashboard",
+    "/dashboard/pal"
 ];
 

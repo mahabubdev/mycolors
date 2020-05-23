@@ -1,0 +1,21 @@
+.dashboard-wrapper {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    background-color: #EEEFF4;
+}
+
+.dashboard-content {
+    position: absolute;
+    display: block;
+    top: 5rem;
+}
+
+@media (max-width: 1100px) {
+    .dashboard-wrapper {
+        margin-left: 60px !important;
+        width: calc(100% - 60px) !important;
+    }
+}

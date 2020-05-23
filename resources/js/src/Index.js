@@ -6,7 +6,7 @@ import store from './store/store';
 
 import Routes from './routes/index';
 
-
+import "./components/css/index.css";
 
 
 

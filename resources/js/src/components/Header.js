@@ -19,9 +19,9 @@ const Header = (props) => {
 
     return(
         <div className="header-area">
-            <nav className="navbar navbar-expand-lg navbar-light">
+            <nav className="navbar navbar-expand-lg navbar-light py-1">
                 <div className="container">
-                    <NavLink className="navbar-brand" to="/">MyColors</NavLink>
+                    <NavLink className="navbar-brand" to="/">myColors</NavLink>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -40,19 +40,19 @@ const Header = (props) => {
                                 auth.isAuthenticated ? (
                                     <React.Fragment>
                                         <li className="nav-item">
-                                            <NavLink className="nav-link btn btn-outline-info" activeClassName="btn-info" to="/dashboard">Dashboard</NavLink>
+                                            <NavLink className="nav-link btn btn-dash" activeClassName="btn-info text-white" to="/dashboard">Dashboard</NavLink>
                                         </li>
                                         <li className="nav-item">
-                                            <button onClick={logMeOut} className="nav-link btn btn-outline-danger ml-2">Logout</button>
+                                            <button onClick={logMeOut} className="nav-link btn btn-lgt ml-2">Logout</button>
                                         </li>
                                     </React.Fragment> 
                                 ) : (
                                     <React.Fragment>
                                         <li className="nav-item">
-                                            <NavLink className="nav-link btn btn-outline-success" activeClassName="btn-success" to="/login">Login</NavLink>
+                                            <NavLink className="nav-link btn btn-log" activeClassName="btn-success text-white" to="/login">Login</NavLink>
                                         </li>
                                         <li className="nav-item">
-                                            <NavLink className="nav-link btn btn-outline-primary ml-2" activeClassName="btn-primary" to="/register">Register</NavLink>
+                                            <NavLink className="nav-link btn btn-reg ml-2" activeClassName="btn-primary text-white" to="/register">Register</NavLink>
                                         </li>
                                     </React.Fragment>
                                 )

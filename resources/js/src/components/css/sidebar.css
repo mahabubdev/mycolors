@@ -1,0 +1,112 @@
+.sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #2C343B;
+    padding: 0 !important;
+    color: #ffffff;
+    z-index: 9;
+}
+.sidebar-wrapper::-webkit-scrollbar {
+    width: 1px;
+}
+
+.nav-menu {
+    display: block;
+    min-height: 4rem;
+}
+.branding {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 5px 25px 0 rgba(0,0,0,0.15);
+}
+.branding .logo {
+    color: #ffffff;
+}
+
+.main-menu {
+    display: block;
+    padding: 0 !important;
+    overflow-x: hidden;
+}
+.main-menu ul {
+    padding: 0 !important;
+    margin: 0;
+    list-style: none;
+}
+
+.main-menu ul li {
+    display: block;
+    margin: 0;
+    padding: 0 !important;
+    border-right: 3px solid transparent;
+}
+.main-menu ul li .activeNow {
+    border-right: 3px solid #3b7cbd;
+}
+.main-menu ul li .activeNow,
+.main-menu ul li:hover 
+ {
+    background-color: #262a2e;
+}
+.main-menu ul li a.activeNow,
+.main-menu ul li a:hover
+ {
+    color: #ffffff;
+}
+.main-menu ul li a:hover {
+    text-decoration: none;
+    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+    -moz-transform: translateX(5px);
+    -ms-transform: translateX(5px);
+    -o-transform: translateX(5px);
+}
+.main-menu ul li a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffffff;
+    padding: 10px 0;
+    padding-left: 5px;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+}
+.main-menu ul li a svg {
+    display: inline-block;
+    margin-right: 3px;
+}
+
+
+/*
+* RESPONSIVE CSS
+*/
+@media (max-width: 1100px) {
+
+    .sidebar-wrapper{
+        min-width: 60px !important;
+    }
+    .branding .logo {
+        font-size: 14px !important;
+        padding: 5px !important;
+    }
+    .main-menu ul li a {
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .nav-menu ul li a svg {
+        font-size: 30px !important;
+    }
+
+    .main-menu ul li a span {
+        display: none !important;
+    }
+
+}
