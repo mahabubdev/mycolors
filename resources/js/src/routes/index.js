@@ -20,6 +20,9 @@ import HomePage from './../components/pages/HomePage';
 import AboutPage from './../components/pages/AboutPage';
 import ContactPage from './../components/pages/ContactPage';
 import IndexPage from './../components/pages/dashboard/IndexPage';
+import AddPalette from './../components/pages/dashboard/AddPalette';
+import PaletteEdit from './../components/pages/dashboard/PaletteEdit';
+import PaletteView from './../components/pages/dashboard/PaletteView';
 import Palette from '../components/pages/dashboard/Palette';
 import LoginPage from './../components/pages/auth/LoginPage';
 import RegisterPage from './../components/pages/auth/RegisterPage';
@@ -122,6 +125,29 @@ function Routes(props)  {
                     layout={DashboardLayout}
                     component={Palette}
                     />
+
+
+                    <AppRoute
+                    exact path="/dashboard/add/palette"
+                    layout={DashboardLayout}
+                    component={AddPalette}
+                    />
+
+
+
+                    <AppRoute
+                    exact path="/dashboard/edit/:palette"
+                    layout={DashboardLayout}
+                    component={PaletteEdit}
+                    />
+
+                    <AppRoute
+                    exact path="/dashboard/palette/:palette"
+                    layout={DashboardLayout}
+                    component={PaletteView}
+                    />
+
+
                 </Route>
 
 

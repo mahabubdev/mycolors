@@ -42,7 +42,7 @@
     letter-spacing: 1px;
 }
 
-.hero .btn-h {
+.hero .btn-h, .btn-h {
     background: linear-gradient(90deg, #D22F36, #D82C6A);
     color: #FFFFFF;
     padding: 10px 25px;
@@ -54,7 +54,7 @@
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
 }
-.hero .btn:hover {
+.hero .btn:hover , .btn-h:hover {
     color: #FFFFFF;
     box-shadow: 0 10px 35px 0 rgba(216, 44, 106, 0.8);
     transform: translateY(-2px);

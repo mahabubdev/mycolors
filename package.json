@@ -26,8 +26,10 @@
     },
     "dependencies": {
         "react-icons": "^3.10.0",
+        "react-modal": "^3.11.2",
         "react-redux": "^7.2.0",
         "react-router-dom": "^5.2.0",
+        "react-table-6": "^6.11.0",
         "redux": "^4.0.5",
         "redux-promise": "^0.6.0",
         "redux-thunk": "^2.3.0",

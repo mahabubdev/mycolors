@@ -8,6 +8,11 @@
     padding: 0 !important;
     color: #ffffff;
     z-index: 9;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
 }
 .sidebar-wrapper::-webkit-scrollbar {
     width: 1px;

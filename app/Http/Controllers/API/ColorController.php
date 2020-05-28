@@ -16,7 +16,7 @@ class ColorController extends Controller
     {
         // Create color by palette and check no duplicate color in same palette
         $colorValid = Validator::make($r->all(), [
-            'hexcode'   =>  ['required', 'string', 'min:7', 'max:7']
+            'hexcode'   =>  ['required', 'string', 'min:7', 'max:8']
         ]);
 
         if($colorValid->fails()){
@@ -34,29 +34,47 @@ class ColorController extends Controller
             if ($checkPal->exists()){
                 // palette OK
 
-                //check hexcode is not duplicate in this palette
-                $palID = $checkPal->first()->id;
-                $dup = Color::where('palette_id', $palID)->where('hexcode', $validated['hexcode']);
+                // now check author and authUser is same ?
+                $nowUser = auth()->user()->id; // current requested user
+                $palAuthor = $checkPal->first()->author()->first()->id; // palette author 
+                //dd($palAuthor);
 
-                if ($dup->exists()) {
-                    // Duplicate entry found
-                    return response()->json([
-                        'error'    =>  'Duplicate color entry!'
-                    ], 400);
+                if ($palAuthor === $nowUser) {
+                    // Permitted to create
+                    //dd('TRUE');
+                    //check hexcode is not duplicate in this palette
+                    $palID = $checkPal->first()->id; //dd($palID);
+                    $dup = Color::where('palette_id', $palID)->where('hexcode', $validated['hexcode']);
+
+                    if ($dup->exists()) {
+                        // Duplicate entry found
+                        return response()->json([
+                            'error'    =>  'Duplicate color entry!'
+                        ], 400);
+                    }
+                    else {
+                        //dd('OKK');
+                        // No duplicate founded ... go on and create the color now ... 
+                        //dd($validated);
+                        $newColor = new Color();
+                        $newColor->hexcode = $validated['hexcode'];
+                        $newColor->palette_id = $palID;
+                        $newColor->save();  //dd('OKK');
+
+                        return response()->json([
+                            'msg'           =>  'Color Added!',
+                            'color_info'    =>  $newColor
+                        ], 201);
+                    }
                 }
                 else {
-                    // No duplicate founded ... go on and create the color now ... 
-                    //dd($validated);
-                    $newColor = new Color();
-                    $newColor->hexcode = $validated['hexcode'];
-                    $newColor->palette_id = $palID;
-                    $newColor->save();
-
+                    //dd('FALSE');
+                    // Unauthorized 401
                     return response()->json([
-                        'msg'           =>  'Color Added!',
-                        'color_info'    =>  $newColor
-                    ], 201);
+                        'error'    =>  'Unauthorized operation...!'
+                    ], 401);
                 }
+
             }
             else {
                 // palette is not exists

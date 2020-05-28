@@ -13,6 +13,18 @@ use App\Model\Color;
 
 class PaletteController extends Controller
 {
+
+    public function getPals (Request $r)
+    {
+        //
+        //dd($r->perpage);
+
+        $getUserPals = Palette::where('user_id', auth()->user()->id)->get();
+        //dd($getUserPals);
+        //return response()->json("from backEnd " + $r->perpage, 200);
+        return response()->json($getUserPals, 200);
+    }
+
     public function palPage(Request $r)
     {
         // get colors by palette slug && check user is the owner or not
@@ -23,19 +35,22 @@ class PaletteController extends Controller
         if ($findPal->exists()) {
             // palette really exists
 
-            $palAuthor = $findPal->first()->id;
+            $palAuthor = $findPal->first()->author()->first()->id;
+            //dd($palAuthor);
             $currentUser = auth()->user()->id;
+            //dd($currentUser);
 
             // check right author or not
             if ( $palAuthor === $currentUser ) {
-                // ok, he is right person
-                // now u can fetch pal data
-                $fecthPal = $findPal->first()->colors()->get();
-                $author = $findPal->first()->author()->first()->username;
+                //dd('TRUE');
+                //$targetpal = $findPal->first()->id;
+                $colors = $findPal->first()->colors()->get();
+
+                $author = auth()->user()->username;
                 //retuen
                 return response()->json([
                     'author'    => $author,
-                    'colors'    => $fecthPal  
+                    'colors'    => $colors,
                 ], 200);
             }
             else {
@@ -73,9 +88,36 @@ class PaletteController extends Controller
 
 
 
-    public function palDelete()
+    public function destroy(Request $req )
     {
-        //
+        //take palette first
+        $pal = Palette::where('slug', $req->slug);
+
+        if ($pal->exists()) {
+            // exits and go for delete
+            $palID = $pal->first()->id;
+            try {
+                // delete
+                $palette = Palette::find($palID);
+                $palette->delete();
+
+                return response()->json([
+                    'message'   =>  'Palette deleted successfully!'
+                ], 200);
+            }
+            catch (Exeption $error) {
+                // something went wrong
+                return response()->json([
+                    'message'   =>  'Something went wrong!'
+                ], 400);
+            }
+        }
+        else {
+            // not found 404
+            return response()->json([
+                'message'   =>  'Palette not found!'
+            ], 404);
+        }
     }
 
 

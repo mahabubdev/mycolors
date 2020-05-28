@@ -13,7 +13,7 @@ import ls from './../../utils/secureLS'; // secure localStorage Data
 const initState = {
     isAuthenticated: ls.get('token') ? ls.get('token') : null,
     user: ls.get('user') ? ls.get('user') : null,
-    pals: ls.get('plas') ? ls.get('pals') : null,
+    //pals: ls.get('plas') ? ls.get('pals') : null,
     profile: ls.get('profile') ? ls.get('profile') : null,
     loginError: null,
 }
@@ -26,18 +26,18 @@ export default function (state = initState, action) {
         ls.remove('token');
         ls.remove('user');
         ls.remove('profile');
-        ls.remove('pals');
+        //ls.remove('pals');
         //console.log(action.payload);
         //localStorage.setItem('token', JSON.stringify(action.payload.access_token));
         ls.set('token', action.payload.access_token);
         ls.set('user', action.payload.user);
         ls.set('profile', action.payload.profile);
-        ls.set('pals', action.payload.pals);
+        //ls.set('pals', action.payload.pals);
         return {
             ...state,
             isAuthenticated: true,
             user : action.payload.user,
-            pals: action.payload.pals,
+            //pals: action.payload.pals,
             profile: action.payload.profile
         }
 
@@ -73,12 +73,12 @@ export default function (state = initState, action) {
         ls.remove('token');
         ls.remove('user');
         ls.remove('profile');
-        ls.remove('pals');
+        //ls.remove('pals');
         // payload
         ls.set('token', action.payload.access_token);
         ls.set('user', action.payload.user);
         ls.set('profile', action.payload.profile);
-        ls.set('pals', action.payload.pals);
+        //ls.set('pals', action.payload.pals);
         console.log(action.payload)
         return {
             ...state,

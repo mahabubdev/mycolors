@@ -24,7 +24,7 @@ const initState = {
         },
         collapsed: {
             width: {
-                minWidth: '60px'
+                minWidth: '60px',
             },
             logo : {
                 fontSize: '14px',

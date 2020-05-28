@@ -62,7 +62,7 @@ class AuthController extends Controller
                             'access_token'  =>  $accessToken,
                             'user'          =>  auth()->user(),
                             'profile'       =>  auth()->user()->profile()->get()[0],
-                            'pals'          =>  auth()->user()->pals()->get(),
+                            //'pals'          =>  auth()->user()->pals()->get(),
                             'loginerr'      =>  false
                         ], 202);
                     }

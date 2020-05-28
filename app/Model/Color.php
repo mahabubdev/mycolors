@@ -17,6 +17,6 @@ class Color extends Model
     // Eloquent Relations
     public function pal()
     {
-        return $this->belongsTo(\App\Model\Palette::class);
+        return $this->belongsTo( \App\Model\Palette::class, 'palette_id');
     }
 }

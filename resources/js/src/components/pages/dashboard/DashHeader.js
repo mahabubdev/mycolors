@@ -4,12 +4,14 @@ import "../../css/dash-header.css"
 import { GoGrabber, GoLinkExternal, GoPerson, GoSignOut } from "react-icons/go";
 
 import { toogleNavSide } from "../../../store/actions/theme"
+import { logOut } from "../../../store/actions/auth"
 import { useDispatch, useSelector } from "react-redux";
 
 
 const DashHeader = (props) => {
 
     const dispatch = useDispatch();
+    //const auth = useSelector( state => (state.auth) ); // Theme State
     const theme = useSelector( state => (state.theme) ); // Theme State
 
 
@@ -34,6 +36,10 @@ const DashHeader = (props) => {
         dispatch(toogleNavSide());
     }
 
+    const logOutMe = () => {
+        dispatch(logOut());
+    }
+
     return (
         <div className="dash-header" style={
             theme.sideExpanded ? theme.sidenav.expanded.dashHeader : theme.sidenav.collapsed.dashHeader
@@ -52,7 +58,7 @@ const DashHeader = (props) => {
                             show.exposed ? { display: 'flex' } : { display: 'none' }
                         }>
                         <li><NavLink to="/profile"><GoPerson /> Profile</NavLink></li>
-                        <li><NavLink to="/"><GoSignOut /> Logout</NavLink></li>
+                        <li><button type="button" onClick={logOutMe}><GoSignOut /> Logout</button></li>
                     </ul>
                 </div>
            </div>

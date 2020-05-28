@@ -12,6 +12,9 @@ export const authRoutes = [
 
 export const dashboardRoutes = [
     "/dashboard",
-    "/dashboard/pal"
+    "/dashboard/pal",
+    "/dashboard/add/palette",
+    "/dashboard/edit/:palette",
+    "/dashboard/palette/:palette"
 ];
 

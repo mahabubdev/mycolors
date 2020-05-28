@@ -19,7 +19,8 @@ class CreateColorsTable extends Migration
             $table->string('hexcode');
 
             // Foreign KEY
-            $table->foreign('palette_id')->references('id')->on('users')
+            $table->foreign('palette_id')
+                ->references('id')->on('palettes')
                 ->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

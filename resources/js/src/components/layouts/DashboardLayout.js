@@ -18,7 +18,7 @@ const DashboardLayout = (props) => {
         //console.log('Passed..')
         if (authStatus === false || authStatus === null){
             //console.log('STAY')
-            //props.children.props.history.push('/login')
+            props.children.props.history.push('/login')
         }
     }, [])
 
@@ -29,7 +29,7 @@ const DashboardLayout = (props) => {
             }>
                 <DashHeader />
                 <Sidebar />
-                <div className="dashboard-content">
+                <div className="dashboard-content pt-3">
                     <div className="container">
                         { props.children }
                     </div>

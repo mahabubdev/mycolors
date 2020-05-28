@@ -1,0 +1,48 @@
+.palettes {
+    z-index: inherit !important;
+}
+
+.colors-card {
+    box-shadow: 0 6px 30px 0 rgba(0,0,0,0.12);
+    padding: 5px;
+    cursor: pointer;
+}
+.color-card {
+    height: 100%;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.color-card > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-card .btn-c {
+    opacity: 0 !important;
+    padding: 10px 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: linear-gradient(25deg, #D2417F, #F03564);
+    opacity: 0.99;
+    transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+}
+.color-card:hover .btn-c {
+    opacity: 1 !important;
+    box-shadow: 0 4px 30px 0 rgba(210, 65, 127, 0.5);
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+}
