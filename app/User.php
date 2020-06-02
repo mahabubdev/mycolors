@@ -63,4 +63,10 @@ class User extends Authenticatable
         return $this->hasMany(\App\Model\Palette::class);
     }
 
+    // get verifyToken
+    public function verify()
+    {
+        return $this->hasOne( \App\Model\Token::class );
+    }
+
 }

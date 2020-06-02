@@ -28,7 +28,7 @@ const LoginPage = (props) =>  {
     // handle form submit
     const formSubmit = e => {
         e.preventDefault();
-        console.log(loginData);
+        //console.log(loginData);
         //loginReq(loginData); // send to loginReq action
         dispatch(loginReq(loginData));
 
@@ -46,6 +46,11 @@ const LoginPage = (props) =>  {
                 <input name="password" placeholder="Password" onChange={inputHandleChange}  /> <br />
                 <button className="btn" type="submit">Login</button>
                 <hr />
+                <p className="d-flex justify-content-center w-100">
+                    <NavLink to="/forgot">
+                        <strong>Forgot password?</strong>
+                    </NavLink>
+                </p>
                 <p>
                     Need an account ? <NavLink to="/register">Create an account</NavLink> <br />
                     <NavLink to="/home"> | Go Back | </NavLink>

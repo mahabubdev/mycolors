@@ -4,7 +4,8 @@ import {
     LOAD_USER,
     REG_SUCCESS,
     REG_ERR,
-    LOGOUT
+    LOGOUT,
+    UPDATE_PROFILE
 } from "./types";
 
 
@@ -12,6 +13,8 @@ import axios from "axios";
 import { apiHeader, apiURL } from './../../config/Axios';
 
 
+
+import notifier from '../../utils/notify';
 
 
 
@@ -32,7 +35,7 @@ export const loadUser = () => {
             
         })
         .catch(error => {
-            console.log('Load User failed...!')
+            //notifier('danger', 'Registration failed!', `${error.response.data.error}`)
         })
     }
 }
@@ -50,13 +53,15 @@ export const registerReq = (data) => {
                 type: REG_SUCCESS,
                 payload: response.data
             })
+            notifier('success', 'Registration successfull!', 'You are now a part of this tiny community')
         })
         .catch(errors => {
-            console.log(errors)
+            console.log(errors.response.data)
             dispatch({
                 type: REG_ERR,
                 payload: errors
             })
+            notifier('danger', 'Registration failed!', `${errors.response.data.error}`)
         })
     }
 }
@@ -77,16 +82,30 @@ export const loginReq = (data) => {
                 payload: resposne.data
          })
          // notify
+         notifier('success', 'Login successfull!', 'You are logged-in now ...')
+
 
      })
      .catch(error => {
-         console.log('Login Failded or gone wrong ... ')
-         console.log(error)
+         //console.log('Login Failded or gone wrong ... ')
+         //console.log(error)
          dispatch({type: LOGIN_ERR})
+         notifier('danger', 'Login failed!', `${error.response.data.msg}`)
          //return { type: LOGIN_ERR }
      });
     }
 
+}
+
+
+export const updateProfile = (data) => {
+    return function (dispatch) {
+        dispatch({
+            type: UPDATE_PROFILE,
+            payload: data
+        })
+        //notifier('info', 'Profile Updated!', )
+    }
 }
 
 
@@ -99,9 +118,11 @@ export const logOut = async () => {
             dispatch({
                 type: LOGOUT
             })
+            notifier('warning', 'Logged-out!', 'You are logged-out now')
         })
         .catch(err => {
             console.log('Logout operation failed ...')
+            notifier('danger', 'Error occured!', 'Log-out operation falied!')
         })
     }
 }

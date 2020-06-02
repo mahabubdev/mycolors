@@ -44,12 +44,14 @@ class PaletteController extends Controller
             if ( $palAuthor === $currentUser ) {
                 //dd('TRUE');
                 //$targetpal = $findPal->first()->id;
-                $colors = $findPal->first()->colors()->get();
+                $palData = $findPal->first();
+                $colors = $palData->colors()->get();
 
                 $author = auth()->user()->username;
                 //retuen
                 return response()->json([
                     'author'    => $author,
+                    'palette'   =>  $palData,
                     'colors'    => $colors,
                 ], 200);
             }
@@ -72,17 +74,37 @@ class PaletteController extends Controller
 
 
 
-    public function palColors()
+    public function palEdit( Request $req )
     {
-        //
-    }
+        // dd($req->all());
+        $palFind = Palette::where('slug', $req->pal);
 
+        if ($palFind->exists()) {
+            // pal exists
 
+            $takeID = $palFind->first()->id;
 
+            $updatePal = Palette::find($takeID);
 
-    public function palEdit()
-    {
-        //
+            $updatePal->name = $req->name;
+            $updatePal->description = $req->desc;
+            $updatePal->save();
+
+            return response()->json([
+                'message' => 'palette updated!',
+                'palette' => $palFind->first()
+            ], 200);
+            
+        }
+        else {
+            // pal doesn't exists 404
+            //return response()->json('ERR', 400);
+            return response()->json([
+                'message' => 'palette not found!',
+                'palette' => null
+            ], 404);
+            
+        }
     }
 
 
@@ -153,7 +175,7 @@ class PaletteController extends Controller
             if ($palFind->exists()) {
                 // pal aleary exists | taken
 
-                $modifySlug = $generateSlug . substr( time(), -3 ); // modify as unique
+                $modifySlug = $generateSlug . "-" . uniqid(); // modify as unique
 
 
                 $create = new Palette();

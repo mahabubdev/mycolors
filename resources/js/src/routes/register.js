@@ -7,13 +7,15 @@ export const defaultRoutes = [
 
 export const authRoutes = [
     "/login",
-    "/register"
+    "/register",
+    "/forgot"
 ];
 
 export const dashboardRoutes = [
     "/dashboard",
     "/dashboard/pal",
-    "/dashboard/add/palette",
+    "/dashboard/profile",
+    "/dashboard/profile/edit",
     "/dashboard/edit/:palette",
     "/dashboard/palette/:palette"
 ];

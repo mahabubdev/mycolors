@@ -11,8 +11,11 @@ import { useDispatch, useSelector } from "react-redux";
 const DashHeader = (props) => {
 
     const dispatch = useDispatch();
-    //const auth = useSelector( state => (state.auth) ); // Theme State
+    const auth = useSelector( state => (state.auth) ); // Theme State
     const theme = useSelector( state => (state.theme) ); // Theme State
+
+    const [photo, setPhoto] = useState({url: null})
+    const {url} = photo;
 
 
     // toggle dropdown user-menu
@@ -40,6 +43,14 @@ const DashHeader = (props) => {
         dispatch(logOut());
     }
 
+    useEffect(() => {
+        if (auth.isAuthenticated){
+            setPhoto({...photo, url: `/storage/users/${auth.profile.photo}`})
+        }
+    }, [auth])
+    
+
+
     return (
         <div className="dash-header" style={
             theme.sideExpanded ? theme.sidenav.expanded.dashHeader : theme.sidenav.collapsed.dashHeader
@@ -52,12 +63,14 @@ const DashHeader = (props) => {
                 <div className="user-bar" onClick={toogleMenu}>
                     <strong>Md Mahabub</strong>
                     <div className="user-pic">
-                        <img src="https://via.placeholder.com/150" alt="user-image" />
+                        {
+                            auth.isAuthenticated ? (<img src={photo.url} />) : null
+                        }
                     </div>
                     <ul className="user-menu" style={
                             show.exposed ? { display: 'flex' } : { display: 'none' }
                         }>
-                        <li><NavLink to="/profile"><GoPerson /> Profile</NavLink></li>
+                        <li><NavLink to="/dashboard/profile"><GoPerson /> Profile</NavLink></li>
                         <li><button type="button" onClick={logOutMe}><GoSignOut /> Logout</button></li>
                     </ul>
                 </div>

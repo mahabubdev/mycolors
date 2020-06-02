@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { useSelector } from "react-redux";
 
 const DefaultLayout = (props) => {
@@ -6,21 +6,26 @@ const DefaultLayout = (props) => {
     const auth = useSelector( state => (state.auth) ); // Auth State
     const authStatus = auth.isAuthenticated;
 
+
     // Auth check and redirect if not
+    /*
     useEffect(() => {
-        //console.log('Passed..')
-        if (authStatus){
-            //console.log('STAY')
-            props.children.props.history.push('/dashboard')
+        if (! authStatus) {
+            if (props.children.props.location.pathname === '/login') {
+                //console.log(props.children.props)
+            }
         }
-    }, [authStatus, auth, props])
+    }, []) */
+
 
 
     return (
         <div className="default-page">
             <div className="cred-header"></div>
             <div className="page-area">
-                { props.children }
+                {
+                    authStatus === true ? ( props.children.props.history.push('/dashboard') ) : ( props.children )
+                }
             </div>
         </div>
     );

@@ -16,7 +16,7 @@ class ColorController extends Controller
     {
         // Create color by palette and check no duplicate color in same palette
         $colorValid = Validator::make($r->all(), [
-            'hexcode'   =>  ['required', 'string', 'min:7', 'max:8']
+            'hexcode'   =>  ['required', 'string', 'min:6', 'max:6']
         ]);
 
         if($colorValid->fails()){
@@ -44,12 +44,16 @@ class ColorController extends Controller
                     //dd('TRUE');
                     //check hexcode is not duplicate in this palette
                     $palID = $checkPal->first()->id; //dd($palID);
-                    $dup = Color::where('palette_id', $palID)->where('hexcode', $validated['hexcode']);
+                    $dup = Color::where('palette_id', $palID);
+                    //dd($dup->exists());
+                    $dupAlreadyColor = $dup->where('hexcode', "#" . $r->hexcode);
+ 
+                    //dd($dupAlreadyColor->exists());
 
-                    if ($dup->exists()) {
+                    if ( $dupAlreadyColor->exists() ) {
                         // Duplicate entry found
                         return response()->json([
-                            'error'    =>  'Duplicate color entry!'
+                            'errors'    =>  'Duplicate color entry!'
                         ], 400);
                     }
                     else {
@@ -57,7 +61,7 @@ class ColorController extends Controller
                         // No duplicate founded ... go on and create the color now ... 
                         //dd($validated);
                         $newColor = new Color();
-                        $newColor->hexcode = $validated['hexcode'];
+                        $newColor->hexcode = "#" . $validated['hexcode'];
                         $newColor->palette_id = $palID;
                         $newColor->save();  //dd('OKK');
 
@@ -71,7 +75,7 @@ class ColorController extends Controller
                     //dd('FALSE');
                     // Unauthorized 401
                     return response()->json([
-                        'error'    =>  'Unauthorized operation...!'
+                        'errors'    =>  'Unauthorized operation...!'
                     ], 401);
                 }
 
@@ -79,7 +83,7 @@ class ColorController extends Controller
             else {
                 // palette is not exists
                 return response()->json([
-                    'error'    =>  'Palette not found!'
+                    'errors'    =>  'Palette not found!'
                 ], 404);
             }
         }
@@ -87,15 +91,32 @@ class ColorController extends Controller
     }
 
 
-    public function edit()
-    {
-        //
-    }
 
-
-    public function del()
+    public function del(Request $req)
     {
-        //
+        // Delete a color
+        $color = $req->color;
+
+        $colorFind = Color::find($color);
+
+        if ( $colorFind->exists() ) {
+            //dd('TRUE');
+            $colorFind->delete();
+
+            return response()->json([
+                'message'   =>  'Color deleted successfully!',
+                'color'     =>  $colorFind->first()
+            ], 200);
+        }
+        else {
+            //dd('FALSE');
+            return response()->json([
+                'message'  =>  'Operation failed!'
+            ], 400);
+        }
+
+        //dd($colorFind);
+
     }
 
 

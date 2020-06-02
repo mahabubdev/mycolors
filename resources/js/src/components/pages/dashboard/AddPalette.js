@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios';
 import { apiHeader, apiURL } from './../../../config/Axios';
+import notifier from './../../../utils/notify';
 
 function AddPalette (props) {
     // forms and others
@@ -22,15 +23,23 @@ function AddPalette (props) {
         e.preventDefault();
         // send data
         axios.post(apiURL + '/pal/add', formData, apiHeader)
-        .then(response => {console.log(response.data)})
-        .catch(error => {console.log(error)});
+        .then(response => {
+            //console.log(response.data);
+            notifier('success', 'Palette created!', `New palette has been created successfully!`)
+            window.location.reload(false)
+            //props.history.push('/dashboard/pal')
+        })
+        .catch(error => {
+            notifier('danger', 'Error occuared!', `${error.response.data}`)
+        });
     }
 
 
     // return
     return (
         <div>
-            <h2>Add New palette</h2>
+            <hr />
+            <h3 className="text-center">Add New Palette</h3>
             <div className="forms py-3">
                 <form onChange={onChangeData} onSubmit={onSend}>
                     <input name="name" className="my-1 pd-2" placeholder="Palette Name" required /> <br />

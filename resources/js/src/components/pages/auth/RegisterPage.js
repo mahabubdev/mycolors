@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import "../../css/auth.css";
 
 import { registerReq } from '../../../store/actions/auth'
+import notifier from './../../../utils/notify';
 
 
 
@@ -37,10 +38,11 @@ const RegisterPage = (props) =>  {
         e.preventDefault();
 
         if (RegData.password != RegData.password_confirmation) {
-            alert('Passwords mismatched');
+            //alert('Passwords mismatched');
+            notifier('warning', 'Password Mismatched', 'Make sure passwords are matched to each others')
         } else {
             // go to create
-            console.log(RegData);
+            //console.log(RegData);
             //registerReq(RegData); // send to registerReq action
             dispatch(registerReq(RegData));
         }

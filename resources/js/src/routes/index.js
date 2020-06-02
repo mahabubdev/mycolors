@@ -20,11 +20,13 @@ import HomePage from './../components/pages/HomePage';
 import AboutPage from './../components/pages/AboutPage';
 import ContactPage from './../components/pages/ContactPage';
 import IndexPage from './../components/pages/dashboard/IndexPage';
-import AddPalette from './../components/pages/dashboard/AddPalette';
+import EditProfile from './../components/pages/dashboard/EditProfile';
 import PaletteEdit from './../components/pages/dashboard/PaletteEdit';
 import PaletteView from './../components/pages/dashboard/PaletteView';
 import Palette from '../components/pages/dashboard/Palette';
+import Profile from './../components/pages/dashboard/Profile';
 import LoginPage from './../components/pages/auth/LoginPage';
+import ForgotPage from './../components/pages/auth/ForgotPage';
 import RegisterPage from './../components/pages/auth/RegisterPage';
 import NotFound from './../components/pages/NotFound';
 
@@ -33,6 +35,10 @@ import NotFound from './../components/pages/NotFound';
 import ls from '../utils/secureLS'; // secure localStorage Data
 // set Auth Token if authenticated ... 
 import setAuthToken from '../token/setAuthToken';
+
+
+
+
 
 
 function Routes(props)  {
@@ -78,6 +84,12 @@ function Routes(props)  {
                     exact path="/login"
                     layout={CredentLayout}
                     component={LoginPage}
+                    />
+
+                    <AppRoute
+                    exact path="/forgot"
+                    layout={CredentLayout}
+                    component={ForgotPage}
                     />
 
                     <AppRoute
@@ -128,9 +140,15 @@ function Routes(props)  {
 
 
                     <AppRoute
-                    exact path="/dashboard/add/palette"
+                    exact path="/dashboard/profile"
                     layout={DashboardLayout}
-                    component={AddPalette}
+                    component={Profile}
+                    />
+
+                    <AppRoute
+                    exact path="/dashboard/profile/edit"
+                    layout={DashboardLayout}
+                    component={EditProfile}
                     />
 
 
@@ -140,6 +158,8 @@ function Routes(props)  {
                     layout={DashboardLayout}
                     component={PaletteEdit}
                     />
+
+
 
                     <AppRoute
                     exact path="/dashboard/palette/:palette"

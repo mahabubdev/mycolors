@@ -3,9 +3,12 @@ import axios from "axios";
 import { apiHeader, apiURL } from './../../../config/Axios';
 import ReactTable from 'react-table-6'
 import 'react-table-6/react-table.css'
-
+import { GoArchive, GoDiffIgnored, GoEye } from "react-icons/go";
 import "../../css/palettes.css";
 import { NavLink } from 'react-router-dom';
+import AddPalette from './AddPalette';
+
+import notifier from './../../../utils/notify';
 
 
 
@@ -24,14 +27,16 @@ function Palette (props) {
     const removePal = (pal) => {
         //
         console.log(pal)
-        axios.delete( apiURL + `/pal/delete/${pal}` )
+        axios.delete( apiURL + `/pal/delete/${pal}`, apiHeader )
         .then(response => {
-            console.log(response.data);
+            notifier('info', 'Palette deleted!', 'Palette has been deleted successfully!');
+            //console.log(response.data);
             // re-render this page 
-            window.location.reload(false)
-
+            window.location.reload(false);
         })
-        .catch(err => {console.log(err)})
+        .catch(err => {
+            notifier('danger', 'Error occured!', 'Something went wrong ...!')
+        })
     }
 
 
@@ -47,8 +52,8 @@ function Palette (props) {
         accessor: 'slug',
         Cell: (val) => (
             <React.Fragment>
-                <NavLink to={'/dashboard/palette/' + val.value} className="mx-1 btn btn-sm btn-primary">View</NavLink>
-                <NavLink to={'/dashboard/edit/' + val.value} className="btn btn-sm btn-warning">Edit</NavLink>
+                <NavLink to={'/dashboard/palette/' + val.value} className="mx-1 btn btn-sm btn-primary"><GoEye /></NavLink>
+                <NavLink to={'/dashboard/edit/' + val.value} className="btn btn-sm btn-warning"><GoDiffIgnored /></NavLink>
                 <button type="button" className="mx-1 btn btn-sm btn-danger" onClick={
                     (e) => {
                         e.preventDefault();
@@ -60,7 +65,7 @@ function Palette (props) {
                             return false
                         }
                     }
-                }>Remove</button>
+                }><GoArchive /></button>
             </React.Fragment>
         )
     }]
@@ -101,13 +106,14 @@ function Palette (props) {
     //
     return (
         <div className="palettes" id="hasModal">
-            <h2>Your palettes</h2>
+            <h2>Palette page</h2>
+
+            <AddPalette />
 
             <div>
                 {
                     loaded.status === true ? (
                         <div>
-                            <NavLink to={'/dashboard/add/palette'} className="btn btn-success my-2">Add New</NavLink>
                             <ReactTable 
                             data={pals[0]}
                             columns={cols}

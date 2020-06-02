@@ -15,12 +15,11 @@ const DashboardLayout = (props) => {
 
     // Auth check and redirect if not
     useEffect(() => {
-        //console.log('Passed..')
-        if (authStatus === false || authStatus === null){
-            //console.log('STAY')
+        if (! authStatus) {
             props.children.props.history.push('/login')
         }
-    }, [])
+    }, [props, auth])
+    
 
     return (
         <div className="dashboard-page">
@@ -31,7 +30,11 @@ const DashboardLayout = (props) => {
                 <Sidebar />
                 <div className="dashboard-content pt-3">
                     <div className="container">
-                        { props.children }
+                        {
+                            authStatus ? ( props.children ) : (
+                                props.children.props.history.push('/login')
+                            )
+                        }
                     </div>
                 </div>
             </div>

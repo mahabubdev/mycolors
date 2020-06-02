@@ -151,6 +151,158 @@ class AuthController extends Controller
 
 
 
+    ### PROFILE edit
+    public function editProfile(Request $req)
+    {
+        // Edit user profile data
+        $prData = Validator::make($req->all(), [
+            'name'      =>  ['string', 'max:255', 'nullable'],
+            'gender'    =>  ['string', 'max:255', 'nullable'],
+            'dob'    =>  ['string', 'max:255', 'nullable'],
+            'address'    =>  ['string', 'max:255', 'nullable'],
+            'github'    =>  ['string', 'max:255', 'nullable'],
+            'facebook'    =>  ['string', 'max:255', 'nullable'],
+            'instagram'    =>  ['string', 'max:255', 'nullable'],
+            'website'    =>  ['string', 'max:255', 'nullable']
+        ]);
+
+        // Validation after logics
+        if ($prData->fails())
+        {
+            // when request data will not validated | Validation Error
+            return response()->json($prData->messages(), 400);
+        }
+
+        else {
+            // take validated data
+            $prVal = $prData->validated();
+
+            $userP = \App\Model\Profile::where( 'user_id', auth()->user()->id )->first();
+            $userD = \App\User::where( 'username', auth()->user()->username )->first();
+
+            //dd($userD);
+
+            //dd(count($prVal));
+
+            if (count($prVal) > 0) {
+                // has value for update
+
+                //dd($prVal);
+                //userD
+
+                foreach ($prVal as $prf => $v) {
+                    // every params has came,, update now
+                    if ($prf != "name" ) {
+                        $userP->$prf = $v;
+                        $userP->save();
+                        
+                    }
+                    elseif ($prf == "name") {
+                        $userD->$prf = $v;
+                        $userD->save();
+                    }
+
+                }
+
+                return response()->json([
+                    'message' => 'Profile information updated!',
+                    'user'    => auth()->user(),
+                    'profile' => auth()->user()->profile()->first()
+                ], 201);
+
+            }
+            else {
+                return response()->json([
+                    'message' => 'Nothing to update!',
+                    'profile' => null
+                ], 400);
+            }
+        }
+    }
+
+
+
+    public function editPhoto(Request $req)
+    {
+        //return response()->json($req->file('photo'), 200);
+        //dd($req->file());
+
+        // Edit user profile data
+        $prData = Validator::make($req->file(), [
+            'photo' => 'mimes:jpeg,jpg,png|dimensions:min_width=120,min_height=150|max:500|min:30'
+        ]);
+
+        // Validation after logics
+        if ($prData->fails())
+        {
+            //dd($prData->messages());
+            // when request data will not validated | Validation Error
+            return response()->json($prData->messages(), 400);
+        }
+
+        else {
+            $destination = storage_path('app/public/users');  // file saving path
+            //dd('passed');
+            //dd($prData->validated());
+            // take validated data
+            $prVal = $prData->validated();
+
+            //dd($prVal['photo']);
+            $photo = $prVal['photo'];
+            //$pName = $photo->getFilename();
+            $extn = $photo->getClientOriginalExtension();
+
+            $madeName = uniqid().".".$extn; // file renaming
+
+            $oldPicName = auth()->user()->profile()->first()->photo;
+            //dd($oldPicName);
+
+            $userProfile = \App\Model\Profile::where( 'user_id', auth()->user()->id )->first();
+
+            if ( $userProfile->exists() ) {
+
+                //dd($oldPicName);
+                // Delete previous photo is not === "default.png"
+                if ($oldPicName != "default.png") {
+                    //dd('No, delete');
+                     \File::delete('storage/users/' . $oldPicName);
+                }
+
+                //dd('OK');
+                $userProfile->photo = $madeName;
+                $userProfile->save();
+
+                //dd(\Storage::disk('local'));
+
+                //dd($userProfile->photo);
+                //dd(storage_path('app/public/users'));
+                //move($destination,$file_name);
+                if ( $photo->move($destination, $madeName) ) {
+                    // return
+                    return response()->json([
+                        'message'   =>  'Profile picture updated!',
+                        'profile'     =>  auth()->user()->profile()->first()
+                    ], 202);
+                }
+                //move($destination,$file_name);
+            }
+
+            //dd($pName);
+
+
+            // save photo
+
+
+            // return
+
+        }
+    }
+
+
+
+
+
+
 
     ### REGISTER
     public function register(Request $req)

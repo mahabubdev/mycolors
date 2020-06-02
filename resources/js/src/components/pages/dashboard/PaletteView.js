@@ -4,6 +4,10 @@ import { apiHeader, apiURL } from './../../../config/Axios';
 import { NavLink } from 'react-router-dom';
 import "../../css/palettes.css";
 
+import { GoArchive, GoDiffIgnored, GoDiffAdded } from "react-icons/go";
+
+import notifier from './../../../utils/notify';
+
 function PaletteView (props) {
     // fetch palette data from backend according to the slug
     const [page, setPage] = useState({check: false});
@@ -29,13 +33,19 @@ function PaletteView (props) {
         })
     }
 
-    const onFormSend = () => {
-        axios.post(apiURL + `/${props.match.params.palette}/color/add`, color, apiHeader)
+    const onFormSend = async (e) => {
+        e.preventDefault();
+        await axios.post(apiURL + `/${props.match.params.palette}/color/add`, color, apiHeader)
         .then( response => {
-            console.log(response.data)
-            window.location.reload(false)
+ 
+            notifier('success', `${color.hexcode} saved!`, `${response.data.msg}`);
+
+            return window.location.reload(false);
         })
-        .catch(err => {console.log(err)})
+        .catch( err => {
+            console.log(err.response.data)
+            notifier('danger', 'Error occured!', `${err.response.data.errors}`);
+        })
     }
 
 
@@ -67,8 +77,8 @@ function PaletteView (props) {
                 //props.history.push('/dashboard/pal')
             })
             .catch( error => {
-                console.log(error)
-                alert('Not found or Error occued!')
+                //console.log(error.data)
+                alert(`Error : ${error}`)
                 //alert('Someting went wrong!')
             })
         }
@@ -83,13 +93,16 @@ function PaletteView (props) {
             <div>
                 <strong>Palette Author: </strong> {loaded.status ? data.getData.author : 'Loading ...'}
                 <hr />
-                <div className="d-flex justify-content-between align-center">
-                    <form className="color-add my-2 col-md-8 col-sm-10" onSubmit={onFormSend} onChange={onchangeData}>
-                        <input type="text" className="col-md-8 col-sm-6 col-xs-6 mr-3 py-2" name="hexcode" placeholder="Insert Color (HexCode)" />
-                        <button className="btn btn-h" type="submit">Insert</button>
+                <div className="d-flex justify-content-between align-center fl-1100-c">
+                    <form className="color-add my-2 col-md-8 col-sm-10" onSubmit={ e => onFormSend(e) } onChange={onchangeData}>
+                        <input type="text" 
+                            title="Example: 513FDD"
+                            className="col-md-8 col-sm-6 col-xs-6 mr-3 py-2" 
+                            name="hexcode" placeholder="Insert Color (HexCode only | Ex. 513FDD)" />
+                        <button className="btn btn-h" type="submit"><GoDiffAdded /> Insert</button>
                     </form>
-                    <div className="col-md-4 my-2 pt-1">
-                        <NavLink className="btn btn-lg btn-warning d-inline" to={`/dashboard/edit/${props.match.params.palette}`}>Edit</NavLink>
+                    <div className="col-md-4 my-2 edit-link">
+                        <NavLink className="btn btn-h" to={`/dashboard/edit/${props.match.params.palette}`}><GoDiffIgnored /> Edit</NavLink>
                     </div>
                 </div>
                 <br />
@@ -106,13 +119,14 @@ function PaletteView (props) {
                                                 backgroundColor: c.hexcode,
                                                 minHeight: '200px'
                                             }
+                                        } onClick={
+                                            () => {
+                                                navigator.clipboard.writeText(c.hexcode); // set Copy to Clipboard
+                                                notifier('success', 'Copied!', `${c.hexcode}`);
+                                            }
                                         }>
                                             <div>
-                                                <button className="btn btn-c" type="button" onClick={
-                                                    () => {
-                                                        navigator.clipboard.writeText(c.hexcode); // set Copy to Clipboard
-                                                    }
-                                                }>
+                                                <button className="btn btn-c" type="button">
                                                     { c.hexcode }
                                                 </button>
                                             </div>

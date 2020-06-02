@@ -5,3 +5,6 @@ export const REG_SUCCESS = 'REG_SUCCESS'
 export const REG_ERR = 'REG_ERR'
 export const LOGOUT = 'LOGOUT'
 export const TOG_SIDENAV = 'TOG_SIDENAV'
+
+export const UPDATE_PROFILE = 'UPDATE_PROFILE'
+export const UPDATE_USER = 'UPDATE_USER'

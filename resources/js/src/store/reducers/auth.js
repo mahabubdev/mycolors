@@ -4,7 +4,9 @@ import {
     LOAD_USER,
     REG_SUCCESS,
     REG_ERR,
-    LOGOUT
+    LOGOUT,
+    UPDATE_PROFILE,
+    UPDATE_USER
 } from '../actions/types';
 
 import ls from './../../utils/secureLS'; // secure localStorage Data
@@ -45,15 +47,36 @@ export default function (state = initState, action) {
         case LOAD_USER: 
         ls.remove('user');
         ls.remove('profile');
-        ls.remove('pals');
+        //ls.remove('pals');
         // set them
         ls.set('user', action.payload.access_token);
         ls.set('profile', action.payload.profile);
-        ls.set('pals', action.payload.pals);
+        //ls.set('pals', action.payload.pals);
         return {
             ...state,
             user : action.payload.user,
             pals: action.payload.pals,
+            profile: action.payload.profile
+        }
+
+        
+
+        // UPDATE PROFILE STATE
+        case UPDATE_USER: 
+        return [
+            ...state,
+            {
+                ...user,
+                name: action.payload.user.name
+            }
+        ]
+
+        // UPDATE USER DATA
+        case UPDATE_PROFILE: 
+        ls.remove('profile');
+        ls.set('profile', action.payload.profile);
+        return {
+            ...state,
             profile: action.payload.profile
         }
 

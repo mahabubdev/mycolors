@@ -9,14 +9,19 @@ import Routes from './routes/index';
 import "./components/css/index.css";
 
 
+import ReactNotification from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css';
+
+
 
 function Index( props ) {
 
 
     return (
-    <Provider store={store}>
-        <Routes />
-    </Provider>
+        <Provider store={store}>
+            <ReactNotification />
+            <Routes />
+        </Provider>
     );
 }
 

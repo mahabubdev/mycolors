@@ -11,6 +11,11 @@ font-family: 'Cabin Sketch', cursive;
     display: block;
 }
 
+a > svg , button > svg{
+    vertical-align: middle !important;
+    margin-bottom: 2px;
+}
+
 
 
 /*

@@ -1,4 +1,4 @@
-.hero {
+.hero, .hero-others {
     position: relative;
     background-image: url(../../../images/igor-trepeshchenok-barnimages-02.jpg);
     background-position: center center;
@@ -7,7 +7,7 @@
     z-index: 1;
 }
 
-.hero .overlay {
+.hero .overlay, .hero-others .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,7 +17,7 @@
     background: linear-gradient(100deg, rgba(47,102,184,0.7), rgba(18,73,235,0.6));
 }
 
-.hero .hero-content {
+.hero .hero-content, .hero-others .hero-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,17 +25,22 @@
     z-index: 2;
     color: #ffffff;
 }
-.hero .hero-content .content-wrapper {
+.hero-others .hero-content {
+    min-height: 25vh;
+}
+
+.hero .hero-content .content-wrapper, 
+.hero-others .hero-content .content-wrapper {
     text-align: center;
 }
 
-.hero h2 {
+.hero h2, .hero-others h2 {
     font-family: 'Cabin Sketch', cursive;
     font-size: 72px;
     letter-spacing: 2px;
 }
 
-.hero h5 {
+.hero h5, .hero-others h5 {
     font-family: 'Seaweed Script', cursive;
     font-size: 30px;
     line-height: 50px;
