@@ -5,6 +5,7 @@
 /vendor
 .env
 .env.backup
+yarn.lock
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
