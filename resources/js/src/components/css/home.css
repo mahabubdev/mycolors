@@ -1,0 +1,70 @@
+.hero, .hero-others {
+    position: relative;
+    background-image: url(../../../images/igor-trepeshchenok-barnimages-02.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.hero .overlay, .hero-others .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(100deg, rgba(47,102,184,0.7), rgba(18,73,235,0.6));
+}
+
+.hero .hero-content, .hero-others .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    z-index: 2;
+    color: #ffffff;
+}
+.hero-others .hero-content {
+    min-height: 25vh;
+}
+
+.hero .hero-content .content-wrapper, 
+.hero-others .hero-content .content-wrapper {
+    text-align: center;
+}
+
+.hero h2, .hero-others h2 {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 72px;
+    letter-spacing: 2px;
+}
+
+.hero h5, .hero-others h5 {
+    font-family: 'Seaweed Script', cursive;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+
+.hero .btn-h, .btn-h {
+    background: linear-gradient(90deg, #D22F36, #D82C6A);
+    color: #FFFFFF;
+    padding: 10px 25px;
+    box-shadow: 0 5px 35px 0 rgba(216, 44, 106, 0.4);
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+.hero .btn:hover , .btn-h:hover {
+    color: #FFFFFF;
+    box-shadow: 0 10px 35px 0 rgba(216, 44, 106, 0.8);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+}

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Seaweed+Script&display=swap');
+
+/*
+font-family: 'Seaweed Script', cursive;
+font-family: 'Cabin Sketch', cursive;
+*/
+
+
+.page-wrapper {
+    position: relative;
+    display: block;
+}
+
+a > svg , button > svg{
+    vertical-align: middle !important;
+    margin-bottom: 2px;
+}
+
+
+
+/*
+* RESPONSIVE CSS
+*/
+@media (max-width: 1100px) {
+
+    .toogleSideNav{
+        display: none !important;
+    }
+
+}
