@@ -61,7 +61,7 @@ const DashHeader = (props) => {
            </div>
            <div className="nav navbar-nav right">
                 <div className="user-bar" onClick={toogleMenu}>
-                    <strong>{ auth.user.name }</strong>
+                    <strong>{ auth.user.username }</strong>
                     <div className="user-pic">
                         {
                             auth.isAuthenticated ? (<img src={photo.url} />) : null
