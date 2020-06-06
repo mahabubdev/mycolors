@@ -127,8 +127,8 @@ class VerifyController extends Controller
 
                 
 
-                $to_name = $findUser->first()->name; // User's name
-                $to_email = $findUser->first()->email; // User's Email-Address
+                $to_name = $findUser->name; // User's name
+                $to_email = $findUser->email; // User's Email-Address
                 $newPwd = $newPass; // new password
 
                 $mainData = "<div>
