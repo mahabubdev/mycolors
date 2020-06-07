@@ -1,0 +1,50 @@
+.abt-cards {
+    padding: 25px 10px;
+    background: linear-gradient(35deg, #513FDD, #123CDE);
+    color: #ffffff;
+    transition: all 0.25s ease-in;
+    box-shadow: 0 8px 30px 0 rgba(18,60,222, 0.4);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: all 0.25s ease-in;
+    -moz-transition: all 0.25s ease-in;
+    -ms-transition: all 0.25s ease-in;
+    -o-transition: all 0.25s ease-in;
+}
+
+.abt-cards:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 35px 0 rgba(18,60,222, 0.7);
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+}
+
+.abt-cards h4 {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.abt-cards > hr {
+    border-top: 2px solid rgba(67, 108, 243, 0.7);
+}
+
+.abt-p {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.abt-p p {
+    color: #3c3c3c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 770px) {
+    .abt-cards {
+        margin-top: 10px;
+    }
+}
