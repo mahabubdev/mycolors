@@ -1,0 +1,29 @@
+.contact-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(20deg,#EF5A20, #ED0500);
+    min-height: 200px;
+    padding: 25px 10px;
+    color: #ffffff;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.btn-cc {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #ED0500;
+    text-transform: capitalize;
+    box-shadow: 0 5px 30px 0 rgba(255, 255, 255, 0.15);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 770px) {
+    .contact-card{
+        margin-top: 10px;
+    }
+}
