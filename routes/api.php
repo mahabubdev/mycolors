@@ -36,6 +36,8 @@ Route::middleware('auth:sanctum')->get('/profile', function (Request $request) {
     return response()->json($data, 200);
 });
 
+Route::middleware('auth:sanctum')->get('/storage/{userpic}', 'API\StorageReturnController@userphoto')->name('storage.user');
+
 // authentications
 Route::post('/login', 'API\AuthController@login')->name('login');
 Route::post('/register', 'API\AuthController@register')->name('register');
