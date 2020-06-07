@@ -4,6 +4,8 @@ import { useSelector } from "react-redux";
 import "../css/dashboard.css";
 import Sidebar from './../pages/dashboard/Sidebar';
 import DashHeader from "../pages/dashboard/DashHeader";
+import axios from 'axios';
+import { apiURL, apiHeader } from "../../config/Axios";
 
 const DashboardLayout = (props) => {
     const auth = useSelector( state => (state.auth) ); // Auth State

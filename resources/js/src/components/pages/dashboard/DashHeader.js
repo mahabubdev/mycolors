@@ -7,6 +7,10 @@ import { toogleNavSide } from "../../../store/actions/theme"
 import { logOut } from "../../../store/actions/auth"
 import { useDispatch, useSelector } from "react-redux";
 
+import axios from 'axios';
+import { apiHeader, apiURL } from './../../../config/Axios';
+
+import notifier from './../../../utils/notify';
 
 const DashHeader = (props) => {
 
@@ -43,11 +47,27 @@ const DashHeader = (props) => {
         dispatch(logOut());
     }
 
+    /*
     useEffect(() => {
         if (auth.isAuthenticated){
             setPhoto({...photo, url: `/storage/users/${auth.profile.photo}`})
         }
-    }, [auth])
+    }, [auth]) */
+    /*
+    useEffect(() => {
+        if (auth.isAuthenticated) {
+            axios.get( apiURL + `/storage/${auth.profile.photo}`, apiHeader)
+            .then(res => {
+                setPhoto({
+                    ...photo,
+                    url: res.data
+                })
+            })
+            .catch(err => {
+                notifier('danger', 'Error occured!', `${err.response.data}`);
+            })
+        }
+    }, [auth]) */
     
 
 
@@ -64,7 +84,7 @@ const DashHeader = (props) => {
                     <strong>{ auth.user.username }</strong>
                     <div className="user-pic">
                         {
-                            auth.isAuthenticated ? (<img src={photo.url} />) : null
+                            auth.isAuthenticated ? (<img src={`/api/storage/${auth.profile.photo}`} />) : null
                         }
                     </div>
                     <ul className="user-menu" style={
